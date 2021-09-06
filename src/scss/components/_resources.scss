@@ -1,0 +1,10 @@
+//
+// UTDK Resource componenet overrides.
+//
+.field--name-field-block-resources {
+  &.stacked-display {
+    img {
+      width: 100%;
+    }
+  }
+}

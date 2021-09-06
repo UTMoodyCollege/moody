@@ -1,0 +1,107 @@
+.node--type-moody-faculty-bio {
+  .first-column img {
+    border-radius: 100%;
+    margin-bottom: 40px;
+    max-width: 225px;
+  }
+  hr {
+    margin: rem-calc(10) 20%;
+    border: 1px solid $ut-charcoal--t40;
+  }
+  .first-column,
+  .second-column {
+    margin-bottom: 50px;
+  }
+  .second-column hr {
+    margin: rem-calc(10) 0;
+  }
+  .faculty-bio-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: rem-calc(22);
+    font-weight: 600;
+    font-family: $ut-font--serif;
+    color: $ut-burntorange;
+    > div + div {
+      margin-left: 5px;
+    }
+  }
+  .field--name-field-expertise-faculty-bio .field__item {
+    margin-bottom: 8px;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      font-size: rem-calc(18);
+    }
+  }
+  .first-column {
+    text-align: center;
+  }
+  .list-group {
+    margin-bottom: 20px;
+    flex-direction: column;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      flex-direction: row;
+    }
+  }
+  .list-group-item {
+    font-weight: 600;
+    text-align: center;
+    width: auto;
+    &.active {
+      z-index: unset;
+      border-color: $ut-burntorange;
+      background-color: $ut-burntorange;
+    }
+  }
+  .faculty-bio-label {
+    font-size: rem-calc(14);
+    text-decoration: underline;
+  }
+  .field--name-field-department-association-fac {
+    max-width: 180px;
+    margin: 10px auto;
+    line-height: 1.2;
+  }
+  .field--name-field-position-faculty-bio,
+  .field--name-field-email-address-faculty-bio,
+  .field--name-field-telephone-faculty-bio,
+  .field--name-field-office-number-faculty-bio {
+    color: $ut-bluebonnet;
+    font-size: rem-calc(18);
+    margin-bottom: 10px;
+    a {
+      color: $ut-bluebonnet;
+    }
+  }
+  .field--name-field-position-faculty-bio {
+    font-size: rem-calc(16);
+    font-weight: 500;
+    .field__item {
+      margin-bottom: 5px;
+    }
+  }
+  .field--name-field-personal-link-faculty-bio a {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %ut-button;
+  }
+  .field--name-field-social-faculty-bio {
+    margin-top: 50px;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      text-align: center;
+      .block__ut-social-links--items {
+        max-width: 375px;
+        margin: auto;
+      }
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      .block__ut-social-links--items {
+        max-width: 335px;
+      }
+    }
+  }
+}

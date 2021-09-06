@@ -1,0 +1,92 @@
+//
+// Contact info block styling.
+//
+.moody-contact-info-wrapper {
+  .contact-info-inner-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 25px 0;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      grid-template-columns: 1fr 1fr;
+      padding: 50px 0;
+    }
+    .contact-text {
+      hyphens: auto;
+    }
+    .headline {
+      font-size: rem-calc(32);
+      font-weight: 600;
+      color: $ut-charcoal;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        font-size: rem-calc(42);
+      }
+    }
+    .subheadline {
+      font-size: rem-calc(32);
+      font-weight: 600;
+      color: #D5D2C4;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        font-size: rem-calc(48);
+      }
+    }
+    p {
+      font-size: rem-calc(28);
+      color: $ut-charcoal;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .contact-link {
+      background-color: #353F47;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      padding: 10%;
+      align-items: center;
+      text-align: center;
+      margin-right: 15px;
+      a {
+        min-width: unset;
+      }
+    }
+  }
+}
+// Styles for when place din full-width column
+.layout.layout--utexas-onecol.container-fluid.utexas-layout-no-padding {
+  .moody-contact-info-wrapper {
+    background-color: $ut-burntorange;
+    .contact-info-inner-wrapper {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @extend %bootstrap-fake-margins;
+      .headline {
+        color: $ut-white;
+      }
+      .subheadline {
+        color: #D5D2C4;
+      }
+      p {
+        color: $ut-white;
+      }
+    }
+    .contact-text a {
+      color: $ut-white;
+      text-decoration: underline;
+      transition: color .2s ease-in-out;
+      &:hover {
+        color: #ccc;
+      }
+    }
+    .contact-link {
+      margin-right: 15px;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        margin-right: 0;
+      }
+    }
+  }
+}

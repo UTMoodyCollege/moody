@@ -1,0 +1,74 @@
+//
+// Moody impact-facts component styling.
+//
+.moody-impact-facts-wrapper {
+  padding: 50px 0;
+  .impact-facts-headline {
+    text-align: center;
+    h2 {
+      color: $ut-charcoal;
+      font-size: 1.75rem;
+      margin-top: 50px;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        font-size: 2.75rem;
+      }
+    }
+  }
+  .impact-fact-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    .impact-fact {
+      text-align: center;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      grid-template-columns: 1fr 1fr;
+      &.three-per-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      &.three-per-row {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      &.four-per-row {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+    .if-headline {
+      font-family: Georgia, "Bitstream Charter", serif;
+      font-weight: 900;
+      font-size: 3rem;
+      color: $ut-charcoal;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        font-size: 5rem;
+      }
+    }
+    .if-subheadline {
+      font-family: $ut-font--serif;
+      font-size: 1.625rem;
+      font-weight: 500;
+      max-width: 300px;
+      color: $ut-charcoal;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &.orange-headline {
+      .if-headline {
+        color: $ut-burntorange;
+      }
+    }
+    &.grey-headline {
+      .if-subheadline {
+        color: $ut-burntorange;
+      }
+    }
+  }
+}

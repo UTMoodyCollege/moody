@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      {{ info_bars }}
+      <div class="moody-hero">
+        {{ subsite_hero }}
+      </div>
+      {% if page_subtitle %}
+        <div class="subsite-page-subtitle">
+          {{page_subtitle}}
+        </div>
+      {% endif %}
+      {% if strauss_link %}
+        <div style="margin-top:-20px;">
+          <strong>{{ strauss_link }}</strong>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

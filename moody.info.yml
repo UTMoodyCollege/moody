@@ -1,0 +1,39 @@
+core: 8.x
+core_version_requirement: ^8 || ^9
+type: theme
+base theme: forty_acres
+name: Moody Theme
+description: Custom subtheme of Forty Acres theme.
+screenshot: images/screenshot.png
+
+regions:
+  hidden: Hidden
+  header_primary: Header Primary
+  header_secondary: Header Secondary
+  header_tertiary: Header Tertiary
+  site_announcement: Site Announcement
+  primary_menu: Primary Menu
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  sidebar_first: Left Sidebar
+  sidebar_second: Right Sidebar
+  footer_left: Left Footer
+  footer_middle: Middle Footer
+  footer_right: Right Footer
+  page_top: Page top
+  page_bottom: Page bottom
+
+libraries:
+  - moody/global
+
+libraries-override:
+  core/drupal.dialog.off_canvas:
+    css:
+      base:
+        /core/themes/stable/css/core/dialog/off-canvas.reset.css: css/off-canvas.reset.css
+
+ckeditor_stylesheets:
+  - css/fonts.css
+  - css/general.css

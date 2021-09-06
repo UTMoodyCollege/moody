@@ -1,0 +1,173 @@
+//
+// Utility classes
+//
+
+// ----------
+// Headline Extension
+// This is used to build out the header text styles on any content element.
+%ut-headline {
+  color: $ut-charcoal;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.625;
+  margin: 0 0 0.5rem;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    font-size: 1.125rem;
+    line-height: 1.625;
+    margin: 0 0 0.5rem;
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    font-size: 1.25rem;
+    line-height: 1.6875;
+  }
+}
+
+// -----------
+// Headline Text Default
+// Typical use as the headline field on component instances
+.ut-headline {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @extend %ut-headline;
+  // Anchor tags nested within this class should inherit the color attribute
+  a {
+    color: $ut-charcoal;
+  }
+}
+
+// ----------
+// Headline with underline
+.ut-headline--underline {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @extend %ut-headline;
+
+  border-bottom: 2px solid $ut-bluebonnet;
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+// ----------
+// Poster Headers aka. LARGE BLOCK TEXT
+.ut-headline--poster {
+  font-size: 2.0625rem;
+  line-height: 0.925;
+  font-weight: 900;
+  text-transform: uppercase;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    font-size: 3.0625rem;
+  }
+}
+
+// ----------
+// CTA Links
+// Found mostly in Cards but can be used in multiple places.
+a.ut-cta-link {
+  font-size: 0.825rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+  // @include link-caret;
+  // Darker variants provided for when element is placed on gray background
+  &--darker {
+    color: $ut-burntorange--s20;
+  }
+}
+
+// ----------
+// UT Links
+// Generic link class with semi-bold font and no text-transform.
+a.ut-link {
+  font-size: inherit;
+  letter-spacing: 0.35px;
+  // @include link-caret;
+  // Darker variants provided for when element is placed on gray background
+  &--darker {
+    color: $ut-burntorange--s20;
+  }
+}
+
+// ----------
+// Intro Text Style
+.ut-copy {
+  font-size: 1rem;
+  line-height: 1.375;
+}
+
+// ----------
+// Fluid Width Image class
+.ut-img--fluid {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include img-fluid;
+}
+
+// ----------
+// Headline style for block h2 titles
+.block-headline-h2 {
+  // stylelint-disable-next-line at-rule-no-unknown
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.625;
+  margin: 0 0 0.5rem;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    font-size: 1.5rem;
+    line-height: 1.625;
+    margin: 0 0 0.75rem;
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    font-size: 2rem;
+    line-height: 1.6875;
+    margin: 0 0 1rem;
+  }
+}
+
+// ----------
+// Bootstrap margin faker Extension
+// This is used to provide margin/padding to simulate a bootstrap col-12 container.
+%bootstrap-fake-margins {
+  padding-left: calc((100% - 840px) / 2);
+  padding-right: calc((100% - 840px) / 2);
+  margin-left: 15px;
+  margin-right: 15px;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    padding-left: calc((100% - 1000px) / 2);
+    padding-right: calc((100% - 1000px) / 2);
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    padding-left: calc((100% - 1140px) / 2);
+    padding-right: calc((100% - 1140px) / 2);
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(xl) {
+    padding-left: calc((100% - 1300px) / 2);
+    padding-right: calc((100% - 1300px) / 2);
+  }
+}
+
+.fake-bs-margins {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @extend %bootstrap-fake-margins;
+}
+
+// Repeat the code from above but with important flags to override default style specificity.
+.constrain-content-to-container {
+  > .layout__region {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %bootstrap-fake-margins;
+  }
+}
+// Global class to prevent long strings from breaking outside their containers and
+a[href^="mailto:"],
+.dont-break-out {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  hyphens: auto;
+}

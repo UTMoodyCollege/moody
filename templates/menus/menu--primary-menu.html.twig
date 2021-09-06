@@ -1,0 +1,74 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% import _self as menus %}
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('main-menu__list') }}>
+    {% else %}
+      <div class="sub-nav-wrapper sub-nav">
+        <ul class='main-menu__list--subnav'>
+    {% endif %}
+    {# Loop through each menu item in the current level (e.g., L1s) #}
+    {% for item in items %}
+      {%
+        set item_classes = [
+          item.is_expanded ? 'menu-item-has-children',
+          menu_level == 0 ? 'main-menu__list-item' : 'main-menu__list-item--subnav',
+          item.in_active_trail ? 'active',
+        ]
+      %}
+      {% set link_classes = [menu_level == 0 ? 'main-menu__link' : 'main-menu__link--subnav'] %}
+      {% set link_attributes = { 'class': link_classes }%}
+
+      {% if (item.url.isRouted()) %}
+        {% if item.url.getRouteName() == '<nolink>' or item.url.getRouteName() == '<none>' %}
+          {% set link_attributes = link_attributes|merge({'tabindex': 0}) %}
+        {% endif %}
+      {% endif %}
+
+      <li{{ item.attributes.addClass(item_classes) }}>
+        {{ link(item.title, item.url, link_attributes) }}
+        {% if item.is_expanded %}
+          <i class="icon moody-subnav-trigger" tabindex=0>
+            <svg class="svg angle-down"><use xlink:href="#ut-angle-down"></use></svg>
+          </i>
+        {% endif %}
+        {# In primary menu region, only display up to L2 items #}
+        {% if item.below and menu_level == 0 %}
+          {# Execute the menu_links macro with item.below (i.e., the next level in #}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+    {% if menu_level != 0 %}
+      </div>
+    {% endif %}
+  {% endif %}
+{% endmacro %}

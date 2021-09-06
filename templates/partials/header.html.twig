@@ -1,0 +1,46 @@
+<header id="moody-header" class="{{ logo_height }}">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="header-wrapper">
+					<!-- branding block -->
+					{{ page.header_primary }}
+					<!-- hamburger -->
+          <button href="#" class="UT-nav-hamburger icon-menu d-lg-none" id="menu-icon">
+            <svg viewBox="-1 3 27 25">
+              <title>Open Menu</title>
+              <path d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z"></path>
+            </svg>
+            <span class="hiddenText">MENU</span>
+          </button>
+				</div>
+				<!-- end header-wrapper -->
+				<div class="nav-wrapper">
+					<div class="nav-wrapper-inner">
+						<!-- mobile wordmark -->
+						<div class="d-block d-lg-none p2-logo">
+							<a href="{{ base_path }}" class="main-logo">
+								<h2 class="mobile_wordmark">{{ site_slogan }}</h2>
+							</a>
+							{% if header_mobile_search_cse and display_search %}
+								<div>
+									{{ header_mobile_search_cse }}
+								</div>
+							{% endif %}
+						</div>
+						<div class="search-social-give">
+							{{ page.header_secondary }}
+							{{ page.header_tertiary }}
+							{% if give_link %}
+								<a href="{{ give_link }}" class="give-button ut-btn d-none d-lg-block">Give</a>
+							{% endif %}
+						</div>
+						{{ page.primary_menu }}
+					</div>
+				</div>
+				<!-- end nav-wrapper -->
+			</div>
+		</div>
+	</div>
+</header>
+{{ page.site_announcement }}

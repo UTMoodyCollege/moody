@@ -1,0 +1,451 @@
+//
+// Moody Hero component styling.
+//
+
+/* General defaults for Hero elements */
+.moody-hero .ut-btn--hero {
+  background: transparent;
+  border: 2px solid $ut-white;
+  border-radius: 4px;
+  color: $ut-white;
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 600;
+  padding: .5rem 1rem;
+  transition: background-color, color, .33s ease-out;
+  &:hover,
+  &:focus {
+    background-color: $ut-white;
+    color: $ut-burntorange;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+.field--type-moody-hero {
+  position: relative;
+}
+
+////////////////// Default Style  /////////////////////////////
+/* Styling for default hero with caption and credit line. */
+.moody-hero {
+  p.hero--caption-credit-wrapper {
+    font-size: .875rem;
+    line-height: 1;
+    padding-top: rem-calc(10);
+    .hero-caption {
+      padding-right: rem-calc(8);
+    }
+    .credit {
+      font-style: italic;
+      color: #6a6a6a;
+    }
+  }
+}
+
+/////////////////// Style 1 ////////////////////////////
+/* Hero with Orange Box similar to core site (i.e., Style 1) */
+.moody-hero.hero--photo-orange-insert {
+  .hero-content {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      padding: 0;
+      background: none;
+      // Fake right margin
+      right: 0;
+      padding-right: calc((100% - 1000px) / 2);
+      margin-right: 15px;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      padding-right: calc((100vw - 1140px) / 2);
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(xl) {
+      padding-right: calc((100vw - 1300px) / 2);
+    }
+  }
+  .hero-callout {
+    color: $ut-white;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      padding: 2rem;
+      background: rgba(191, 87, 0, 0.95);
+    }
+  }
+  .hero-headline {
+    line-height: 1.2;
+  }
+}
+
+////////////////// Style 2/////////////////////////
+/* Floating content area ontop of image (i.e., Style 2) */
+.moody-hero.hero--photo-gradient {
+  + .hero-content {
+    .hero-headline {
+      font-weight: 600;
+      line-height: 1.2;
+      font-size: 1.625rem;
+    }
+    .hero-cta {
+      a {
+        margin: 10px 0 0 0;
+      }
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      .hero-callout {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+        align-items: center;
+      }
+      .hero-headline {
+        font-size: 2.4375rem;
+      }
+      .hero-cta a {
+        margin: 0;
+      }
+    }
+  }
+}
+
+/////////////////// Style 3 ////////////////////////////
+/* Hero with pinned overlay that is width of the max content container (Style 3) */
+// stylelint-disable-next-line at-rule-no-unknown
+.moody-hero.hero--photo-white-notch {
+  + .hero-content {
+    .hero-headline {
+      padding-bottom: rem-calc(5);
+      font-size: rem-calc(30);
+      font-weight: 600;
+      line-height: 1.25;
+      color: $ut-burntorange;
+      font-family: $ut-font--serif;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        font-size: rem-calc(42);
+      }
+    }
+    .hero-subhead {
+      font-size: rem-calc(18);
+      float: left;
+      padding-right: 1rem;
+    }
+    .hero-cta {
+      display: inline-block;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        display: block;
+      }
+      a.ut-btn {
+        margin-bottom: 0;
+        @media (max-width: map-get($grid-breakpoints, md)) {
+          color: $ut-burntorange;
+          background-color: $ut-white;
+          font-style: italic;
+          border: none;
+          padding: inherit;
+          font-size: rem-calc(18);
+          &:hover {
+            color: $ut-burntorange--s20 !important;
+          }
+        }
+      }
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      .hero-callout {
+        padding: 1.5rem 1.25rem;
+      }
+      .hero-headline {
+        padding-bottom: 0;
+      }
+      .hero-subhead {
+        font-size: 1.25rem;
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+//////////////////// Style 4 /////////////////////////
+/* Centered Image with blue bar (i.e., Style 4) */
+.moody-hero.hero--blue-bar {
+  .hero-content {
+    background-color: $ut-bluebonnet;
+    padding: 0;
+  }
+  .hero-callout {
+    background: none;
+    margin: auto;
+    padding: 1rem 0;
+  }
+  // stylelint-disable-next-line no-descending-specificity
+  .hero-headline {
+    color: $ut-white;
+    font-size: 1.6875rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+  // stylelint-disable-next-line no-descending-specificity
+  .hero-subhead {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: .5rem;
+  }
+  // stylelint-disable-next-line no-descending-specificity
+  .hero-cta a {
+    margin-bottom: 0;
+  }
+}
+
+////////////////// Style 5 ///////////////////////////
+/* Medium, floated right image (i.e., Style 5) */
+.moody-hero.hero--half-n-half {
+  // stylelint-disable-next-line no-descending-specificity
+  .hero-headline {
+    color: $ut-charcoal;
+    padding: .625rem 0;
+    font-size: 1.6875rem;
+    font-weight: 600;
+    line-height: 1.25;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      font-size: 1.9375rem;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      font-size: 2.5rem;
+    }
+  }
+  .ut-btn--secondary {
+    align-self: start;
+  }
+}
+
+////////////////// Style 6 ///////////////////////////
+/* Taller image with extrabold headline (i.e., Style 6) */
+.moody-hero.extrabold-headline {
+  .hero-content {
+    left: 0;
+    right: 0;
+    bottom: 2rem;
+    max-width: 840px;
+    text-align: left;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      padding: 0;
+      bottom: 3rem;
+      background: none;
+      // Fake left margin
+      max-width: 1000px;
+      padding-left: calc((100% - 1000px) / 2);
+      margin-left: 15px;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      max-width: 1140px;
+      bottom: 4rem;
+      padding-left: calc((100vw - 1140px) / 2);
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(xl) {
+      max-width: 1300px;
+      bottom: 5rem;
+      padding-left: calc((100vw - 1300px) / 2);
+    }
+    // Text colors for styles 7, 8 & 9
+    &.orange-text {
+      .hero-headline,
+      .hero-subhead {
+        color: $ut-burntorange;
+      }
+    }
+    &.charcoal-text {
+      .hero-headline,
+      .hero-subhead {
+        color: $ut-charcoal;
+      }
+    }
+    // stylelint-disable-next-line no-descending-specificity
+    .hero-headline {
+      font-family: $ut-font--black;
+      color: $ut-white;
+      font-size: 2rem;
+      line-height: 2rem;
+      text-transform: uppercase;
+      text-shadow: none;
+      margin-bottom: .5rem;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        font-size: rem-calc(40);
+        line-height: rem-calc(40);
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        font-size: rem-calc(60);
+        line-height: rem-calc(60);
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        font-size: rem-calc(80);
+        line-height: rem-calc(70);
+      }
+    }
+    // stylelint-disable-next-line no-descending-specificity
+    .hero-subhead {
+      line-height: 1.1;
+      font-size: 1.5rem;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        font-size: 1.75rem;
+      }
+    }
+  }
+  .hero-callout {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      max-width: 85%;
+    }
+  }
+  // stylelint-disable-next-line no-descending-specificity
+  .hero-cta {
+    margin-top: 15px;
+  }
+  // Overlay option for styles 7, 8 & 9
+  div.orange-overlay,
+  div.charcoal-overlay,
+  div.heavy-orange-overlay,
+  div.heavy-charcoal-overlay {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  div.orange-overlay:after {
+    background-color: rgba(191, 87, 0, .35);
+  }
+  div.charcoal-overlay:after {
+    background-color: rgba(12, 12, 12, .35);
+  }
+  div.heavy-orange-overlay:after {
+    background-color: rgba(191, 87, 0, .55);
+  }
+  div.heavy-charcoal-overlay:after {
+    background-color: rgba(12, 12, 12, .55);
+  }
+}
+
+////////////////// Style 7 & 8 /////////////////////
+.moody-hero.extrabold-headline.moody-homepage-hero {
+  .hero-content {
+    left: auto;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      // Fake right margin
+      padding-right: calc((100% - 1000px) / 2);
+      margin-right: 15px;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      padding-right: calc((100vw - 1140px) / 2);
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(xl) {
+      padding-right: calc((100vw - 1300px) / 2);
+    }
+  }
+  .hero-callout {
+    align-items: flex-end;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      padding-right: 0;
+    }
+  }
+
+  // Text positioning for styles 7 & 8
+  &.top-left,
+  &.bottom-left {
+    .hero-content {
+      top: 3rem;
+      margin-left: 15px;
+      text-align: left;
+      padding-right: unset;
+      padding-left: calc((100vw - 840px) / 2);
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        padding-left: calc((100vw - 1000px) / 2);
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(lg) {
+        padding-left: calc((100vw - 1140px) / 2);
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(xl) {
+        padding-left: calc((100vw - 1300px) / 2);
+      }
+    }
+  }
+  &.top-right {
+    .hero-content {
+      top: 3rem;
+    }
+  }
+  &.bottom-left,
+  &.bottom-right {
+    .hero-content {
+      top: unset;
+      bottom: 3rem;
+    }
+  }
+  &.top-right,
+  &.bottom-right {
+    .hero-callout {
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+  &.centered {
+    .hero-content {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin: auto;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .hero-callout {
+      justify-content: center;
+      margin: auto;
+    }
+    .hero-headline {
+      margin-bottom: 0;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      .hero-content {
+        padding-right: unset;
+        padding-left: unset;
+      }
+    }
+  }
+}
+
+//////////DELETE//////////////
+// div.messages.messages--error {
+//   display: none !important;
+// }

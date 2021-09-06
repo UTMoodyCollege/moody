@@ -1,0 +1,87 @@
+#moody-people-section {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-left: calc((100% - 1140px) / 2);
+    padding-right: calc((100% - 1140px) / 2);
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(xl) {
+    // fake the right margin of a row
+    padding-left: calc((100% - 1300px) / 2);
+    padding-right: calc((100% - 1300px) / 2);
+  }
+  .moody-card {
+    display: flex;
+    flex-direction: column;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      flex-direction: row;
+    }
+  }
+  .textual-content {
+    padding: 0 15px;
+    flex-basis: 100%;
+    .moody-card-headline {
+      color: $ut-burntorange !important;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @extend %homepage-headline;
+    }
+    .moody-card-subheadline {
+      margin-bottom: 30px;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @extend %homepage-copy;
+    }
+    .moody-card-cta {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        margin-right: 15px;
+      }
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      flex-basis: 50%;
+      padding: 0 calc((100% - 840px) / 2) 40px 15px;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      padding-right: calc((100% - 1000px) / 2);
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      padding-right: calc((100% - 1140px) / 2);
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(xl) {
+      padding-right: calc((100% - 1300px) / 2);
+    }
+  }
+  .moody-card-media {
+    flex-basis: 100%;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      flex-basis: 50%;
+      padding-right: 15px;
+    }
+    img {
+      width: 100%;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        clip-path: polygon(0 0%, 100% 0, 100% calc(100% - 15vw), 0 100%);
+        -webkit-clip-path: polygon(0 0%, 100% 0, 100% calc(100% - 15vw), 0 100%);
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(lg) {
+        clip-path: polygon(0 0%, 100% 0, 100% calc(100% - 175px), 0 100%);
+        -webkit-clip-path: polygon(0 0%, 100% 0, 100% calc(100% - 175px), 0 100%);
+      }
+    }
+  }
+  .ut-btn {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %homepage-button;
+  }
+}

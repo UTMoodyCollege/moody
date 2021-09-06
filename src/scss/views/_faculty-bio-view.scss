@@ -1,0 +1,87 @@
+//
+// Faculty bio view page and block.
+//
+
+.faculty-bio-view {
+  text-align: center;
+  .views-row {
+    margin-bottom: 40px;
+  }
+  .views-field-field-headshot-faculty-bio {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    .field-content {
+      max-width: 225px;
+      border-radius: 100%;
+      overflow: hidden;
+      margin: auto;
+      transform: translateZ(0);
+    }
+    img {
+      border-radius: 100%;
+      max-width: 225px;
+      transition: transform .15s ease-in-out;
+    }
+    a {
+      &:hover,
+      &:focus {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+  .faculty-view-name {
+    color: $ut-bluebonnet;
+    font-family: $ut-font--serif;
+    font-size: rem-calc(24);
+  }
+  .views-field-field-position-faculty-bio {
+    color: $ut-burntorange;
+    &:after {
+      content: ' ';
+      display: block;
+      border: 1px solid #ebe8e2;
+      margin: 10px 30% 10px 30%;
+    }
+  }
+  .views-field-field-department-association-fac {
+    font-style: italic;
+    font-size: rem-calc(13);
+    color: $ut-shade--s40;
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  // Search form
+  form.views-exposed-form {
+    display: block;
+    width: 100%;
+    margin: 0 15px 40px 15px;
+    text-align: left;
+    label[for^=edit-combine] {
+      color: $ut-charcoal;
+      font-weight: 600;
+    }
+    #edit-combine {
+      width: 300px;
+      max-width: 100%;
+    }
+    input.form-submit {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @extend %ut-button;
+
+      width: 100px;
+      margin-left: 20px;
+    }
+    > div {
+      display: inline-block;
+    }
+  }
+  &.hide-department-selector {
+    .form-item-field-department-association-fac-target-id {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+//
+// Embedded localist widget styling.
+//
+.localist-widget #lw {
+  font-family: inherit;
+}
+#lwe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 0;
+}
+#lwe .date,
+#lwe .time {
+  flex-basis: 100px;
+  display: inline-block;
+}
+#lwe .date {
+  font-weight: 600;
+}
+#lwe .time {
+  margin-right: auto;
+}
+#lwe .time:before {
+  content: "at ";
+  font-size: 0.875rem;
+}
+#lwe .title {
+  flex-grow: 1;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+#lwe .location {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+#lwe .location:before {
+  content: "Location: ";
+  font-size: 12px;
+}
+#lw ul {
+  padding-left: 0;
+}
+// stylelint-disable-next-line at-rule-no-unknown
+@include screen-mq(md) {
+  #lwe {
+    display: table;
+    width: 100%;
+  }
+  #lw li.lwe {
+    display: table-row;
+  }
+  #lwe .date,
+  #lwe .time {
+    min-width: 80px;
+  }
+  #lwe .date,
+  #lwe .time,
+  #lwe .title,
+  #lwe .location {
+    display: table-cell;
+    padding: 10px 5px;
+  }
+  #lwe .location:before {
+    content: "";
+  }
+  #lwe .time:before {
+    content: "";
+  }
+  #lw li.lwe + li.lwe .date,
+  #lw li.lwe + li.lwe .time,
+  #lw li.lwe + li.lwe .title,
+  #lw li.lwe + li.lwe .location {
+    border-top: 1px solid #dddddd;
+  }
+}

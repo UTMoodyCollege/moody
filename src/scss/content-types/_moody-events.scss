@@ -1,0 +1,62 @@
+// ----------
+// Moody Event node styles.
+
+// Node pages.
+.node-moody_event {
+  .event-primary {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      padding-right: 25px;
+    }
+    .field--name-field-moodyevent-status {
+      .field__item {
+        display: inline-block;
+        background-color: $ut-bluebonnet;
+        padding: 10px 15px;
+        color: $ut-white;
+        font-style: italic;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+    }
+    .event-content-wrapper {
+      .field--name-field-moodyevent-image {
+        float: left;
+        width: 100%;
+        margin-bottom: 20px;
+        img {
+          width: 100%;
+        }
+        @media (min-width: 375px) {
+          width: 175px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  .event-secondary {
+    .event-detail-wrapper {
+      border: 1px solid $moody-border;
+      padding: 20px 20px 10px 20px;
+      .event-label {
+        text-align: center;
+        font-style: italic;
+        border-bottom: 1px solid $moody-border;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        font-size: 1.25rem;
+      }
+      .field__label {
+        font-weight: 600;
+        &:after {
+          content: ":";
+        }
+      }
+      .field--name-field-moodyevent-datetime,
+      .field--name-field-moodyevent-location,
+      .field--name-field-moodyevent-tags {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

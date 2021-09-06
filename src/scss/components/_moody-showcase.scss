@@ -1,0 +1,178 @@
+//
+// Moody Showcase component styling.
+//
+.field--type-moody-showcase {
+  padding-left: 15px;
+  padding-right: 15px;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(sm) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .field__item {
+    padding: 25px 0;
+    .showcase-text {
+      padding: 20px 0;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        padding: 20px;
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        padding: 30px;
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(xl) {
+        padding: 50px 0 50px 50px;
+      }
+    }
+    &:nth-child(even) {
+      background-color: $ut-white;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        .moody-showcase .showcase-image {
+          grid-column: 2;
+        }
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(xl) {
+        .showcase-text {
+          padding: 50px 50px 50px 0;
+        }
+      }
+    }
+    + .field__item {
+      margin-top: 20px;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  .moody-showcase {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    max-width: unset;
+    padding-left: 0;
+    padding-right: 0;
+    grid-auto-flow: dense;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      grid-template-columns: 1fr 1fr;
+    }
+    // At xl screens constrain the content to container
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(xl) {
+      margin-left: 15px;
+      margin-right: 15px;
+      padding-left: calc((100% - 1300px) / 2);
+      padding-right: calc((100% - 1300px) / 2);
+    }
+  }
+  .showcase-headline {
+    color: $ut-charcoal;
+    margin-bottom: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      font-size: rem-calc(42);
+      margin-bottom: 25px;
+    }
+  }
+  .showcase-copy,
+  .showcase-copy p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  hr {
+    display: none;
+  }
+  .showcase-copy p {
+    font-size: rem-calc(20);
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      font-size: rem-calc(28);
+    }
+  }
+
+  // 66-33 formatter
+  &.view-mode--moody_showcase_style_two {
+    .moody-showcase {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(lg) {
+        grid-template-columns: 60% 40%;
+      }
+    }
+  }
+
+  // Marketing formatter
+  &.view-mode--moody_showcase_style_three {
+    padding-left: 0;
+    padding-right: 0;
+    .moody-showcase {
+      padding-right: 15px;
+      padding-left: 15px;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        max-width: 840px;
+        grid-template-columns: 1fr;
+        .showcase-image {
+          width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        max-width: 1000px;
+        grid-template-columns: 1fr 1fr;
+        margin: auto;
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(lg) {
+        max-width: 1140px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+      .showcase-text {
+        padding: 30px;
+        // stylelint-disable-next-line at-rule-no-unknown
+        @include screen-mq(sm) {
+          padding: 50px;
+        }
+      }
+      .showcase-headline {
+        font-size: rem-calc(32);
+        font-weight: 500;
+        line-height: 1.25;
+        color: $ut-burntorange--s20;
+      }
+      .showcase-copy p {
+        font-size: 1.25rem;
+        line-height: 1.5;
+      }
+      hr {
+        display: block;
+        width: 60px;
+        margin-left: -25px;
+        background-color: $ut-burntorange;
+        height: 5px;
+        border: none;
+      }
+    }
+    .field__item:nth-child(even) {
+      background-color: #eaeaea;
+    }
+    .field__item + .field__item {
+      margin-top: 0;
+    }
+  }
+}
+// Adjust title when in full-width regions
+.layout--utexas-onecol.container-fluid.utexas-layout-no-padding {
+  .block-headline-h2 {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %bootstrap-fake-margins;
+  }
+}

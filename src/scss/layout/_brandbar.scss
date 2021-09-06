@@ -1,0 +1,28 @@
+#brandbar {
+  background: $ut-burntorange;
+  height: 35px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    position: relative;
+  }
+  .brandbar-logo {
+    height: 25px;
+    margin-top: 6px;
+    float: right;
+  }
+}
+
+#eyebrow {
+  height: 10px;
+  background: $ut-burntorange;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    position: relative;
+  }
+}

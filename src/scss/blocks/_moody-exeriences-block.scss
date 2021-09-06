@@ -1,0 +1,105 @@
+#experience-moody-section {
+  padding-left: 0;
+  padding-right: 0;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    // fake the right margin of a row
+    padding-right: calc((100% - 1000px) / 2);
+    margin-right: 15px;
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    // fake the right margin of a row
+    padding-right: calc((100% - 1140px) / 2);
+    margin-right: 15px;
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(xl) {
+    // fake the right margin of a row
+    padding-right: calc((100% - 1300px) / 2);
+  }
+  .experience {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    background: $ut-tangerine;
+    text-align: center;
+    font-family: $ut-font--black;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      padding-top: 200px;
+      clip-path: polygon(0 0%, 100% 0%, 100% calc(100% - 200px), 0% 100%);
+      -webkit-clip-path: polygon(0 0%, 100% 0%, 100% calc(100% - 200px), 0% 100%);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    p {
+      text-transform: uppercase;
+      &:first-child {
+        color: $ut-charcoal;
+        font-size: rem-calc(44);
+        line-height: rem-calc(30);
+        margin-bottom: -10px;
+        @media only screen and (min-width: 350px) {
+          font-size: rem-calc(48);
+        }
+      }
+      &:nth-child(2) {
+        color: $ut-charcoal;
+        font-size: rem-calc(72);
+        @media only screen and (min-width: 350px) {
+          font-size: rem-calc(80);
+        }
+      }
+    }
+  }
+  .moody-card {
+    margin-bottom: 25px;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      margin-bottom: 40px;
+    }
+  }
+  .moody-card-headline {
+    font-size: rem-calc(36);
+    line-height: 1.25;
+    font-weight: 600;
+    color: $ut-charcoal;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      font-size: rem-calc(46);
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      font-size: 2.5rem;
+    }
+  }
+  .moody-card-subheadline {
+    font-size: rem-calc(24);
+    line-height: 1.25;
+    color: $ut-charcoal;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      font-size: rem-calc(30);
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      font-size: 1.8rem;
+    }
+  }
+  .experience-moody-section {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      padding-left: 50px;
+      margin-bottom: 400px;
+    }
+    img {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+  .ut-btn {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %homepage-button;
+  }
+}

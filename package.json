@@ -1,0 +1,36 @@
+{
+  "name": "moody",
+  "version": "1.0.0",
+  "description": "Bootstrap based Drupal Forty Acres subtheme",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.austin.utexas.edu:comm-web/moody-d8-theme.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "./node_modules/gulp/bin/gulp.js default"
+  },
+  "author": "Mike Marsello",
+  "license": "ISC",
+  "dependencies": {
+    "@accessible360/accessible-slick": "^1.0.1",
+    "bootstrap": "^4.3.1",
+    "jquery": "^1.9.1",
+    "natives": "^1.1.6",
+    "plyr": "^3.6.3",
+    "popper.js": "^1.14.7"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-csscombx": "^4.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sequence": "^1.0.0",
+    "gulp-stylelint": "^7.0.0",
+    "stylelint": "^9.3.0",
+    "stylelint-checkstyle-formatter": "^0.1.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-no-browser-hacks": "^1.1.0"
+  }
+}

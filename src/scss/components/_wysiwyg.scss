@@ -1,0 +1,256 @@
+//
+// Extra classes used in WYSIWYGs.
+//
+.pullquote-left {
+  /* Text Only Quote Left */
+  clear: both;
+  float: left;
+  margin: 10px 0;
+  padding: 20px;
+  border-right: none;
+  width: 100%;
+  p {
+    font-size: 1em;
+    color: rgba(191, 87, 0, 1);
+    letter-spacing: .5px;
+    text-align: left;
+    margin: .5em 0 0 0;
+    padding: 0;
+    font-style: italic;
+    line-height: 1.5;
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    margin: 0 30px 20px 0;
+    padding: 0 30px 30px 0;
+    border-right: 2px solid #dedede;
+    width: 40%;
+    p {
+      font-size: 1.2em;
+    }
+  }
+}
+
+.pullquote-right {
+  /* Text Only Quote Right */
+  clear: both;
+  float: right;
+  margin: 10px 0;
+  padding: 20px;
+  border-right: none;
+  width: 100%;
+  p {
+    font-size: 1em;
+    color: rgba(191, 87, 0, 1);
+    letter-spacing: .5px;
+    text-align: left;
+    margin: .5em 0 0 0;
+    padding: 0;
+    font-style: italic;
+    line-height: 1.5;
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    margin: 0 0 20px 30px;
+    padding: 0 0 30px 30px;
+    border-left: 2px solid #dedede;
+    width: 40%;
+    p {
+      font-size: 1.2em;
+    }
+  }
+}
+
+.img-bottom-padding {
+  margin-bottom: 25px;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    margin-bottom: 40px;
+  }
+}
+
+.quote-fullwidth,
+.quote-fullwidth p {
+  clear: both;
+  margin: 1em 0 1.5rem 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: $ut-burntorange;
+  line-height: 1.5;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    font-size: 2rem;
+  }
+}
+
+.pullquote-left-image {
+  /* Quote Left with Image */
+  clear: both;
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  p {
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 1rem;
+    font-style: italic;
+    color: $ut-charcoal;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0 5px 0;
+    line-height: 1.5;
+  }
+  h3 {
+    font-size: .875rem;
+    color: $ut-burntorange;
+    text-align: center;
+    padding: 5px 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+  img {
+    width: 100%;
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @media screen and (min-width: 450px) {
+    margin: 0 30px 20px 0;
+    padding: 0 30px 20px 0;
+    width: auto;
+    max-width: 300px;
+    border-right: 2px solid #dedede;
+    img {
+      margin-top: 25px;
+      width: auto;
+    }
+  }
+}
+
+.pullquote-right-image {
+  /* Quote right with Image */
+  clear: both;
+  float: right;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  p {
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 1rem;
+    font-style: italic;
+    color: $ut-charcoal;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0 5px 0;
+    line-height: 1.5;
+  }
+  h3 {
+    font-size: .875rem;
+    color: $ut-burntorange;
+    text-align: center;
+    padding: 5px 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+  img {
+    width: 100%;
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @media screen and (min-width: 500px) {
+    margin: 0 0 20px 30px;
+    padding: 0 0 20px 30px;
+    width: auto;
+    max-width: 300px;
+    border-left: 2px solid #dedede;
+    img {
+      margin-top: 25px;
+      width: auto;
+    }
+  }
+}
+.indent-image-left {
+  float: left;
+  margin: 0;
+  padding: 0 1.5em .5em 0;
+  p {
+    margin: 1em 0 0 0;
+    padding: 0;
+    font-size: .75em;
+    text-align: center;
+  }
+}
+.indent-image-right {
+  float: right;
+  margin: 0;
+  padding: 0 0 .5em 1.5em;
+  p {
+    margin: 1em 0 0 0;
+    padding: 0;
+    font-size: .75em;
+    text-align: center;
+  }
+}
+
+// Ckeditor styles for dropdown
+// The button styles used in the editor are in _buttons.scss
+.ck-orange-text {
+  color: $ut-burntorange !important;
+}
+p.ck-fine-print {
+  font-size: .875rem;
+  line-height: 1.15;
+}
+ul.ck-twocol {
+  list-style-type: none;
+  columns: 2;
+  column-gap: 20px;
+}
+p.overview-statement {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+// Special styling for prospective page basic blocks.
+#prospective-style-basic-block {
+  p.ut-h2 {
+    color: $ut-burntorange;
+    max-width: 900px;
+    margin: 2rem auto;
+  }
+  hr {
+    margin-bottom: 1rem;
+    border-top: 5px solid $moody-peach;
+  }
+  .prospective-style-basic-block-textual-content {
+    display: flex;
+    flex-direction: column;
+    > div {
+      flex-basis: 100%;
+      padding: 2rem 3rem 0 2rem;
+      li > p {
+        font-size: 1.25rem;
+      }
+      &:first-child p {
+        font-size: rem-calc(24);
+        line-height: 1.75;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      flex-direction: row;
+      align-items: center;
+      > div {
+        padding: 2rem 3rem;
+      }
+    }
+    h3 {
+      text-align: center;
+    }
+  }
+}

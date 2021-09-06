@@ -1,0 +1,93 @@
+#moody-header {
+  border-bottom: 1px solid $ut-charcoal--t40;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    border-bottom: none;
+    .search-social-give {
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+  }
+  .ut-logo--main {
+    object-fit: contain;
+    object-position: center;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      object-position: top;
+    }
+  }
+  &.short_logo {
+    height: 60px;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      height: auto;
+      .search-social-give {
+        min-height: 40px;
+      }
+      .main-menu__list {
+        margin-top: rem-calc(25);
+      }
+      .site-navigation-subsite {
+        .main-menu__list {
+          margin-top: rem-calc(18);
+        }
+      }
+    }
+    .ut-logo--main {
+      height: 40px;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(lg) {
+        height: 55px;
+      }
+    }
+  }
+
+  &.medium_logo {
+    height: 70px;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      height: auto;
+      .search-social-give {
+        min-height: 70px;
+      }
+      .main-menu__list {
+        margin-top: 35px;
+      }
+      .site-navigation-subsite {
+        .main-menu__list {
+          margin-top: 15px;
+        }
+      }
+    }
+    .ut-logo--main {
+      height: 50px;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(lg) {
+        height: 80px;
+      }
+    }
+  }
+
+  &.tall_logo {
+    height: 80px;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      height: auto;
+      .search-social-give {
+        min-height: 90px;
+      }
+      .site-navigation-subsite {
+        .main-menu__list {
+          margin-top: 18px;
+        }
+      }
+    }
+    .ut-logo--main {
+      height: 60px;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(lg) {
+        height: 100px;
+      }
+    }
+  }
+}

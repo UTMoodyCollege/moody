@@ -1,0 +1,101 @@
+//
+// Moody Flex CTA styling.
+//
+.field--type-moody-flex-color-blocks {
+  display: flex;
+  flex-direction: column;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    flex-direction: row;
+  }
+  .flex-color-blocks-wrapper {
+    transition: background-color .2s ease-in-out;
+    color: $ut-white;
+    padding: 30px;
+    text-align: center;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    + .flex-color-blocks-wrapper {
+      margin-top: 5px;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      + .flex-color-blocks-wrapper {
+        margin-left: 2rem;
+        margin-top: 0;
+      }
+      /* two items */
+      // stylelint-disable-next-line no-descending-specificity
+      &:first-child:nth-last-child(2),
+      &:first-child:nth-last-child(2) ~ .flex-color-blocks-wrapper {
+        flex-basis: 50%;
+      }
+      /* three items */
+      // stylelint-disable-next-line no-descending-specificity
+      &:first-child:nth-last-child(3),
+      &:first-child:nth-last-child(3) ~ .flex-color-blocks-wrapper {
+        flex-basis: 33.33%;
+      }
+      /* four items */
+      // stylelint-disable-next-line no-descending-specificity
+      &:first-child:nth-last-child(4),
+      &:first-child:nth-last-child(4) ~ .flex-color-blocks-wrapper {
+        flex-basis: 25%;
+        padding: 30px 15px;
+        .headline {
+          font-size: 1.5rem;
+        }
+        .flex-color-blocks-wrapper {
+          padding: 30px 15px;
+        }
+      }
+    }
+    &.orange {
+      background-color: $ut-burntorange;
+    }
+    &.green {
+      background-color: $ut-turtlepond;
+    }
+    &.blue {
+      background-color: $ut-bluebonnet;
+    }
+    &.gray {
+      background-color: $ut-charcoal;
+    }
+    .headline {
+      color: $ut-white;
+      font-size: 1.875rem;
+      line-height: 1.2;
+      font-weight: 600;
+      white-space: pre-line;
+      margin-bottom: 0;
+    }
+    .subheadline {
+      color: $ut-white;
+      font-size: rem-calc(20);
+      font-weight: 400;
+      margin-bottom: 0;
+      white-space: pre-line;
+    }
+    .headline + .subheadline {
+      margin-top: 20px;
+    }
+  }
+  a.flex-color-blocks-wrapper {
+    &.orange:hover {
+      background-color: $ut-burntorange-dark;
+    }
+    &.green:hover {
+      background-color: $ut-turtlepond--s20;
+    }
+    &.blue:hover {
+      background-color: $ut-bluebonnet--s20;
+    }
+    &.gray:hover {
+      background-color: $ut-charcoal--s40;
+    }
+  }
+}

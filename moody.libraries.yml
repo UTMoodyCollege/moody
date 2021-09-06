@@ -1,0 +1,28 @@
+global:
+  css:
+    theme:
+      css/overrides.css: {}
+      css/styles.css: {}
+      css/site-custom.css: {}
+      css/slick.min.css: {}
+  js:
+    js/custom.js: {}
+    js/collapse.js: {}
+    js/modal.js: {}
+    js/svgxuse.js: {}
+    js/slick.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+media-pages:
+  css:
+    theme:
+      css/plyr.css: {}
+  js:
+    js/plyr.min.js: {}
+
+search-pages:
+  css:
+    theme:
+      css/search-pages.css: {}

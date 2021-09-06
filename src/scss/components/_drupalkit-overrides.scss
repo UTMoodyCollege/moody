@@ -1,0 +1,21 @@
+//
+// UTDK overrides.
+//
+.utexas-featured-highlight {
+  .ut-btn {
+    margin-top: 20px;
+  }
+}
+.ut-flex-content-area {
+  .ut-btn,
+  .link-list {
+    margin-top: 20px;
+  }
+}
+a.ut-link {
+  font-weight: 500;
+  text-decoration: underline;
+}
+footer #block-footermenu {
+  margin-top: 0;
+}

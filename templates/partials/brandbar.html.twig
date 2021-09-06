@@ -1,0 +1,15 @@
+{% if show_brandbar %}
+  <div id="brandbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <a href="https://www.moody.utexas.edu">
+            <img class="brandbar-logo" src="{{ base_path }}{{ active_theme_path() }}/images/logos/utexas_moody_white.png" alt="Moody College of Communication"/>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% else %}
+  <div id="eyebrow"></div>
+{% endif %}

@@ -1,0 +1,26 @@
+//
+// Moody specific typography classes.
+//
+
+// Class for text fields on grid displays.
+%image__moody-grid {
+  // margin-bottom: 20px;
+}
+%lead-text__moody-grid {
+  margin-top: 10px;
+  color: $ut-header-font-color;
+  font-size: rem-calc(20);
+  line-height: 1.25;
+  font-weight: 600;
+}
+%secondary-text__moody-grid {
+  margin-top: 10px;
+  color: $ut-body-font-color;
+  font-size: rem-calc(16);
+  line-height: 1.25;
+}
+%tertiary-text__moody-grid {
+  margin-top: 10px;
+  color: $ut-header-font-color;
+  font-size: rem-calc(14);
+}

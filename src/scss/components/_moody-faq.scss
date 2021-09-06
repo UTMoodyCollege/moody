@@ -1,0 +1,58 @@
+//
+// Moody faq component styling.
+//
+.field--type-moody-faq {
+  .faq-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    font-weight: 600;
+    width: 100%;
+    font-size: rem-calc(18);
+    text-align: left;
+    padding: 10px 15px 10px 0;
+    margin-bottom: 2px;
+    color: $ut-burntorange;
+    .open-faq,
+    .close-faq {
+      width: 15px;
+      min-width: 15px;
+    }
+    .open-faq { // plus
+      display: none;
+    }
+    .close-faq { // minus
+      display: block;
+    }
+    &.collapsed {
+      color: $ut-charcoal;
+      .open-faq {
+        display: block;
+      }
+      .close-faq {
+        display: none;
+      }
+    }
+    &:hover {
+      color: $ut-burntorange;
+    }
+  }
+  .faq-body {
+    padding: 10px 15px 10px 0;
+    margin-bottom: 2px;
+    p {
+      font-size: 1rem;
+    }
+    p:last-child() {
+      margin-bottom: 0;
+    }
+  }
+  svg {
+    opacity: 1;
+  }
+  hr {
+    margin: 0;
+  }
+}

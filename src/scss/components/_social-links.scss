@@ -1,0 +1,50 @@
+//
+// Social link styles.
+//
+.block__ut-social-links--items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  grid-gap: 0;
+  .block__ut-social-links--item {
+    margin: 0;
+    + .block__ut-social-links--item {
+      margin-left: 10px;
+    }
+  }
+  > div {
+    margin-left: 0;
+    + div {
+      margin-left: 10px;
+    }
+  }
+  svg {
+    fill: $ut-burntorange;
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    transition: all .2s ease-in-out;
+  }
+  .invert,
+  .block__ut-social-link:hover,
+  .block__ut-social-link:focus,
+  .block__ut-social-links--link:hover,
+  .block__ut-social-links--link:focus {
+    svg {
+      background: $ut-burntorange;
+      fill: $ut-white;
+    }
+  }
+  .invert {
+    .block__ut-social-link:hover,
+    .block__ut-social-link:focus {
+      svg {
+        background: $ut-white;
+        fill: $ut-burntorange;
+      }
+    }
+  }
+}
+.layout__region .block__ut-social-links--items {
+  display: flex;
+}

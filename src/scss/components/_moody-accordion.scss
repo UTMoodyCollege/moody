@@ -1,0 +1,67 @@
+//
+// Moody accordion component styling.
+//
+.field--type-moody-accordion {
+  .accordion-btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: none;
+    background: $ut-white;
+    font-weight: 600;
+    width: 100%;
+    font-size: rem-calc(26);
+    line-height: 1.2;
+    text-align: left;
+    padding: 20px 0;
+    color: $ut-charcoal;
+    .accordion-caret {
+      width: 0;
+      height: 0;
+      margin-right: 20px;
+      margin-left: 10px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 15px solid $ut-charcoal;
+      transition: transform .2s ease-in-out;
+    }
+    &.collapsed {
+      color: $ut-burntorange;
+      .accordion-caret {
+        border-top: 15px solid $ut-burntorange;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  .accordion-body {
+    border: none;
+    padding: 20px 0 20px 50px;
+    p:last-child() {
+      margin-bottom: 0;
+    }
+  }
+  // Condensed formatter
+  &.condensed {
+    .accordion-btn {
+      font-size: rem-calc(20);
+      padding: 8px 0;
+      &.collapsed {
+        .accordion-caret {
+          border-top: 10px solid $ut-burntorange;
+        }
+      }
+    }
+    // stylelint-disable-next-line no-descending-specificity
+    .accordion-caret {
+      margin-right: 10px;
+      margin-left: 5px;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 10px solid $ut-charcoal;
+      transition: transform .2s ease-in-out;
+    }
+    .accordion-body {
+      padding: 10px 0 10px 27px;
+    }
+  }
+}

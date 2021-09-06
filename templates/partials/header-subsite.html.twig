@@ -1,0 +1,82 @@
+{% set logo_link = (custom_logo and subsite_base_url) ? subsite_base_url : path('<front>') %}
+{% set subsite_logo_height = (custom_logo and subsite_logo_height) ? subsite_logo_height : logo_height %}
+
+<header id="moody-header" class="{{ subsite_logo_height }}">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="header-wrapper">
+					<!-- branding block -->
+					<div id="block-moody-site-branding-header" class="block block-system block-system-branding-block">
+						<a href="{{ logo_link }}" title="{{ subsite_title }}" rel="home">
+							{% if custom_logo %}
+								<span class="site-title sr-only">"{{ subsite_title }}</span>
+								<a href="{{ logo_link }}" title="{{ subsite_title }}" rel="home">
+									{{ custom_logo }}
+								</a>
+							{% else %}
+								<span class="site-title sr-only">"{{ site_slogan }}</span>
+								<a href="{{ logo_link }}" title="Home" rel="home">
+									<img class="img-fluid ut-logo--main" src="{{ default_logo_url }}" alt="Home">
+								</a>
+							{% endif %}
+					</div>
+
+					<div class="search-social-give d-none d-lg-block">
+						{{ page.header_secondary }}
+						<!-- Place sitewide social icons in header_tertiary -->
+						{% if subsite_social %}
+							{{ subsite_social }}
+						{% else %}
+							{{ page.header_tertiary }}
+						{% endif %}
+						{% if give_link and subsite_give_link %}
+							<a href="{{ subsite_give_link }}" class="give-button ut-btn">Give</a>
+						{% elseif give_link and subsite_give_link == FALSE %}
+							<a href="{{ give_link }}" class="give-button ut-btn">Give</a>
+						{% endif %}
+					</div>
+
+					<!-- hamburger -->
+					<button href="#" class="UT-nav-hamburger icon-menu" id="menu-icon">
+						<svg viewbox="-1 3 27 25">
+							<title>Open Menu</title>
+							<path d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z"></path>
+						</svg>
+						<span class="hiddenText">MENU</span>
+					</button>
+				</div>
+				<!-- end header-wrapper -->
+				<div class="nav-wrapper">
+					<div class="nav-wrapper-inner">
+						<div class="d-block p2-logo">
+							<!-- mobile wordmark -->
+							<a href="{{ base_path }}" class="main-logo">
+								<h2 class="mobile_wordmark">{{ site_slogan }}</h2>
+							</a>
+						</div>
+							<div class="search-social-give d-lg-none">
+								{{ page.header_secondary }}
+								{{ page.header_tertiary }}
+							</div>
+						{# </div> #}
+						<div class="site-navigation site-navigation-main">
+							{{ page.primary_menu }}
+						</div>
+						<div class="d-lg-none mt-5">
+							<h2 class="mobile_wordmark subsite-wordmark">{{ subsite_title }}</h2>
+							{{ subsite_nav }}
+						</div>
+					</div>
+				</div>
+				<!-- end nav-wrapper -->
+				<div class="subsite-navigation site-navigation-subsite d-none d-lg-block">
+					{{ subsite_nav }}
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+{{ page.site_announcement }}
+{{ page.ambient_video }}

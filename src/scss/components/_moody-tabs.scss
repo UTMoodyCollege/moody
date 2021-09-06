@@ -1,0 +1,20 @@
+//
+// Moody tabs styling.
+//
+.field--type-moody-flex-tabs,
+.block-inline-blockmoody-flex-tabs {
+  .nav-tabs {
+    flex-direction: column;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      flex-direction: row;
+    }
+  }
+  .nav-item {
+    font-size: rem-calc(18);
+    font-weight: 500;
+  }
+  .tab-content {
+    margin-top: 10px;
+  }
+}

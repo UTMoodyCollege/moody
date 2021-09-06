@@ -1,0 +1,96 @@
+#block-moody-page-title {
+  padding-left: 0;
+  padding-right: 0;
+}
+.node-moody_standard_page {
+  #block-moody-page-title {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+// Foundation class
+.button-list {
+  flex-direction: column;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    flex-direction: row;
+    a.button + a.button {
+      margin-left: 10px;
+    }
+  }
+}
+
+// Foundation class
+.alert-box {
+  &.secondary {
+    background-color: #6a6361 !important;
+    color: white;
+    border-color: #c7c7c7;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+// Moody - UTDK2 class
+ul.no-bullet {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+// Center the discard changes button
+.layout-builder-discard-changes {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @extend %bootstrap-fake-margins;
+}
+
+// Make sure edit tabs are visible
+#block-moody-tabs {
+  // z-index: 1;
+  background-color: $ut-white;
+  padding-bottom: 2.5rem;
+}
+
+//---- Margin classes added via layout builder styles ----//
+////////////////////////////////////////////////////////////
+// Remove top margin
+.moody-remove-mt {
+  margin-top: -2.5rem !important;
+}
+// Remove bottom margin
+.moody-remove-mb {
+  margin-bottom: 0 !important;
+}
+// Add top margin
+.moody-add-mt {
+  margin-top: 2.5rem !important;
+}
+// Add bottom margin (this is already 2.5rem by default so we bump it to 5rem here)
+.moody-add-mb {
+  margin-bottom: 5rem !important;
+}
+
+// Make readable container a little bit wider than the default UTDK value
+.readable.container {
+  max-width: 960px;
+}
+
+// Increase top and bottom padding of sections with background accent
+.layout--utexas-onecol.background-accent > div {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+// Table styles
+.tablesaw {
+  margin-bottom: 1rem;
+  th {
+    background: #efefef;
+  }
+  td,
+  th {
+    border: 1px solid #cdcdcd;
+  }
+}

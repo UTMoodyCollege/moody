@@ -1,0 +1,36 @@
+//
+// UTDK Promo Unit overrides.
+//
+.field--type-utexas-promo-unit {
+  .utexas-promo-unit-container {
+    padding: 0;
+    margin-left: 0;
+  }
+  .ut-headline--underline {
+    margin-left: 0;
+  }
+  .utexas-promo-unit {
+    margin-left: 0;
+    .data-wrapper {
+      margin: 0;
+      a {
+        color: $ut-burntorange-dark;
+      }
+      > .ut-link--darker {
+        display: block;
+        font-style: italic;
+        font-weight: 700;
+        margin-top: 15px;
+        text-decoration: underline;
+      }
+    }
+    .image-wrapper {
+      padding-right: 1rem;
+    }
+  }
+  &.stacked-display {
+    .image-wrapper {
+      padding-right: 0;
+    }
+  }
+}

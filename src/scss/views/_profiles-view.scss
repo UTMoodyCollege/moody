@@ -1,0 +1,81 @@
+//
+// Profile view page and block.
+//
+
+// View page styles
+.moody-profile-grid {
+  > header {
+    width: 100%;
+  }
+  > form.views-exposed-form {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-end;
+    label {
+      font-weight: 600;
+      font-size: rem-calc(20);
+    }
+    select {
+      width: 200px;
+      margin-right: 20px;
+      margin-bottom: 8px;
+    }
+  }
+  .views-row {
+    text-align: center;
+    margin-bottom: 40px;
+    .rtf-profile-link-wrapper {
+      display: block;
+      .image-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 225px;
+        overflow: hidden;
+        border-radius: 100%;
+        transform: translateZ(0);
+      }
+      img {
+        border-radius: 100%;
+        transition: transform .2s ease-in-out;
+      }
+      .title {
+        padding-top: .5em;
+        font-family: $ut-font--serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        color: $ut-bluebonnet;
+      }
+      .subtitle {
+        font-weight: 500;
+        padding-top: .5em;
+      }
+      &:focus,
+      &:hover {
+        text-decoration: none;
+        img {
+          transform: scale(1.2);
+        }
+        .subtitle {
+          color: $ut-burntorange-dark;
+        }
+      }
+      hr {
+        width: 150px;
+        border-color: $moody-border;
+      }
+    }
+  }
+  .button-list {
+    flex-direction: column;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      flex-direction: row;
+      a.button + a.button {
+        margin-left: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+//
+// Bootstrap modal style overrides.
+//
+.modal-dialog {
+  .modal-content {
+    .modal-title {
+      font-weight: 600;
+      color: $ut-charcoal;
+    }
+    .modal-header {
+      align-items: center;
+      background-color: $ut-limestone;
+      border-bottom: none;
+    }
+    .close {
+      font-size: 2rem;
+      opacity: 1;
+      color: $ut-charcoal;
+      text-shadow: none;
+      margin: 0;
+      padding: 0 10px;
+      &:hover,
+      &:focus {
+        outline: 1px solid $ut-charcoal;
+        opacity: 1;
+      }
+    }
+    .modal-body {
+      background-color: $ut-limestone;
+    }
+    button {
+      transition: all .2s ease-in-out;
+      &:hover,
+      &:focus {
+        background: $ut-limestone;
+        border-color: $ut-charcoal;
+        color: $ut-charcoal !important;
+      }
+    }
+    .modal-footer {
+      border-top: none;
+      background-color: $ut-limestone;
+      flex-direction: column;
+      button {
+        align-self: flex-end;
+      }
+    }
+    .modal-description {
+      text-align: left;
+      a {
+        color: $ut-burntorange-dark;
+      }
+    }
+  }
+}

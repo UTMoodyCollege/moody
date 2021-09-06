@@ -1,0 +1,75 @@
+//
+// Inner rail styling.
+//
+.wysiwyg_inner_rail {
+  width: 100%;
+  padding: 0;
+  padding-bottom: 10px;
+  .element-invisible {
+    width: 1px;
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @media only screen and (max-width: 900px) {
+    margin-bottom: 20px;
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    width: 50%;
+    padding-right: 20px;
+    float: left;
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(lg) {
+    width: 40%;
+  }
+  &.size-small {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @media only screen and (min-width: 400px) and (max-width: 40em) {
+      width: 50% !important;
+      border: none;
+      padding: 0;
+      padding-right: 20px;
+      float: left;
+      &.align-right {
+        padding: 0;
+        padding-left: 20px;
+      }
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      width: 30%;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      width: 25%;
+    }
+  }
+  &.size-large {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      width: 55%;
+    }
+  }
+  &.align-right {
+    float: right;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      padding-left: 20px;
+      padding-right: 0;
+    }
+  }
+  h3.post-headline {
+    border-bottom: 2px solid #3c87a3;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  p {
+    margin: 0 0 8px 0;
+    font-size: rem-calc(15);
+    line-height: rem-calc(22);
+  }
+}

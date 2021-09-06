@@ -1,0 +1,124 @@
+//
+// Moody Focus Areas component styling.
+//
+.focus-areas-wrapper {
+  text-align: center;
+  padding: 50px 25px;
+  .focus-areas-title {
+    display: inline-block;
+    font-size: 2.75rem;
+    margin-top: 50px;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      font-size: 3.75rem;
+    }
+  }
+  .focus-areas-items {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    justify-items: center;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      grid-template-columns: 1fr 1fr;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(xl) {
+      padding-left: calc((100% - 1140px) / 2);
+      padding-right: calc((100% - 1140px) / 2);
+    }
+    .focus-areas-item {
+      max-width: 300px;
+      width: 100%;
+      margin-bottom: 35px;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        padding: 0 30px;
+      }
+      .ut-headline {
+        display: inline-block;
+        font-size: rem-calc(32);
+        line-height: 1.2;
+        font-family: $ut-font--serif;
+        color: $ut-charcoal;
+        margin-top: 20px;
+        font-weight: 500;
+      }
+      .ut-copy {
+        font-size: rem-calc(24);
+        color: $ut-charcoal;
+        font-family: $ut-font--serif;
+        margin-bottom: 0;
+      }
+      .image-wrapper {
+        .image-overflow {
+          overflow: hidden;
+          max-width: 100%;
+          margin: auto;
+        }
+        img {
+          width: 100px;
+        }
+      }
+      .linked-focus-area-item {
+        .ut-headline,
+        .ut-copy {
+          color: $ut-burntorange;
+        }
+        &:hover,
+        &:focus {
+          .ut-headline,
+          .ut-copy {
+            color: $ut-burntorange-dark;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+          }
+        }
+      }
+    }
+    &.two-per-row {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    &.four-per-row {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        grid-template-columns: 1fr 1fr;
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(lg) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+  }
+  .ut-btn--homepage {
+    margin: 100px 0 0 0 !important;
+  }
+  // // Use https://www.coffee-break-designs.com/labs/svg_stripe_generator/ to create striped styles. (65deg, 1px, 20px)
+  // &.gray { // 9daeb7
+  //   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuX0RKUzMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIyMC41IiBoZWlnaHQ9IjIwLjUiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg2NSkiPjxsaW5lIHgxPSIwIiB5PSIwIiB4Mj0iMCIgeTI9IjIwLjUiIHN0cm9rZT0iIzlEQUVCNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz4gPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuX0RKUzMpIiBvcGFjaXR5PSIxIi8+PC9zdmc+');
+  // }
+  // &.blue { // 00a9b7
+  //   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuX0RKUzMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIyMC41IiBoZWlnaHQ9IjIwLjUiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg2NSkiPjxsaW5lIHgxPSIwIiB5PSIwIiB4Mj0iMCIgeTI9IjIwLjUiIHN0cm9rZT0iIzAwQTlCNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz4gPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuX0RKUzMpIiBvcGFjaXR5PSIxIi8+PC9zdmc+');
+  // }
+  // &.green { // 579d42
+  //   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuX0RKUzMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIyMC41IiBoZWlnaHQ9IjIwLjUiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg2NSkiPjxsaW5lIHgxPSIwIiB5PSIwIiB4Mj0iMCIgeTI9IjIwLjUiIHN0cm9rZT0iIzU3OUQ0MiIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz4gPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuX0RKUzMpIiBvcGFjaXR5PSIxIi8+PC9zdmc+');
+  // }
+  // &.orange { // bf5700
+  //   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuX0RKUzMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIyMC41IiBoZWlnaHQ9IjIwLjUiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg2NSkiPjxsaW5lIHgxPSIwIiB5PSIwIiB4Mj0iMCIgeTI9IjIwLjUiIHN0cm9rZT0iI0JGNTcwMCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz4gPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuX0RKUzMpIiBvcGFjaXR5PSIxIi8+PC9zdmc+');
+  // }
+}
+// Overrides for full-width regions
+.layout--utexas-onecol.container-fluid {
+  .focus-areas-wrapper {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %bootstrap-fake-margins;
+  }
+}

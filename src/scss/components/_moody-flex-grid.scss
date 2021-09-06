@@ -1,0 +1,172 @@
+//
+// Moody Flex Grid component styling.
+//
+.flex-grid-wrapper {
+  img {
+    width: 100%;
+    transition: transform .2s ease-in-out;
+  }
+  .mfg--item {
+    height: 100%;
+    background: $ut-limestone--t40;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 9px 22px -23px $ut-charcoal;
+  }
+  .mfg--image {
+    overflow: hidden;
+  }
+  .mfg--headline {
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+  .mfg--copy p {
+    margin-bottom: 0;
+  }
+
+  // Circular display
+  &.circular-display {
+    .mfg--image,
+    .mfg--image img {
+      border-radius: 100%;
+      max-width: 250px;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+    .mfg--headline {
+      font-weight: 400;
+    }
+    .flex-grid-item {
+      max-width: 450px;
+      margin: auto;
+    }
+  }
+
+  .linked-flex-grid-item {
+    display: block;
+    height: 100%;
+    .mfg--headline,
+    .mfg--copy {
+      color: $ut-burntorange-dark;
+    }
+    &:focus,
+    &:hover {
+      .mfg--image img {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  // Promo display
+  &.promo-display {
+    .flex-grid-item {
+      position: relative;
+    }
+    .mfg--image--promo {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .8);
+      }
+    }
+    .linked-flex-grid-item {
+      display: block;
+      transition: all .2s ease-in-out;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      &:before {
+        content: "";
+        background: transparent;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transition: background-color .2s ease-in-out;
+      }
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        &:before {
+          background-color: rgba(0, 0, 0, 1);
+        }
+      }
+    }
+    .ut--headline {
+      color: $ut-white;
+      font-size: rem-calc(24);
+      text-align: center;
+      margin: 0;
+      padding: 15px;
+      font-weight: 600;
+    }
+    // Styles when no link is present
+    .mfg--text--promo {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  // Grid for all displays
+  .flex-grid-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      &.six-columns {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(lg) {
+      &.three-columns {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      &.four-columns {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      &.five-columns {
+        grid-template-columns: repeat(5, 1fr);
+      }
+      &.six-columns {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+  }
+  // Circular display
+  // stylelint-disable-next-line no-duplicate-selectors
+  &.circular-display {
+    .flex-grid-items {
+      row-gap: 4rem;
+    }
+  }
+  // Rectangular display
+  // stylelint-disable-next-line no-duplicate-selectors
+  &.rectangular-display {
+    .mfg--headline {
+      font-weight: 400;
+      font-size: 1.75rem;
+    }
+  }
+}

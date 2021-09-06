@@ -1,0 +1,74 @@
+//
+// UTDK Site Announcement overrides.
+//
+#site-announcement.announcement-content {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 0;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      align-items: center;
+      flex-direction: row;
+      margin-left: auto;
+      margin-right: auto;
+      .text-wrapper {
+        margin-right: 2rem;
+      }
+    }
+  }
+  .announcement-title {
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .announcement-body {
+    margin-bottom: 0;
+    padding: 0;
+    p {
+      margin-bottom: 0;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      font-size: 1.125rem;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .announcement-title + .announcement-body {
+    margin-top: 1rem;
+  }
+  .cta {
+    margin-bottom: 0;
+  }
+  .text-wrapper + .cta {
+    margin-top: 1rem;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      margin-top: 0;
+      flex-shrink: 0;
+      max-width: 200px;
+    }
+  }
+  .ut-btn {
+    margin-bottom: 0;
+  }
+  .text-wrapper {
+    flex-shrink: 2;
+  }
+}
+#block-siteannouncement {
+  margin-top: -2.5rem;
+}

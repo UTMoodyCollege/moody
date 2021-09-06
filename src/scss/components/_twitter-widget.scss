@@ -1,0 +1,36 @@
+//
+// Twitter widget overrides.
+//
+.layout--utexas-onecol {
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    .twitter_widget {
+      border: none;
+    }
+    .twitter-content {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 1rem;
+      .tweet {
+        border: 1px solid $moody-border;
+        box-shadow: 1px 1px 1px $moody-border;
+        padding: 0;
+        + .tweet {
+          border-top: 1px solid $moody-border;
+          margin-left: 20px;
+        }
+        .tweet-header,
+        .tweet-content {
+          padding: 20px;
+        }
+        .tweet-header {
+          background-color: $ut-limestone--t20;
+          border-bottom: 1px solid $moody-border;
+          a {
+            color: $ut-burntorange-dark;
+          }
+        }
+      }
+    }
+  }
+}

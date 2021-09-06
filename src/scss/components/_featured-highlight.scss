@@ -1,0 +1,49 @@
+//
+// Featured Highlight component styles.
+//
+.utexas-featured-highlight {
+  .content-wrapper {
+    font-size: 1.125rem;
+    > .ut-btn {
+      display: block;
+      margin-top: 15px;
+      width: max-content;
+      max-width: 100%;
+    }
+  }
+}
+// Fake container margins on edge-to-edge featured highlight
+.layout--utexas-onecol.container-fluid {
+  .utexas-featured-highlight {
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %bootstrap-fake-margins;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      flex-direction: column;
+    }
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(md) {
+      flex-direction: row;
+      .image-wrapper {
+        margin-right: 30px;
+      }
+    }
+    .content-wrapper {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+.field--type-utexas-featured-highlight {
+  .fh-background {
+    background-color: #d6d2c4;
+  }
+  .fh-background.medium {
+    background-color: #005f86;
+  }
+  .fh-background.dark {
+    background-color: #333f48;
+  }
+}

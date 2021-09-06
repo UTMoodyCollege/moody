@@ -1,0 +1,127 @@
+<?php
+
+/**
+ * @file
+ * The primary PHP file for a Forty Acres subtheme.
+ */
+
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements template_preprocess_html().
+ */
+function moody_preprocess_html(&$variables) {
+  if (isset($variables['node_type'])) {
+    // Add node-TYPE class to the <body> element.
+    $variables['attributes']['class'][] = ('node-' . $variables['node_type']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function moody_preprocess_page(&$variables) {
+  $node_type = FALSE;
+  if (isset($variables['node']) && is_object($variables['node'])) {
+    $node_type = $variables['node']->getType();
+  }
+  if (isset($variables['node']) && is_string($variables['node'])) {
+    $node = Node::load($variables['node']);
+    $node_type = $node->getType();
+  }
+  $variables['base_path'] = base_path();
+  // Display eyebrow on Moody core pages that don't have custom subsite logo.
+  $variables['show_brandbar'] = TRUE;
+  $sitename = \Drupal::config('system.site')->get('name');
+  if (isset($sitename) && $sitename == "Moody College of Communication") {
+    if (isset($node_type) && $node_type != 'moody_subsite_page' || !isset($variables['custom_logo']['#uri'])) {
+      $variables['show_brandbar'] = FALSE;
+    }
+  }
+  // Populate slogan so it can be used to print site name in mobile nav.
+  $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
+  // Give link.
+  $give_link = theme_get_setting('give_link');
+  $variables['give_link'] = $give_link;
+  // Load plyr.js on media pages.
+  if ($node_type && $node_type == 'moody_media_page') {
+    $variables['#attached']['library'][] = 'moody/media-pages';
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ *
+ * Add class to style block titles on select block types.
+ */
+function moody_preprocess_block(&$variables) {
+  $block_type = $variables['derivative_plugin_id'];
+  // print_r($block_type);
+  $blocks_with_titles = [
+    'moody_hero',
+    'moody_showcase',
+    'moody_flex_color_blocks',
+    'moody_flex_grid',
+    'moody_flex_tabs',
+    'moody_accordion',
+    'moody_impact_facts',
+    'moody_focus_areas',
+    'news-block_1',
+    'utexas_promo_list',
+    'utexas_promo_unit',
+    'utexas_flex_content_area',
+    'utexas_photo_content_area',
+    'utexas_quick_links',
+    'feed_block',
+    'call_to_action',
+    'utexas_resources',
+    'basic',
+    'utexas_featured_highlight',
+    'moody_events-block_1',
+  ];
+  if (in_array($block_type, $blocks_with_titles)) {
+    $variables['title_attributes']['class'] = 'block-headline-h2 ut-h3';
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view_fields().
+ */
+function moody_preprocess_views_view_fields(&$variables) {
+  $view_name = isset($variables['view']) ? $variables['view']->id() : '';
+  $views_grids = [
+    'eas_blocks',
+    'prague_stories',
+    'rtf_showcase',
+  ];
+  if (in_array($view_name, $views_grids)) {
+    // Get nid for content associated with this row.
+    $nid = $variables['row']->nid;
+    $node = Node::load($nid);
+    // Get initial values for url, title and description.
+    $video_url = $node->get('field_media_page_video')->getString();
+    // Process video_url to account for different video providers and URL formats.
+    // 1. https://www.youtube.com/watch?v=vrRzx2Fsll0
+    // 2. https://youtu.be/jKK7NDUyZuY
+    // 3. https://vimeo.com/19213523
+    $youtube1 = "/www.youtube.com\/watch/";
+    $youtube2 = "/\/\/youtu.be\//";
+    $vimeo = "/\/\/vimeo.com\//";
+    // For youtube videos.
+    if (preg_match($youtube1, $video_url) || preg_match($youtube2, $video_url)) {
+      $parsed_url = preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $video_url, $matches);
+      $processed_video_url = "https://www.youtube.com/embed/" . $matches[1] . "?autoplay=1&amp;modestbranding=1";
+    }
+    // For vimeo videos.
+    elseif (preg_match($vimeo, $video_url)) {
+      $vimeoid = parse_url($video_url, PHP_URL_PATH);
+      $processed_video_url = "//player.vimeo.com/video" . $vimeoid . "?color=00adef&portrait=0&title=0&byline=0&autoplay=1&loop=0";
+    }
+    $modal_title = $node->get('title')->getString();
+    $modal_description = isset($node->get('field_media_page_description')->getValue()[0]['value']) ? $node->get('field_media_page_description')->getValue()[0]['value'] : 'RTF video';
+    // Send these values to views-view-fields--XXX to provide to modal windows.
+    $variables['video_url'] = $processed_video_url;
+    $variables['modal_title'] = $modal_title;
+    $variables['modal_description'] = $modal_description;
+  }
+}

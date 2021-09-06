@@ -1,0 +1,13 @@
+body.node-moody_media_page {
+  .plyr--audio {
+    width: 500px;
+    max-width: 100%;
+    height: 100px;
+    display: flex !important;
+    justify-content: center;
+  }
+  .plyr__controls {
+    background-color: lighten($ut-tangerine, 30%);
+    padding: 32px 67px;
+  }
+}

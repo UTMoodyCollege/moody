@@ -1,0 +1,66 @@
+//
+// Moody quotation component styling.
+//
+.quotation-wrapper {
+  position: relative;
+  .quote {
+    font-style: italic;
+    width: 100%;
+    margin-bottom: 0;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %homepage-headline;
+    &:before {
+      font-family: Arial, Helvetica, sans-serif;
+      content: "“";
+      position: absolute;
+      margin-left: -25px;
+    }
+    &:after {
+      font-family: Arial, Helvetica, sans-serif;
+      content: "”";
+    }
+  }
+  .author {
+    font-weight: 900;
+    margin-top: 2rem;
+    width: 100%;
+    text-align: right;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @extend %homepage-copy;
+  }
+  &.orange {
+    .quote-wrapper:after {
+      position: absolute;
+      right: 0;
+      content: "";
+      border-top: solid 40px $ut-burntorange;
+      border-left: solid 40px transparent;
+    }
+    .quote {
+      padding: 2rem 2rem 2rem rem-calc(57);
+      background: $ut-burntorange;
+      color: $ut-white;
+    }
+    .author {
+      color: $ut-burntorange;
+      margin-top: 4rem;
+    }
+  }
+  &.grey {
+    .quote-wrapper:after {
+      position: absolute;
+      right: 0;
+      content: "";
+      border-top: solid 40px $ut-charcoal;
+      border-left: solid 40px transparent;
+    }
+    .quote {
+      padding: 2rem 2rem 2rem rem-calc(57);
+      background: $ut-charcoal;
+      color: $ut-white;
+    }
+    .author {
+      margin-top: 4rem;
+    }
+  }
+}
