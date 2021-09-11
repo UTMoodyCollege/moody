@@ -5315,6 +5315,12 @@ span.addtoany_list {
 .flex-grid-wrapper .mfg--copy p {
   margin-bottom: 0;
 }
+.flex-grid-wrapper .flex-grid-item {
+  align-self: start;
+  height: 100%;
+
+  -ms-flex-item-align: start;
+}
 .flex-grid-wrapper.circular-display .mfg--image,
 .flex-grid-wrapper.circular-display .mfg--image img {
   max-width: 250px;

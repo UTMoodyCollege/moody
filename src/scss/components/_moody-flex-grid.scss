@@ -24,6 +24,10 @@
   .mfg--copy p {
     margin-bottom: 0;
   }
+  .flex-grid-item {
+    align-self: start;
+    height: 100%;
+  }
 
   // Circular display
   &.circular-display {
