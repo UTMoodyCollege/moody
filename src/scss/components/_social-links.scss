@@ -20,8 +20,8 @@
   }
   svg {
     fill: $ut-burntorange;
-    width: 35px;
-    height: 35px;
+    width: 35px !important;
+    height: 35px !important;
     border-radius: 4px;
     transition: all .2s ease-in-out;
   }
@@ -44,6 +44,9 @@
       }
     }
   }
+}
+header .block__ut-social-links--items {
+  padding-right: 0;
 }
 .layout__region .block__ut-social-links--items {
   display: flex;

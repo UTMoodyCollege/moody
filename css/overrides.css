@@ -5226,6 +5226,13 @@ span.addtoany_list {
 .field--type-utexas-promo-unit.stacked-display .image-wrapper {
   padding-right: 0;
 }
+.utexas-featured-highlight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 20px;
+  padding-left: 20px;
+}
 .utexas-featured-highlight .content-wrapper {
   font-size: 1.125rem;
 }
@@ -6094,8 +6101,8 @@ p.overview-statement {
   margin-left: 10px;
 }
 .block__ut-social-links--items svg {
-  width: 35px;
-  height: 35px;
+  width: 35px !important;
+  height: 35px !important;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   border-radius: 4px;
@@ -6116,6 +6123,9 @@ p.overview-statement {
   background: #fff;
 
   fill: #bf5700;
+}
+header .block__ut-social-links--items {
+  padding-right: 0;
 }
 .layout__region .block__ut-social-links--items {
   display: -webkit-box;

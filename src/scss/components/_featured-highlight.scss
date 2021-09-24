@@ -2,6 +2,9 @@
 // Featured Highlight component styles.
 //
 .utexas-featured-highlight {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
   .content-wrapper {
     font-size: 1.125rem;
     > .ut-btn {
