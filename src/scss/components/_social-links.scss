@@ -2,7 +2,7 @@
 // Social link styles.
 //
 .block__ut-social-links--items {
-  display: flex;
+  display: flex !important;
   flex-wrap: wrap;
   gap: 0;
   grid-gap: 0;
