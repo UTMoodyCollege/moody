@@ -96,16 +96,6 @@
     }
   }
 
-  // 66-33 formatter
-  &.view-mode--moody_showcase_style_two {
-    .moody-showcase {
-      // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(lg) {
-        grid-template-columns: 60% 40%;
-      }
-    }
-  }
-
   // Marketing formatter
   &.view-mode--moody_showcase_style_three {
     padding-left: 0;
@@ -168,7 +158,26 @@
       margin-top: 0;
     }
   }
+
+  // 66-33 formatter
+  &.view-mode--moody_showcase_style_two {
+    .moody-showcase {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(lg) {
+        grid-template-columns: 40% 60%;
+      }
+    }
+    .moody-showcase-66-33:nth-child(odd) {
+      .moody-showcase {
+        // stylelint-disable-next-line at-rule-no-unknown
+        @include screen-mq(lg) {
+          grid-template-columns: 60% 40%;
+        }
+      }
+    }
+  }
 }
+
 // Adjust title when in full-width regions
 .layout--utexas-onecol.container-fluid.utexas-layout-no-padding {
   .block-headline-h2 {
