@@ -6337,6 +6337,11 @@ header .block__ut-social-links--items {
   margin-bottom: 0;
   font-style: italic;
 }
+@media screen and (min-width: 600px) {
+  .quotation-wrapper .quote-wrapper .quote {
+    margin-left: 20px;
+  }
+}
 .quotation-wrapper .quote-wrapper .quote:before {
   position: absolute;
   margin-left: -25px;
@@ -6410,6 +6415,49 @@ header .block__ut-social-links--items {
 }
 .quotation-wrapper.default .quote {
   padding-left: 20px;
+}
+.moody-newsletter-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+  background-color: #353f47;
+
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+}
+.moody-newsletter-wrapper .moody-newsletter-headline {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+@media screen and (min-width: 600px) {
+  .moody-newsletter-wrapper .moody-newsletter-headline {
+    font-size: 3rem;
+  }
+}
+.moody-newsletter-wrapper .moody-newsletter-link {
+  margin-top: 2rem;
+}
+.moody-newsletter-wrapper.gray .moody-newsletter-headline {
+  color: #d5d2c4;
+}
+.moody-newsletter-wrapper.blue {
+  background-color: #005f86;
+}
+.moody-newsletter-wrapper.orange {
+  background-color: #bf5700;
+}
+.moody-newsletter-wrapper.orange .moody-newsletter-link a {
+  background-color: #a04400;
+}
+.moody-newsletter-wrapper.green {
+  background-color: #579d42;
 }
 .faculty-bio-view {
   text-align: center;
