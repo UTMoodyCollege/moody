@@ -1,0 +1,41 @@
+//
+// Moody Newsletter componenet styles.
+//
+.moody-newsletter-wrapper {
+  width: 100%;
+  padding: 50px;
+  background-color: #353F47;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  .moody-newsletter-headline {
+    font-size: rem-calc(32);
+    font-weight: 600;
+    color: $ut-white;
+    line-height: 1.2;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      font-size: rem-calc(48);
+    }
+  }
+  .moody-newsletter-link {
+    margin-top: 2rem;
+  }
+  &.gray {
+    .moody-newsletter-headline {
+      color: #D5D2C4;
+    }
+  }
+  &.blue {
+    background-color: $ut-bluebonnet;
+  }
+  &.orange {
+    background-color: $ut-burntorange;
+    .moody-newsletter-link a {
+      background-color: $ut-burntorange-dark;
+    }
+  }
+  &.green {
+    background-color: $ut-turtlepond;
+  }
+}

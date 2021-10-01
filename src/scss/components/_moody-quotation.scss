@@ -21,6 +21,10 @@
       margin-bottom: 0;
       margin-top: 0;
       // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        margin-left: 20px;
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
       @extend %homepage-headline;
       &:before {
         font-family: Arial, Helvetica, sans-serif;
