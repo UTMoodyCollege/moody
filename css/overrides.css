@@ -216,7 +216,7 @@ li > p {
 .block-inline-blockbasic .ut-h6 {
   margin-bottom: 15px;
 }
-.quotation-wrapper .quote,
+.quotation-wrapper .quote-wrapper .quote,
 #moody-people-section .textual-content .moody-card-headline {
   margin-top: 20px;
   color: #333f48;
@@ -225,14 +225,14 @@ li > p {
   line-height: 1.25;
 }
 @media screen and (min-width: 600px) {
-  .quotation-wrapper .quote,
+  .quotation-wrapper .quote-wrapper .quote,
   #moody-people-section .textual-content .moody-card-headline {
     margin-top: 0;
     margin-right: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .quotation-wrapper .quote,
+  .quotation-wrapper .quote-wrapper .quote,
   #moody-people-section .textual-content .moody-card-headline {
     font-size: 2.5rem;
   }
@@ -4877,11 +4877,6 @@ body.node-moody_media_page .plyr__controls {
     font-size: 1.75rem;
   }
 }
-@media screen and (min-width: 1200px) {
-  .field--type-moody-showcase.view-mode--moody_showcase_style_two .moody-showcase {
-    grid-template-columns: 60% 40%;
-  }
-}
 .field--type-moody-showcase.view-mode--moody_showcase_style_three {
   padding-right: 0;
   padding-left: 0;
@@ -4948,6 +4943,16 @@ body.node-moody_media_page .plyr__controls {
 }
 .field--type-moody-showcase.view-mode--moody_showcase_style_three .field__item + .field__item {
   margin-top: 0;
+}
+@media screen and (min-width: 1200px) {
+  .field--type-moody-showcase.view-mode--moody_showcase_style_two .moody-showcase {
+    grid-template-columns: 40% 60%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .field--type-moody-showcase.view-mode--moody_showcase_style_two .moody-showcase-66-33:nth-child(odd) .moody-showcase {
+    grid-template-columns: 60% 40%;
+  }
 }
 .field--type-moody-flex-color-blocks {
   display: -webkit-box;
@@ -6304,20 +6309,61 @@ header .block__ut-social-links--items {
 .quotation-wrapper {
   position: relative;
 }
-.quotation-wrapper .quote {
+.quotation-wrapper .quote-wrapper .quote-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+}
+@media screen and (min-width: 600px) {
+  .quotation-wrapper .quote-wrapper .quote-contents {
+    flex-direction: row;
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -ms-flex-direction: row;
+  }
+}
+.quotation-wrapper .quote-wrapper img {
   width: 100%;
+}
+.quotation-wrapper .quote-wrapper .quote {
+  width: 100%;
+  margin-top: 0;
   margin-bottom: 0;
   font-style: italic;
 }
-.quotation-wrapper .quote:before {
+.quotation-wrapper .quote-wrapper .quote:before {
   position: absolute;
   margin-left: -25px;
   content: "“";
   font-family: Arial, Helvetica, sans-serif;
 }
-.quotation-wrapper .quote:after {
+.quotation-wrapper .quote-wrapper .quote:after {
+  position: absolute;
   content: "”";
   font-family: Arial, Helvetica, sans-serif;
+}
+.quotation-wrapper .quote-wrapper .moody-card-media {
+  margin-right: 0;
+}
+@media screen and (min-width: 600px) {
+  .quotation-wrapper .quote-wrapper .moody-card-media {
+    margin-right: 1rem;
+  }
+}
+.quotation-wrapper .quote-wrapper .moody-card-media + .quote {
+  margin-top: 20px;
+}
+@media screen and (min-width: 600px) {
+  .quotation-wrapper .quote-wrapper .moody-card-media + .quote {
+    margin-top: 0;
+    margin-left: 25px;
+  }
 }
 .quotation-wrapper .author {
   width: 100%;
@@ -6325,36 +6371,45 @@ header .block__ut-social-links--items {
   text-align: right;
   font-weight: 900;
 }
-.quotation-wrapper.orange .quote-wrapper:after {
-  position: absolute;
-  right: 0;
-  content: "";
-  border-top: solid 40px #bf5700;
-  border-left: solid 40px transparent;
+.quotation-wrapper.orange .quote-wrapper,
+.quotation-wrapper.grey .quote-wrapper {
+  padding: 2rem;
 }
-.quotation-wrapper.orange .quote {
-  padding: 2rem 2rem 2rem 3.5625rem;
-  color: #fff;
-  background: #bf5700;
-}
-.quotation-wrapper.orange .author {
-  margin-top: 4rem;
-  color: #bf5700;
-}
+.quotation-wrapper.orange .quote-wrapper:after,
 .quotation-wrapper.grey .quote-wrapper:after {
   position: absolute;
   right: 0;
   content: "";
-  border-top: solid 40px #333f48;
-  border-left: solid 40px transparent;
+  border-left: solid 70px transparent;
 }
+.quotation-wrapper.orange .quote,
 .quotation-wrapper.grey .quote {
-  padding: 2rem 2rem 2rem 3.5625rem;
   color: #fff;
-  background: #333f48;
 }
+.quotation-wrapper.orange .author,
 .quotation-wrapper.grey .author {
   margin-top: 4rem;
+}
+.quotation-wrapper.orange .quote-wrapper {
+  background: #bf5700;
+}
+.quotation-wrapper.orange .quote-wrapper:after {
+  border-top: solid 70px #bf5700;
+}
+.quotation-wrapper.orange .author {
+  color: #bf5700;
+}
+.quotation-wrapper.grey .quote-wrapper {
+  background: #333f48;
+}
+.quotation-wrapper.grey .quote-wrapper:after {
+  border-top: solid 70px #333f48;
+}
+.quotation-wrapper.grey .author {
+  color: #333f48;
+}
+.quotation-wrapper.default .quote {
+  padding-left: 20px;
 }
 .faculty-bio-view {
   text-align: center;
