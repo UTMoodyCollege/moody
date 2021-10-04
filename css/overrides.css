@@ -6459,6 +6459,39 @@ header .block__ut-social-links--items {
 .moody-newsletter-wrapper.green {
   background-color: #579d42;
 }
+.moody-resource-group-wrapper {
+  width: 100%;
+}
+.moody-resource-group-wrapper h3 {
+  padding: 20px;
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+@media screen and (min-width: 600px) {
+  .moody-resource-group-wrapper h3 {
+    font-size: 2.25rem;
+  }
+}
+.moody-resource-group-wrapper h3.gray {
+  background-color: #353f47;
+}
+.moody-resource-group-wrapper h3.blue {
+  background-color: #005f86;
+}
+.moody-resource-group-wrapper h3.orange {
+  background-color: #bf5700;
+}
+.moody-resource-group-wrapper h3.green {
+  background-color: #579d42;
+}
+.moody-resource-group-wrapper .resource-group-links {
+  margin-top: 1.5rem;
+}
+.moody-resource-group-wrapper .link-list li + li {
+  margin-top: 1rem;
+}
 .faculty-bio-view {
   text-align: center;
 }
