@@ -238,6 +238,7 @@ li > p {
   }
 }
 .quotation-wrapper .author,
+.moody-promotion-wrapper .moody-promotion-inner-wrapper .copy p,
 #moody-people-section .textual-content .moody-card-subheadline {
   margin-bottom: 30px;
   color: #333f48;
@@ -246,12 +247,14 @@ li > p {
 }
 @media screen and (min-width: 600px) {
   .quotation-wrapper .author,
+  .moody-promotion-wrapper .moody-promotion-inner-wrapper .copy p,
   #moody-people-section .textual-content .moody-card-subheadline {
     margin-right: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
   .quotation-wrapper .author,
+  .moody-promotion-wrapper .moody-promotion-inner-wrapper .copy p,
   #moody-people-section .textual-content .moody-card-subheadline {
     font-size: 1.8rem;
   }
@@ -364,7 +367,12 @@ a.ut-link--darker {
 .layout.layout--utexas-onecol.utexas-layout-no-padding.container-sm .moody-contact-info-wrapper .contact-info-inner-wrapper,
 .layout.layout--utexas-onecol.utexas-layout-no-padding.container-md .moody-contact-info-wrapper .contact-info-inner-wrapper,
 .layout.layout--utexas-onecol.utexas-layout-no-padding.container-lg .moody-contact-info-wrapper .contact-info-inner-wrapper,
-.layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-contact-info-wrapper .contact-info-inner-wrapper {
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-contact-info-wrapper .contact-info-inner-wrapper,
+.layout.layout--utexas-onecol.container-fluid.utexas-layout-no-padding .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-sm .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-md .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-lg .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-promotion-wrapper .moody-promotion-inner-wrapper {
   margin-right: 15px;
   margin-left: 15px;
   padding-right: calc((100% - 840px) / 2);
@@ -393,7 +401,12 @@ a.ut-link--darker {
   .layout.layout--utexas-onecol.utexas-layout-no-padding.container-sm .moody-contact-info-wrapper .contact-info-inner-wrapper,
   .layout.layout--utexas-onecol.utexas-layout-no-padding.container-md .moody-contact-info-wrapper .contact-info-inner-wrapper,
   .layout.layout--utexas-onecol.utexas-layout-no-padding.container-lg .moody-contact-info-wrapper .contact-info-inner-wrapper,
-  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-contact-info-wrapper .contact-info-inner-wrapper {
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-contact-info-wrapper .contact-info-inner-wrapper,
+  .layout.layout--utexas-onecol.container-fluid.utexas-layout-no-padding .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-sm .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-md .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-lg .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-promotion-wrapper .moody-promotion-inner-wrapper {
     padding-right: calc((100% - 1000px) / 2);
     padding-left: calc((100% - 1000px) / 2);
   }
@@ -421,7 +434,12 @@ a.ut-link--darker {
   .layout.layout--utexas-onecol.utexas-layout-no-padding.container-sm .moody-contact-info-wrapper .contact-info-inner-wrapper,
   .layout.layout--utexas-onecol.utexas-layout-no-padding.container-md .moody-contact-info-wrapper .contact-info-inner-wrapper,
   .layout.layout--utexas-onecol.utexas-layout-no-padding.container-lg .moody-contact-info-wrapper .contact-info-inner-wrapper,
-  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-contact-info-wrapper .contact-info-inner-wrapper {
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-contact-info-wrapper .contact-info-inner-wrapper,
+  .layout.layout--utexas-onecol.container-fluid.utexas-layout-no-padding .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-sm .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-md .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-lg .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-promotion-wrapper .moody-promotion-inner-wrapper {
     padding-right: calc((100% - 1140px) / 2);
     padding-left: calc((100% - 1140px) / 2);
   }
@@ -449,7 +467,12 @@ a.ut-link--darker {
   .layout.layout--utexas-onecol.utexas-layout-no-padding.container-sm .moody-contact-info-wrapper .contact-info-inner-wrapper,
   .layout.layout--utexas-onecol.utexas-layout-no-padding.container-md .moody-contact-info-wrapper .contact-info-inner-wrapper,
   .layout.layout--utexas-onecol.utexas-layout-no-padding.container-lg .moody-contact-info-wrapper .contact-info-inner-wrapper,
-  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-contact-info-wrapper .contact-info-inner-wrapper {
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-contact-info-wrapper .contact-info-inner-wrapper,
+  .layout.layout--utexas-onecol.container-fluid.utexas-layout-no-padding .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-sm .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-md .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-lg .moody-promotion-wrapper .moody-promotion-inner-wrapper,
+  .layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-promotion-wrapper .moody-promotion-inner-wrapper {
     padding-right: calc((100% - 1300px) / 2);
     padding-left: calc((100% - 1300px) / 2);
   }
@@ -6491,6 +6514,72 @@ header .block__ut-social-links--items {
 }
 .moody-resource-group-wrapper .link-list li + li {
   margin-top: 1rem;
+}
+.moody-promotion-wrapper {
+  width: 100%;
+  padding: 25px;
+  background-color: #00a9b7;
+}
+@media screen and (min-width: 600px) {
+  .moody-promotion-wrapper {
+    padding: 50px;
+  }
+}
+.moody-promotion-wrapper .moody-promotion-inner-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+}
+@media screen and (min-width: 600px) {
+  .moody-promotion-wrapper .moody-promotion-inner-wrapper {
+    flex-direction: row;
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -ms-flex-direction: row;
+  }
+}
+.moody-promotion-wrapper .moody-promotion-inner-wrapper img {
+  min-width: 250px;
+}
+@media screen and (min-width: 600px) {
+  .moody-promotion-wrapper .moody-promotion-inner-wrapper img {
+    margin-right: 1.5rem;
+  }
+}
+.moody-promotion-wrapper .moody-promotion-inner-wrapper .headline {
+  color: #333f48;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+@media screen and (min-width: 600px) {
+  .moody-promotion-wrapper .moody-promotion-inner-wrapper .headline {
+    font-size: 3rem;
+  }
+}
+.moody-promotion-wrapper .moody-promotion-inner-wrapper .date {
+  margin-bottom: 1rem;
+  color: #333f48;
+  font-size: 1.375rem;
+  font-weight: 700;
+  font-style: italic;
+}
+.moody-promotion-wrapper .moody-promotion-inner-wrapper .cta-wrapper {
+  margin-top: 2rem;
+}
+.layout.layout--utexas-onecol.container-fluid.utexas-layout-no-padding .moody-promotion-wrapper,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-sm .moody-promotion-wrapper,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-md .moody-promotion-wrapper,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-lg .moody-promotion-wrapper,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-promotion-wrapper {
+  padding-right: 0;
+  padding-left: 0;
 }
 .faculty-bio-view {
   text-align: center;
