@@ -1,0 +1,62 @@
+//
+// Moody Promotion componenet styles.
+//
+.moody-promotion-wrapper {
+  width: 100%;
+  padding: 25px;
+  background-color: $ut-turquoise;
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(sm) {
+    padding: 50px;
+  }
+  .moody-promotion-inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    // stylelint-disable-next-line at-rule-no-unknown
+    @include screen-mq(sm) {
+      flex-direction: row;
+    }
+    img {
+      min-width: 250px;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        margin-right: 1.5rem;
+      }
+    }
+    .headline {
+      font-size: rem-calc(32);
+      font-weight: 700;
+      color: $ut-charcoal;
+      line-height: 1.2;
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(sm) {
+        font-size: rem-calc(48);
+      }
+    }
+    .date {
+      font-style: italic;
+      font-weight: 700;
+      font-size: rem-calc(22);
+      color: $ut-charcoal;
+      margin-bottom: 1rem;
+    }
+    .copy p {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @extend %homepage-copy;
+    }
+    .cta-wrapper {
+      margin-top: 2rem;
+    }
+  }
+}
+// Extend bootstrap margins if placed in full-width region
+.layout.layout--utexas-onecol.container-fluid.utexas-layout-no-padding {
+  .moody-promotion-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    .moody-promotion-inner-wrapper {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @extend %bootstrap-fake-margins;
+    }
+  }
+}
