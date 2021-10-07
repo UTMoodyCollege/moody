@@ -176,6 +176,24 @@
       }
     }
   }
+
+  // 33-66 formatter
+  &.view-mode--default_33_66_display {
+    .moody-showcase {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(lg) {
+        grid-template-columns: 60% 40%;
+      }
+    }
+    .moody-showcase-33-66:nth-child(odd) {
+      .moody-showcase {
+        // stylelint-disable-next-line at-rule-no-unknown
+        @include screen-mq(lg) {
+          grid-template-columns: 40% 60%;
+        }
+      }
+    }
+  }
 }
 
 // Adjust title when in full-width regions

@@ -20,7 +20,7 @@
       min-width: 250px;
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(sm) {
-        margin-right: 1.5rem;
+        margin-right: 2.5rem;
       }
     }
     .headline {
@@ -50,7 +50,7 @@
   }
 }
 // Extend bootstrap margins if placed in full-width region
-.layout.layout--utexas-onecol.container-fluid.utexas-layout-no-padding {
+.layout.layout--utexas-onecol.container-fluid {
   .moody-promotion-wrapper {
     padding-left: 0;
     padding-right: 0;
