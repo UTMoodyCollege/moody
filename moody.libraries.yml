@@ -11,6 +11,7 @@ global:
     js/modal.js: {}
     js/svgxuse.js: {}
     js/slick.min.js: {}
+    js/amm_overridden.js: {}
   dependencies:
     - core/jquery
     - core/drupal
