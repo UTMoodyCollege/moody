@@ -22,8 +22,3 @@ media-pages:
       css/plyr.css: {}
   js:
     js/plyr.min.js: {}
-
-search-pages:
-  css:
-    theme:
-      css/search-pages.css: {}
