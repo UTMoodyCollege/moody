@@ -5269,14 +5269,13 @@ span.addtoany_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-right: 20px;
-  padding-left: 20px;
 }
 .utexas-featured-highlight .content-wrapper {
+  padding: 2rem !important;
   font-size: 1.125rem;
 }
 .utexas-featured-highlight .content-wrapper > .ut-btn {
-  display: block;
+  display: table-cell;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -5367,11 +5366,13 @@ span.addtoany_list {
 
   -ms-flex-item-align: start;
 }
+.flex-grid-wrapper.circular-display .mfg--image {
+  margin-bottom: 1.5rem !important;
+}
 .flex-grid-wrapper.circular-display .mfg--image,
 .flex-grid-wrapper.circular-display .mfg--image img {
   max-width: 250px;
   margin: auto;
-  margin-bottom: 1rem;
   border-radius: 100%;
 }
 .flex-grid-wrapper.circular-display .mfg--headline {
@@ -6964,6 +6965,12 @@ header .block__ut-social-links--items {
   margin-left: 0;
 }
 .block-views-blockmoody-events-block-1 .slick-dots li[aria-hidden=false] button {
+  -webkit-transition: all 0.2 ease-in-out;
+  transition: all 0.2 ease-in-out;
+  color: #fff;
+  background: #bf5700;
+}
+.block-views-blockmoody-events-block-1 .slick-dots li.slick-active button {
   color: #fff;
   background: #bf5700;
 }

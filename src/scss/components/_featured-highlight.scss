@@ -3,12 +3,11 @@
 //
 .utexas-featured-highlight {
   display: flex;
-  padding-left: 20px;
-  padding-right: 20px;
   .content-wrapper {
     font-size: 1.125rem;
+    padding: 2rem !important;
     > .ut-btn {
-      display: block;
+      display: table-cell;
       margin-top: 15px;
       width: max-content;
       max-width: 100%;
@@ -34,8 +33,15 @@
     .content-wrapper {
       padding-left: 0 !important;
       padding-right: 0 !important;
+      // padding-top: 2rem;
+      // padding-bottom: 2rem;
       margin-left: 0;
       margin-right: 0;
+      // // stylelint-disable-next-line at-rule-no-unknown
+      // @include screen-mq(lg) {
+      //   padding-top: 2rem;
+      //   padding-bottom: 2rem;
+      // }
     }
   }
 }
