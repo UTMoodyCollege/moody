@@ -118,6 +118,13 @@
         button {
           background: $ut-burntorange;
           color: $ut-white;
+          transition: all .2 ease-in-out;
+        }
+      }
+      &.slick-active {
+        button {
+          color: $ut-white;
+          background: $ut-burntorange;
         }
       }
     }

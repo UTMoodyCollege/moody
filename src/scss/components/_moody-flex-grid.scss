@@ -31,12 +31,14 @@
 
   // Circular display
   &.circular-display {
+    .mfg--image {
+      margin-bottom: 1.5rem !important;
+    }
     .mfg--image,
     .mfg--image img {
       border-radius: 100%;
       max-width: 250px;
       margin: auto;
-      margin-bottom: 1rem;
     }
     .mfg--headline {
       font-weight: 400;
