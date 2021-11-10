@@ -209,13 +209,9 @@
           var slideNum = $(this).text().substring(12);
           $(this).replaceWith(slideNum);
         });
-        // var replacementText = $('.slick-dots .slick-sr-only').slice(5);
-        // console.log(replacementText);
-        // $('.slick-dots .slick-sr-only').text(replacementText.value());
-        // Hide localist controls if less than two items.
-        var numEvents = eventList.children().length;
-        if (numEvents < 2) {
-          $('#eventList-controls').addClass('hide-controls');
+        // Hide controls if less than two items.
+        if (!$('.slick-dots').length) {
+          $('.slick-autoplay-toggle-button').hide();
         }
       }
 
