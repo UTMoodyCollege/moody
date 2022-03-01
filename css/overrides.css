@@ -483,10 +483,10 @@ a[href^="mailto:"],
   word-wrap: break-word;
   word-break: break-word;
   /* Adds a hyphen where the word breaks, if supported (No Blink) */
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  -webkit-hyphens: initial;
+  hyphens: initial;
 
-  -ms-hyphens: auto;
+  -ms-hyphens: initial;
   /* These are technically the same, but use both */
   overflow-wrap: break-word;
 }
