@@ -143,3 +143,21 @@ function moody_theme_suggestions_block_alter(array &$suggestions, array $variabl
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_field--node--field-moody-subtitle--moody-feature-page.html.twig().
+ */
+function moody_preprocess_field__node__field_moody_subtitle__moody_feature_page(&$variables) {
+  if (isset($variables['element']['#object']) && $variables['element']['#object'] instanceof Node) {
+    $node = $variables['element']['#object'];
+
+    $node_author_info = $node->field_feature_page_author->getValue()[0];
+    $node_author_name = $node_author_info['first_name'] . $node_author_info['last_name'];
+    $node_author_title = $node_author_info['title'];
+    $pub_date = date('l F j, Y', $node->created->value);
+    $variables['feature_page_pub_date'] = $pub_date;
+    $variables['author_name'] = $node_author_name;
+    $variables['author_title'] = $node_author_title;
+  }
+  
+}

@@ -41,7 +41,7 @@
         line-height: 1;
         font-weight: 600;
         font-style: normal !important;
-        color: #8BAEC3;
+        color: #8baec3;
         float: left;
         padding-right: 10px;
         margin-top: 5px;
@@ -117,6 +117,14 @@
     }
     .next img {
       margin-left: 10px;
+    }
+  }
+  .feature-page-date-and-author-under-title-box {
+    font-size: 0.85em;
+    font-weight: 500;
+    .pub-date {
+    }
+    .author {
     }
   }
 }

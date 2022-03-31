@@ -4166,6 +4166,10 @@ footer.ut-footer .block__ut-social-links--items .invert .block__ut-social-link:f
 .moody-feature-page .prev-next-links .next img {
   margin-left: 10px;
 }
+.moody-feature-page .feature-page-date-and-author-under-title-box {
+  font-size: 0.85em;
+  font-weight: 500;
+}
 body.moody-subsite-page ul.info-bars {
   display: -webkit-box;
   display: -ms-flexbox;
