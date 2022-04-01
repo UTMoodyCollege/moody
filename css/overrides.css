@@ -4836,6 +4836,9 @@ body.node-moody_media_page .plyr__controls {
   .field--type-moody-showcase .field__item:nth-child(even) .moody-showcase .showcase-image {
     grid-column: 2;
   }
+  .field--type-moody-showcase .field__item:nth-child(even) .moody-showcase .showcase-video {
+    grid-column: 2;
+  }
 }
 @media screen and (min-width: 1600px) {
   .field--type-moody-showcase .field__item:nth-child(even) .showcase-text {
@@ -4916,6 +4919,11 @@ body.node-moody_media_page .plyr__controls {
     grid-template-columns: 1fr;
   }
   .field--type-moody-showcase.view-mode--moody_showcase_style_three .moody-showcase .showcase-image {
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .field--type-moody-showcase.view-mode--moody_showcase_style_three .moody-showcase .showcase-video {
     width: 500px;
     margin-right: auto;
     margin-left: auto;

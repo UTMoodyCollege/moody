@@ -33,6 +33,9 @@
         .moody-showcase .showcase-image {
           grid-column: 2;
         }
+        .moody-showcase .showcase-video {
+          grid-column: 2;
+        }
       }
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(xl) {
@@ -108,6 +111,11 @@
         max-width: 840px;
         grid-template-columns: 1fr;
         .showcase-image {
+          width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .showcase-video {
           width: 500px;
           margin-left: auto;
           margin-right: auto;
