@@ -4166,6 +4166,9 @@ footer.ut-footer .block__ut-social-links--items .invert .block__ut-social-link:f
 .moody-feature-page .prev-next-links .next img {
   margin-left: 10px;
 }
+body.moody-subsite-page .block__ut-social-link p {
+  display: none;
+}
 body.moody-subsite-page ul.info-bars {
   display: -webkit-box;
   display: -ms-flexbox;

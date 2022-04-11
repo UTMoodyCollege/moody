@@ -1,4 +1,9 @@
 body.moody-subsite-page {
+  .block__ut-social-link {
+    p {
+      display: none;
+    }
+  }
   ul.info-bars {
     display: flex;
     flex-direction: column;
