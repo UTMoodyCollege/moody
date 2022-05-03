@@ -3370,7 +3370,7 @@ ul.no-bullet {
   #moody-header .main-menu__link.focus ~ .sub-nav-wrapper .main-menu__list--subnav,
   #moody-header .main-menu__link.open ~ .sub-nav-wrapper .main-menu__list--subnav {
     display: block;
-    opacity: 0.97;
+    opacity: 1;
     background-color: #bf5700;
   }
   #moody-header .main-menu__link.focus ~ .sub-nav-wrapper .main-menu__list--subnav .main-menu__link--subnav,
