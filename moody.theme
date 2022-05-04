@@ -164,3 +164,22 @@ function moody_preprocess_form_element_label(&$variables) {
     
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function moody_preprocess_input__search(&$variables) {
+  if (isset($variables['element']['#title'])) {
+    if (isset($variables['element']['#id'])) {
+      if ($variables['element']['#id'] == "edit-keys") {
+        // Check if the title is "Search".
+        $string = $variables['element']['#title'];
+        if ($string == "Search") {
+          // Alter to include a tabindex for a11y.
+          $variables['attributes']['tabindex'] = '0';
+        }
+      }
+    }
+    
+  }
+}
