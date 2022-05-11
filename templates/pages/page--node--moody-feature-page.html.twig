@@ -54,44 +54,43 @@
 
 {{ page.help }}
 
-<div class="container feature-page-content {{ color_scheme }}">
-  <div class="row justify-content-center">
-    <div class="col-sm-12 col-md-10 col-xl-9">
-      <main role="main">
-        <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-        <div class="layout-content">
-          {{ page.content }}
-        </div>{# /.layout-content #}
-      </main>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="prev-next-links">
-        <div class="prev">
-          {% if prev_node.title %}
-            <img src="{{ base_path ~ directory}}/images/icons/news-previous.gif" role="presentation" alt="The Previous article is {{ prev_node.title }}" />
-            <a href="{{ prev_node.url }}">{{ prev_node.title }}</a>
-          {% endif %}
-        </div>
-        <div class="next">
-          {% if next_node.title %}
-            <a href="{{ next_node.url }}">{{ next_node.title }}</a>
-            <img src="{{ base_path ~ directory}}/images/icons/news-next.gif" role="presentation" alt="Next article is {{ next_node.title }}" />
-          {% endif %}
-        </div>
-      </div>
-      <div class="contact-info">
-        <h3>For more information, contact:</h3>
-        <span>
-          <a href="mailto:kmabley@austin.utexas.edu?Subject=Features%Information">Kathleen Mabley</a>
-          at
-          <a href="tel:+01-512-471-7209" rel="nofollow">512-232-1417</a>
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-{% include '@moody/partials/footer.html.twig' %}
+<div class="feature-page-content {{ color_scheme }}">
+	<main role="main">
+		<a id="main-content" tabindex="-1"></a>
+		{# link is in html.html.twig #}
+		<div class="layout-content">
+			{{ page.content }}
+		</div>
+		{# /.layout-content #}
+	</main>
+	<div class="row justify-content-center">
+		<div class="col-sm-12 col-md-10 col-xl-9">
 
-</div>{# /.layout-container #}
+			<div class="prev-next-links">
+				<div class="prev">
+					{% if prev_node.title %}
+						<img src="{{ base_path ~ directory}}/images/icons/news-previous.gif" role="presentation" alt="The Previous article is {{ prev_node.title }}"/>
+						<a href="{{ prev_node.url }}">{{ prev_node.title }}</a>
+					{% endif %}
+				</div>
+				<div class="next">
+					{% if next_node.title %}
+						<a href="{{ next_node.url }}">{{ next_node.title }}</a>
+						<img src="{{ base_path ~ directory}}/images/icons/news-next.gif" role="presentation" alt="Next article is {{ next_node.title }}"/>
+					{% endif %}
+				</div>
+			</div>
+
+			<div class="contact-info">
+				<h3>For more information, contact:</h3>
+				<span>
+					<a href="mailto:kmabley@austin.utexas.edu?Subject=Features%Information">Kathleen Mabley</a>
+					at
+					<a href="tel:+01-512-471-7209" rel="nofollow">512-232-1417</a>
+				</span>
+			</div>
+
+		</div>
+	</div>
+</div>
+{% include '@moody/partials/footer.html.twig' %}</div>{# /.layout-container #}
