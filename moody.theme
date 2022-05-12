@@ -94,6 +94,14 @@ function moody_preprocess_block(&$variables) {
         switch ($node->getType()) {
           case "moody_feature_page":
             $variables['feature_page'] = "yes";
+            // Remove the "utexas-readable" from the title block.
+            if (!empty($variables['attributes']['class'])) {
+              foreach ($variables['attributes']['class'] as $key => $val) {
+                if ($val === "utexas-readable") {
+                  unset($variables['attributes']['class'][$key]);
+                }
+              }
+            }
             break;
         }
       }
