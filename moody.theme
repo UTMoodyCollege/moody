@@ -5,6 +5,7 @@
  * The primary PHP file for a Forty Acres subtheme.
  */
 
+use Drupal\node\NodeInterface;
 use Drupal\node\Entity\Node;
 use Drupal\block\Entity\Block;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
@@ -84,6 +85,20 @@ function moody_preprocess_block(&$variables) {
   if (in_array($block_type, $blocks_with_titles)) {
     $variables['title_attributes']['class'] = 'block-headline-h2 ut-h3';
   }
+
+  if (!empty($variables['base_plugin_id'])) {
+    if ($variables['base_plugin_id'] === "page_title_block") {
+      $node = \Drupal::routeMatch()->getParameter('node');
+      if ($node instanceof NodeInterface) {
+        // You can get nid and anything else you need from the node object.
+        switch ($node->getType()) {
+          case "moody_feature_page":
+            $variables['feature_page'] = "yes";
+            break;
+        }
+      }
+    }
+  }
 }
 
 /**
@@ -120,7 +135,7 @@ function moody_preprocess_views_view_fields(&$variables) {
       $processed_video_url = "//player.vimeo.com/video" . $vimeoid . "?color=00adef&portrait=0&title=0&byline=0&autoplay=1&loop=0";
     }
     $modal_title = $node->get('title')->getString();
-    $modal_description = isset($node->get('field_media_page_description')->getValue()[0]['value']) ? $node->get('field_media_page_description')->getValue()[0]['value'] : 'RTF video';
+    $modal_description = $node->get('field_media_page_description')->getValue()[0]['value'] ?? 'RTF video';
     // Send these values to views-view-fields--XXX to provide to modal windows.
     $variables['video_url'] = $processed_video_url;
     $variables['modal_title'] = $modal_title;
@@ -145,7 +160,6 @@ function moody_theme_suggestions_block_alter(array &$suggestions, array $variabl
   }
 }
 
-
 /**
  * Implements hook_preprocess_HOOK().
  */
@@ -161,7 +175,7 @@ function moody_preprocess_form_element_label(&$variables) {
         }
       }
     }
-    
+
   }
 }
 
@@ -180,6 +194,6 @@ function moody_preprocess_input__search(&$variables) {
         }
       }
     }
-    
+
   }
 }
