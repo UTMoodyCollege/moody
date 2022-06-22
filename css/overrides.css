@@ -6619,6 +6619,9 @@ header .block__ut-social-links--items {
   -ms-flex-direction: column;
   -ms-flex-pack: center;
 }
+.block-moody-lam-info-summary {
+  height: 100%;
+}
 .faculty-bio-view {
   text-align: center;
 }
