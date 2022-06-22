@@ -6601,6 +6601,23 @@ header .block__ut-social-links--items {
   padding-right: 0;
   padding-left: 0;
 }
+.moody-lam-info-summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  height: 100%;
+
+  -webkit-box-align: left;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -ms-flex-align: left;
+  -ms-flex-direction: column;
+  -ms-flex-pack: center;
+}
 .faculty-bio-view {
   text-align: center;
 }
