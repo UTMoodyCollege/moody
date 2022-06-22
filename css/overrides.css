@@ -6609,6 +6609,7 @@ header .block__ut-social-links--items {
   justify-content: center;
   align-items: left;
   height: 100%;
+  min-height: 250px;
 
   -webkit-box-align: left;
   -webkit-box-direction: normal;
