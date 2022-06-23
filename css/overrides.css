@@ -6619,8 +6619,60 @@ header .block__ut-social-links--items {
   -ms-flex-direction: column;
   -ms-flex-pack: center;
 }
+.moody-lam-info-summary .overview-statement h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.moody-lam-info-summary .block__ut-social-links--items {
+  margin-left: 0;
+}
 .block-moody-lam-info-summary {
   height: 100%;
+}
+.block-moody-lam-lam-page-quote .quotation-wrapper {
+  position: relative;
+}
+.block-moody-lam-lam-page-quote .quotation-wrapper .quote-wrapper .quote-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+}
+@media screen and (min-width: 600px) {
+  .block-moody-lam-lam-page-quote .quotation-wrapper .quote-wrapper .quote-contents {
+    flex-direction: row;
+
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -ms-flex-direction: row;
+  }
+}
+.block-moody-lam-lam-page-quote .quotation-wrapper .quote-wrapper img {
+  width: 100%;
+}
+.block-moody-lam-lam-page-quote .quotation-wrapper .quote-wrapper .quote {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 900px) {
+  .block-moody-lam-lam-page-quote .quotation-wrapper .quote-wrapper .quote {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .block-moody-lam-lam-page-quote .quotation-wrapper .quote-wrapper .quote {
+    font-size: 1.5rem;
+  }
+}
+.block-moody-lam-lam-page-quote .quotation-wrapper .quote-wrapper .quote:before {
+  position: absolute;
+  margin-left: -15px;
+  content: "“";
+  font-family: Arial, Helvetica, sans-serif;
 }
 .faculty-bio-view {
   text-align: center;
