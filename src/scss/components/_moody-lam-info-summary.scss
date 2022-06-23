@@ -7,12 +7,17 @@
   min-height: 250px;
   .overview-statement h2 {
     font-weight: 600;
-    font-size: 1.8rem;
+
+    @include screen-mq(lg) {
+      font-size: 3rem;
+    }
+
     line-height: 1.5;
+    color: $ut-charcoal;
   }
 
   .block__ut-social-links--items {
-     margin-left: 0;
+    margin-left: 0;
   }
 }
 
@@ -23,18 +28,18 @@
 .block-moody-lam-lam-page-quote {
   .quotation-wrapper {
     position: relative;
-    .quote-wrapper {
-      .quote-contents {
-        display: flex;
-        flex-direction: column;
+    .author {
+        font-size: rem-calc(18);
         // stylelint-disable-next-line at-rule-no-unknown
-        @include screen-mq(sm) {
-          flex-direction: row;
+        @include screen-mq(md) {
+          font-size: rem-calc(18);
         }
-      }
-      img {
-        width: 100%;
-      }
+        // stylelint-disable-next-line at-rule-no-unknown
+        @include screen-mq(lg) {
+          font-size: 1.3rem;
+        }
+    }
+    .quote-wrapper {
       .quote {
         font-size: rem-calc(24);
         // stylelint-disable-next-line at-rule-no-unknown
@@ -46,11 +51,11 @@
           font-size: 1.5rem;
         }
         &:before {
-            font-family: Arial, Helvetica, sans-serif;
-            content: "“";
-            position: absolute;
-            margin-left: -15px;
-          }
+          font-family: Arial, Helvetica, sans-serif;
+          content: "“";
+          position: absolute;
+          margin-left: -15px;
+        }
       }
     }
   }

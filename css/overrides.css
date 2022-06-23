@@ -6620,9 +6620,14 @@ header .block__ut-social-links--items {
   -ms-flex-pack: center;
 }
 .moody-lam-info-summary .overview-statement h2 {
-  font-size: 1.8rem;
+  color: #333f48;
   font-weight: 600;
   line-height: 1.5;
+}
+@media screen and (min-width: 1200px) {
+  .moody-lam-info-summary .overview-statement h2 {
+    font-size: 3rem;
+  }
 }
 .moody-lam-info-summary .block__ut-social-links--items {
   margin-left: 0;
@@ -6633,27 +6638,18 @@ header .block__ut-social-links--items {
 .block-moody-lam-lam-page-quote .quotation-wrapper {
   position: relative;
 }
-.block-moody-lam-lam-page-quote .quotation-wrapper .quote-wrapper .quote-contents {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
-
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -ms-flex-direction: column;
+.block-moody-lam-lam-page-quote .quotation-wrapper .author {
+  font-size: 1.125rem;
 }
-@media screen and (min-width: 600px) {
-  .block-moody-lam-lam-page-quote .quotation-wrapper .quote-wrapper .quote-contents {
-    flex-direction: row;
-
-    -webkit-box-direction: normal;
-    -webkit-box-orient: horizontal;
-    -ms-flex-direction: row;
+@media screen and (min-width: 900px) {
+  .block-moody-lam-lam-page-quote .quotation-wrapper .author {
+    font-size: 1.125rem;
   }
 }
-.block-moody-lam-lam-page-quote .quotation-wrapper .quote-wrapper img {
-  width: 100%;
+@media screen and (min-width: 1200px) {
+  .block-moody-lam-lam-page-quote .quotation-wrapper .author {
+    font-size: 1.3rem;
+  }
 }
 .block-moody-lam-lam-page-quote .quotation-wrapper .quote-wrapper .quote {
   font-size: 1.5rem;
