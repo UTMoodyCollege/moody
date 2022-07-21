@@ -2244,6 +2244,18 @@ a[href^="mailto:"],
     transition: none;
   }
 }
+.collapsing.width {
+  width: 0;
+  height: auto;
+  -webkit-transition: width 0.35s ease;
+  transition: width 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing.width {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
 .badge {
   display: inline-block;
   padding: 0.25em 0.4em;
@@ -4165,6 +4177,10 @@ footer.ut-footer .block__ut-social-links--items .invert .block__ut-social-link:f
 }
 .moody-feature-page .prev-next-links .next img {
   margin-left: 10px;
+}
+.block-field-blocknodemoody-feature-pagebody figcaption {
+  font-size: 14px;
+  font-style: italic;
 }
 body.moody-subsite-page .block__ut-social-link p {
   display: none;
