@@ -181,7 +181,7 @@
         display: block;
       }
     }
-    i.moody-subnav-trigger {
+    .moody-subnav-trigger {
       position: relative;
       z-index: 100;
       top: 0;
@@ -202,7 +202,7 @@
         display: none;
       }
     }
-    i.moody-subnav-trigger.icon--open {
+    .moody-subnav-trigger.icon--open {
       border: none;
       .svg.angle-down {
         transform: rotate(0deg);
