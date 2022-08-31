@@ -6199,6 +6199,9 @@ header .block__ut-social-links--items {
   display: -ms-flexbox;
   display: flex;
 }
+.a2a_kit {
+  z-index: 100;
+}
 @media screen and (min-width: 900px) {
   .layout--utexas-onecol .twitter_widget {
     border: none;
