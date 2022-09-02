@@ -7544,6 +7544,6 @@ a.ut-link {
 footer #block-footermenu {
   margin-top: 0;
 }
-.Theme-Footer .Theme-FooterLogo--container {
+#StandardFooter.Theme-Footer .Theme-FooterLogo--container {
   display: none;
 }
