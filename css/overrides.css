@@ -3092,7 +3092,7 @@ ul.no-bullet {
 }
 #moody-header {
   position: sticky;
-  z-index: 1;
+  z-index: 205;
   top: 35px;
   min-height: 50px;
   margin-bottom: 2.5rem;
@@ -7544,6 +7544,6 @@ a.ut-link {
 footer #block-footermenu {
   margin-top: 0;
 }
-#moody-header {
-  z-index: 205;
+.Theme-Footer .Theme-FooterLogo--container {
+  display: none;
 }
