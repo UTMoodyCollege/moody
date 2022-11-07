@@ -194,7 +194,7 @@
 
       //////////////////////////////////////////////////////
       // Run the Main Moody events through slick.js
-      var eventList = $('.block-views-blockmoody-events-block-1 .event-list');
+      var eventList = $('.moody-events-view .event-list');
       if (eventList.length != 0) {
         eventList.slick({
           autoplay: true,
