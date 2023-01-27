@@ -3452,6 +3452,20 @@ ul.no-bullet {
 
   -ms-flex-item-align: start;
 }
+@media screen and (min-width: 600px) {
+  #moody-header .give-button {
+    width: 90%;
+    margin-bottom: 2em;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 900px) {
+  #moody-header .give-button {
+    width: inherit;
+    margin-bottom: 0;
+    text-align: inherit;
+  }
+}
 #moody-header #menu-icon {
   z-index: 5;
   display: -webkit-box;
