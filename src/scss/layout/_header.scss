@@ -327,12 +327,10 @@
     padding: 3px 20px;
     border-radius: 5px;
     align-self: flex-start;
-    @include screen-mq(sm) {
-      margin-bottom: 2em;
-      width: 90%;
-      text-align: center;
-    }
-    @include screen-mq(md) {
+    margin-bottom: 2em;
+    width: 90%;
+    text-align: center;
+    @include screen-mq(lg) {
       margin-bottom: 0;
       width: inherit;
       text-align: inherit;

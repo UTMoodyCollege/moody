@@ -3445,21 +3445,17 @@ ul.no-bullet {
 }
 #moody-header .give-button {
   align-self: flex-start;
+  width: 90%;
   margin-bottom: 0;
+  margin-bottom: 2em;
   margin-left: 15px;
   padding: 3px 20px;
+  text-align: center;
   border-radius: 5px;
 
   -ms-flex-item-align: start;
 }
-@media screen and (min-width: 600px) {
-  #moody-header .give-button {
-    width: 90%;
-    margin-bottom: 2em;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   #moody-header .give-button {
     width: inherit;
     margin-bottom: 0;
