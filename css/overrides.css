@@ -6014,7 +6014,7 @@ ul.ck-twocol {
 }
 p.overview-statement {
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5;
 }
 #prospective-style-basic-block p.ut-h2 {
@@ -6650,7 +6650,7 @@ header .block__ut-social-links--items {
 }
 .moody-lam-info-summary .overview-statement h2 {
   color: #333f48;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5;
 }
 @media screen and (min-width: 1200px) {

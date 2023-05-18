@@ -6,7 +6,7 @@
   height: 100%;
   min-height: 250px;
   .overview-statement h2 {
-    font-weight: 600;
+    font-weight: 400;
 
     @include screen-mq(lg) {
       font-size: 3rem;
