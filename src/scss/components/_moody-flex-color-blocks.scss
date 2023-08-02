@@ -9,7 +9,7 @@
     flex-direction: row;
   }
   .flex-color-blocks-wrapper {
-    transition: background-color .2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
     color: $ut-white;
     padding: 30px;
     text-align: center;
@@ -51,6 +51,12 @@
         .flex-color-blocks-wrapper {
           padding: 30px 15px;
         }
+      }
+      /* five items */
+      // stylelint-disable-next-line no-descending-specificity
+      &:first-child:nth-last-child(5),
+      &:first-child:nth-last-child(5) ~ .flex-color-blocks-wrapper {
+        flex-basis: 20%;
       }
     }
     &.orange {

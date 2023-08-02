@@ -5075,6 +5075,7 @@ body.node-moody_media_page .plyr__controls {
     /* two items */
     /* three items */
     /* four items */
+    /* five items */
   }
   .field--type-moody-flex-color-blocks .flex-color-blocks-wrapper + .flex-color-blocks-wrapper {
     margin-top: 0;
@@ -5106,6 +5107,12 @@ body.node-moody_media_page .plyr__controls {
   .field--type-moody-flex-color-blocks .flex-color-blocks-wrapper:first-child:nth-last-child(4) .flex-color-blocks-wrapper,
   .field--type-moody-flex-color-blocks .flex-color-blocks-wrapper:first-child:nth-last-child(4) ~ .flex-color-blocks-wrapper .flex-color-blocks-wrapper {
     padding: 30px 15px;
+  }
+  .field--type-moody-flex-color-blocks .flex-color-blocks-wrapper:first-child:nth-last-child(5),
+  .field--type-moody-flex-color-blocks .flex-color-blocks-wrapper:first-child:nth-last-child(5) ~ .flex-color-blocks-wrapper {
+    flex-basis: 20%;
+
+    -ms-flex-preferred-size: 20%;
   }
 }
 .field--type-moody-flex-color-blocks .flex-color-blocks-wrapper.orange {
