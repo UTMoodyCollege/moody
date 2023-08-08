@@ -59,6 +59,9 @@
     @include screen-mq(md) {
       margin-bottom: 40px;
     }
+    .ut-btn {
+      padding: 8px 12px;
+    }
   }
   .moody-card-headline {
     font-size: rem-calc(36);
@@ -71,7 +74,7 @@
     }
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {
-      font-size: 2.5rem;
+      font-size: 1.8rem;
     }
   }
   .moody-card-subheadline {
@@ -84,7 +87,7 @@
     }
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   }
   .experience-moody-section {

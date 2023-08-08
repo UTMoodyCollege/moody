@@ -77,7 +77,8 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, .8);
+        background-color: rgba(188, 84, 0, 0.85);
+
       }
     }
     .linked-flex-grid-item {
@@ -103,7 +104,7 @@
       &:focus {
         text-decoration: none;
         &:before {
-          background-color: rgba(0, 0, 0, 1);
+          background-color: rgba(188, 84, 0, 1);
         }
       }
     }
