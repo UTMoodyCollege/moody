@@ -139,10 +139,14 @@
         @include screen-mq(sm) {
           padding: 50px;
         }
+        .ut-btn--homepage {
+          padding: 8px 12px;
+          letter-spacing: 0.5px;
+        }
       }
       .showcase-headline {
         font-size: rem-calc(32);
-        font-weight: 500;
+        font-weight: 600;
         line-height: 1.25;
         color: $ut-burntorange--s20;
       }
@@ -153,7 +157,7 @@
       hr {
         display: block;
         width: 60px;
-        margin-left: -25px;
+        margin-left: 0px;
         background-color: $ut-burntorange;
         height: 5px;
         border: none;

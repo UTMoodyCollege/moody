@@ -4981,10 +4981,14 @@ body.node-moody_media_page .plyr__controls {
     padding: 50px;
   }
 }
+.field--type-moody-showcase.view-mode--moody_showcase_style_three .moody-showcase .showcase-text .ut-btn--homepage {
+  padding: 8px 12px;
+  letter-spacing: 0.5px;
+}
 .field--type-moody-showcase.view-mode--moody_showcase_style_three .moody-showcase .showcase-headline {
   color: #9d4700;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.25;
 }
 .field--type-moody-showcase.view-mode--moody_showcase_style_three .moody-showcase .showcase-copy p {
@@ -4995,7 +4999,7 @@ body.node-moody_media_page .plyr__controls {
   display: block;
   width: 60px;
   height: 5px;
-  margin-left: -25px;
+  margin-left: 0;
   border: none;
   background-color: #bf5700;
 }
