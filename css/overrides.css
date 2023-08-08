@@ -6422,6 +6422,7 @@ header .block__ut-social-links--items {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1.5rem;
+  font-weight: 400;
 }
 @media screen and (min-width: 600px) {
   .quotation-wrapper .quote-wrapper .quote {
@@ -6479,7 +6480,7 @@ header .block__ut-social-links--items {
 }
 .quotation-wrapper.orange .author,
 .quotation-wrapper.grey .author {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 .quotation-wrapper.orange .quote-wrapper {
   background: #bf5700;
