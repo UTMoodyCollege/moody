@@ -7228,6 +7228,9 @@ header .block__ut-social-links--items {
     margin-bottom: 40px;
   }
 }
+#experience-moody-section .moody-card .ut-btn {
+  padding: 8px 12px;
+}
 #experience-moody-section .moody-card-headline {
   color: #333f48;
   font-size: 2.25rem;
@@ -7241,7 +7244,7 @@ header .block__ut-social-links--items {
 }
 @media screen and (min-width: 1200px) {
   #experience-moody-section .moody-card-headline {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 }
 #experience-moody-section .moody-card-subheadline {
@@ -7256,7 +7259,7 @@ header .block__ut-social-links--items {
 }
 @media screen and (min-width: 1200px) {
   #experience-moody-section .moody-card-subheadline {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 900px) {
