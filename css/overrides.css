@@ -5453,7 +5453,7 @@ span.addtoany_list {
   bottom: 0;
   left: 0;
   content: "";
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(188, 84, 0, 0.85);
 }
 .flex-grid-wrapper.promo-display .linked-flex-grid-item {
   position: absolute;
@@ -5483,7 +5483,7 @@ span.addtoany_list {
 }
 .flex-grid-wrapper.promo-display .linked-flex-grid-item:hover:before,
 .flex-grid-wrapper.promo-display .linked-flex-grid-item:focus:before {
-  background-color: black;
+  background-color: #bc5400;
 }
 .flex-grid-wrapper.promo-display .ut--headline {
   margin: 0;
