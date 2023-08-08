@@ -6421,7 +6421,7 @@ header .block__ut-social-links--items {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  font-style: italic;
+  font-size: 1.5rem;
 }
 @media screen and (min-width: 600px) {
   .quotation-wrapper .quote-wrapper .quote {
@@ -6430,7 +6430,7 @@ header .block__ut-social-links--items {
 }
 .quotation-wrapper .quote-wrapper .quote:before {
   position: absolute;
-  margin-left: -25px;
+  margin-left: -14px;
   content: "“";
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -6464,7 +6464,7 @@ header .block__ut-social-links--items {
 }
 .quotation-wrapper.orange .quote-wrapper,
 .quotation-wrapper.grey .quote-wrapper {
-  padding: 2rem;
+  padding: 3rem;
 }
 .quotation-wrapper.orange .quote-wrapper:after,
 .quotation-wrapper.grey .quote-wrapper:after {

@@ -16,7 +16,6 @@
       width: 100%;
     }
     .quote {
-      font-style: italic;
       width: 100%;
       margin-bottom: 0;
       margin-top: 0;
@@ -26,11 +25,12 @@
       }
       // stylelint-disable-next-line at-rule-no-unknown
       @extend %homepage-headline;
+      font-size: 1.5rem;
       &:before {
         font-family: Arial, Helvetica, sans-serif;
         content: "“";
         position: absolute;
-        margin-left: -25px;
+        margin-left: -14px;
       }
       &:after {
         position: absolute;
@@ -65,7 +65,7 @@
   &.orange,
   &.grey {
     .quote-wrapper {
-      padding: 2rem;
+      padding: 3rem;
       &:after {
         position: absolute;
         right: 0;
