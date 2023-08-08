@@ -5188,6 +5188,9 @@ body.node-moody_media_page .plyr__controls {
 .block-inline-blockmoody-flex-tabs .tab-content {
   margin-top: 10px;
 }
+.field--type-moody-accordion .accordion-title {
+  border-bottom: 1px solid #9cadb7;
+}
 .field--type-moody-accordion .accordion-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5200,7 +5203,7 @@ body.node-moody_media_page .plyr__controls {
   color: #333f48;
   border: none;
   background: #fff;
-  font-size: 1.625rem;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.2;
 
@@ -5210,25 +5213,48 @@ body.node-moody_media_page .plyr__controls {
   -ms-flex-pack: start;
 }
 .field--type-moody-accordion .accordion-btn .accordion-caret {
-  width: 0;
-  height: 0;
-  margin-right: 20px;
-  margin-left: 10px;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-  border-top: 15px solid #333f48;
-  border-right: 10px solid transparent;
-  border-left: 10px solid transparent;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 20px;
 }
-.field--type-moody-accordion .accordion-btn.collapsed {
-  color: #bf5700;
+.field--type-moody-accordion .accordion-btn .accordion-caret::before,
+.field--type-moody-accordion .accordion-btn .accordion-caret::after {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 10px;
+  content: "";
+  background-color: black;
 }
-.field--type-moody-accordion .accordion-btn.collapsed .accordion-caret {
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  border-top: 15px solid #bf5700;
+.field--type-moody-accordion .accordion-btn .accordion-caret::before {
+  left: 7px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.field--type-moody-accordion .accordion-btn .accordion-caret::after {
+  right: 7px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.field--type-moody-accordion .accordion-btn .accordion-btn.collapsed .accordion-caret {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.field--type-moody-accordion .accordion-btn .accordion-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+.field--type-moody-accordion .accordion-btn .accordion-btn.collapsed {
+  color: #bc5400;
+  /* Use the desired color */
 }
 .field--type-moody-accordion .accordion-body {
   padding: 20px 0 20px 50px;
@@ -5567,7 +5593,7 @@ span.addtoany_list {
 .moody-impact-facts-wrapper .impact-fact-items {
   display: grid;
 
-  gap: 2rem;
+  gap: 5rem;
   grid-template-columns: 1fr;
 }
 .moody-impact-facts-wrapper .impact-fact-items .impact-fact {
@@ -5593,13 +5619,13 @@ span.addtoany_list {
 }
 .moody-impact-facts-wrapper .impact-fact-items .if-headline {
   color: #333f48;
-  font-family: Georgia, "Bitstream Charter", serif;
+  border-bottom: #c3cdd4 solid 2px;
   font-size: 3rem;
   font-weight: 900;
 }
 @media screen and (min-width: 600px) {
   .moody-impact-facts-wrapper .impact-fact-items .if-headline {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 .moody-impact-facts-wrapper .impact-fact-items .if-subheadline {
@@ -5607,7 +5633,6 @@ span.addtoany_list {
   margin-right: auto;
   margin-left: auto;
   color: #333f48;
-  font-family: "CharisSil", Georgia, serif;
   font-size: 1.625rem;
   font-weight: 500;
 }
