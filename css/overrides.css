@@ -6020,8 +6020,8 @@ ul.ck-twocol {
   list-style-type: none;
 }
 p.overview-statement {
-  font-size: 1.8rem;
-  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 #prospective-style-basic-block p.ut-h2 {
