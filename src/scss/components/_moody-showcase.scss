@@ -95,7 +95,7 @@
     font-size: rem-calc(20);
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(md) {
-      font-size: rem-calc(28);
+      font-size: 1.5rem;
     }
   }
 
@@ -145,7 +145,7 @@
         }
       }
       .showcase-headline {
-        font-size: rem-calc(32);
+        font-size: 1.8rem;
         font-weight: 600;
         line-height: 1.25;
         color: $ut-burntorange--s20;
