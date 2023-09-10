@@ -30,13 +30,13 @@
       line-height: 1.2;
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(sm) {
-        font-size: rem-calc(48);
+        font-size: 2rem;
       }
     }
     .date {
       font-style: italic;
       font-weight: 700;
-      font-size: rem-calc(22);
+      font-size: 1.5rem;
       color: $ut-charcoal;
       margin-bottom: 1rem;
     }
