@@ -6584,6 +6584,13 @@ header .block__ut-social-links--items {
   padding: 25px;
   background-color: #00a9b7;
 }
+.moody-promotion-wrapper .media-wrapper {
+  padding-right: 2.5rem;
+}
+.moody-promotion-wrapper ul {
+  padding-inline-start: 20px;
+  -webkit-padding-start: 20px;
+}
 @media screen and (min-width: 600px) {
   .moody-promotion-wrapper {
     padding: 50px;
@@ -6619,7 +6626,7 @@ header .block__ut-social-links--items {
 .moody-promotion-wrapper .moody-promotion-inner-wrapper .headline {
   color: #333f48;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
 }
 @media screen and (min-width: 600px) {
@@ -6634,9 +6641,16 @@ header .block__ut-social-links--items {
   font-weight: 700;
   font-style: italic;
 }
+.moody-promotion-wrapper .moody-promotion-inner-wrapper .copy p {
+  color: #333f48;
+  font-size: 1.5rem;
+}
 .moody-promotion-wrapper .moody-promotion-inner-wrapper .cta-wrapper {
   margin-top: 2rem;
   letter-spacing: 0.5px;
+}
+.moody-promotion-wrapper .moody-promotion-inner-wrapper .cta-wrapper a {
+  padding: 12px 8px;
 }
 .layout.layout--utexas-onecol.container-fluid .moody-promotion-wrapper,
 .layout.layout--utexas-onecol.container-sm .moody-promotion-wrapper,

@@ -5,6 +5,12 @@
   width: 100%;
   padding: 25px;
   background-color: $ut-turquoise;
+  .media-wrapper {
+    padding-right: 2.5rem;
+  }
+  ul {
+    padding-inline-start: 20px;
+  }
   // stylelint-disable-next-line at-rule-no-unknown
   @include screen-mq(sm) {
     padding: 50px;
@@ -25,7 +31,7 @@
     }
     .headline {
       font-size: rem-calc(32);
-      font-weight: 700;
+      font-weight: 600;
       color: $ut-charcoal;
       line-height: 1.2;
       // stylelint-disable-next-line at-rule-no-unknown
@@ -43,11 +49,15 @@
     .copy p {
       // stylelint-disable-next-line at-rule-no-unknown
       @extend %homepage-copy;
-
+      color: $ut-charcoal;
+      font-size: 1.5rem;
     }
     .cta-wrapper {
       margin-top: 2rem;
       letter-spacing: 0.5px;
+      a {
+        padding: 12px 8px;
+      }
     }
   }
 }
