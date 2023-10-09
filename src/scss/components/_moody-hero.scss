@@ -69,7 +69,7 @@
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(md) {
       padding: 2rem;
-      background: rgba(191, 87, 0, 0.95);
+      background: rgba(191, 87, 0, 1);
     }
   }
   .hero-headline {

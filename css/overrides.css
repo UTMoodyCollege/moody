@@ -4481,7 +4481,7 @@ body.node-moody_media_page .plyr__controls {
 @media screen and (min-width: 900px) {
   .moody-hero.hero--photo-orange-insert .hero-callout {
     padding: 2rem;
-    background: rgba(191, 87, 0, 0.95);
+    background: #bf5700;
   }
 }
 .moody-hero.hero--photo-orange-insert .hero-headline {
