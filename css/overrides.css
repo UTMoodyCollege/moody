@@ -6554,30 +6554,24 @@ header .block__ut-social-links--items {
 }
 .moody-resource-group-wrapper h3 {
   padding: 20px;
-  color: #fff;
+  padding-left: 0;
+  color: #333f48;
+  border-bottom: #c3cdd4 solid 2px;
   font-size: 1.75rem;
   font-weight: 600;
   line-height: 1.2;
 }
 @media screen and (min-width: 600px) {
   .moody-resource-group-wrapper h3 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
-}
-.moody-resource-group-wrapper h3.gray {
-  background-color: #353f47;
-}
-.moody-resource-group-wrapper h3.blue {
-  background-color: #005f86;
-}
-.moody-resource-group-wrapper h3.orange {
-  background-color: #bf5700;
-}
-.moody-resource-group-wrapper h3.green {
-  background-color: #579d42;
 }
 .moody-resource-group-wrapper .resource-group-links {
   margin-top: 1.5rem;
+}
+.moody-resource-group-wrapper .resource-group-links a.ut-link {
+  text-decoration: none;
+  letter-spacing: 0;
 }
 .moody-resource-group-wrapper .link-list li + li {
   margin-top: 1rem;
