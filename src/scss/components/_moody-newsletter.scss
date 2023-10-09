@@ -15,7 +15,8 @@
     line-height: 1.2;
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(sm) {
-      font-size: rem-calc(48);
+      font-size: 2rem;
+      margin-bottom: 0;
     }
   }
   .moody-newsletter-link {
@@ -27,6 +28,8 @@
   &.orange {
     background-color: $ut-burntorange;
     .moody-newsletter-link a {
+      padding: 12px 8px;
+      letter-spacing: 0.5px;
       background-color: $ut-burntorange-dark;
     }
   }
