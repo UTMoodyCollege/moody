@@ -710,6 +710,9 @@ a[href^="mailto:"],
   color: #fff;
   background-color: #a04400;
 }
+.ut-btn--homepage {
+  letter-spacing: 0.5px;
+}
 .news-view .views-field-title a,
 .news-view.latest-news-block > .views-row a .views-field-title {
   margin-top: 10px;
@@ -6627,12 +6630,13 @@ header .block__ut-social-links--items {
 .moody-promotion-wrapper .moody-promotion-inner-wrapper .date {
   margin-bottom: 1rem;
   color: #333f48;
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   font-weight: 700;
   font-style: italic;
 }
 .moody-promotion-wrapper .moody-promotion-inner-wrapper .cta-wrapper {
   margin-top: 2rem;
+  letter-spacing: 0.5px;
 }
 .layout.layout--utexas-onecol.container-fluid .moody-promotion-wrapper,
 .layout.layout--utexas-onecol.container-sm .moody-promotion-wrapper,

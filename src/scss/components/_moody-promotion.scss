@@ -43,9 +43,11 @@
     .copy p {
       // stylelint-disable-next-line at-rule-no-unknown
       @extend %homepage-copy;
+
     }
     .cta-wrapper {
       margin-top: 2rem;
+      letter-spacing: 0.5px;
     }
   }
 }
