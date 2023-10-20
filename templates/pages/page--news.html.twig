@@ -56,19 +56,31 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
-      {{ page.sidebar_first }}
-    </div>
-    <div class="col-md-8">
-      <main role="main">
-        <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-        <div class="layout-content">
-          {{ page.content }}
-        </div>{# /.layout-content #}
-      </main>
-    </div>
+    {% if page.sidebar_first %}
+      <div class="col-md-4">
+        {{ page.sidebar_first }}
+      </div>
+      <div class="col-md-8">
+        <main role="main">
+          <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+          <div class="layout-content">
+            {{ page.content }}
+          </div>{# /.layout-content #}
+        </main>
+      </div>
+    {% else %}
+      <div class="col-md-12">
+        <main role="main">
+          <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+          <div class="layout-content">
+            {{ page.content }}
+          </div>{# /.layout-content #}
+        </main>
+      </div>
+    {% endif %}
   </div>
 </div>
+
 {% include '@moody/partials/footer.html.twig' %}
 
 </div>{# /.layout-container #}
