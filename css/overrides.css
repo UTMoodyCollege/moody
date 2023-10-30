@@ -5191,6 +5191,9 @@ body.node-moody_media_page .plyr__controls {
 .block-inline-blockmoody-flex-tabs .tab-content {
   margin-top: 10px;
 }
+.field--type-moody-accordion .accordion-title {
+  border-bottom: 0.5px solid #7d8a92;
+}
 .field--type-moody-accordion .accordion-btn {
   display: -webkit-box;
   display: -ms-flexbox;

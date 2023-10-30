@@ -2,6 +2,9 @@
 // Moody accordion component styling.
 //
 .field--type-moody-accordion {
+  .accordion-title {
+    border-bottom: 0.5px solid $ut-shade--s20;
+  }
   .accordion-btn {
     display: flex;
     justify-content: flex-start;
