@@ -28,7 +28,7 @@
     &.collapsed {
       color: $ut-burntorange;
       .accordion-caret {
-        border-top: 15px solid $ut-burntorange;
+        border-top: 15px solid $ut-shade--s20;
         transform: rotate(-90deg);
       }
     }

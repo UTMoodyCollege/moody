@@ -5231,7 +5231,7 @@ body.node-moody_media_page .plyr__controls {
 .field--type-moody-accordion .accordion-btn.collapsed .accordion-caret {
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  border-top: 15px solid #bf5700;
+  border-top: 15px solid #7d8a92;
 }
 .field--type-moody-accordion .accordion-body {
   padding: 20px 0 20px 50px;
