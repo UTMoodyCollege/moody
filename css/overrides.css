@@ -5221,6 +5221,8 @@ body.node-moody_media_page .plyr__controls {
   transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
   border-top: 15px solid #333f48;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
@@ -5229,8 +5231,8 @@ body.node-moody_media_page .plyr__controls {
   color: #bf5700;
 }
 .field--type-moody-accordion .accordion-btn.collapsed .accordion-caret {
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
   border-top: 15px solid #7d8a92;
 }
 .field--type-moody-accordion .accordion-body {

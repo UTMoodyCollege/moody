@@ -24,12 +24,14 @@
       border-right: 10px solid transparent;
       border-top: 15px solid $ut-charcoal;
       transition: transform .2s ease-in-out;
+      transform: rotate(-180deg);
+
     }
     &.collapsed {
       color: $ut-burntorange;
       .accordion-caret {
         border-top: 15px solid $ut-shade--s20;
-        transform: rotate(-90deg);
+        transform: rotate(0deg);
       }
     }
   }
