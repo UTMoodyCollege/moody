@@ -19,22 +19,38 @@
     padding: 20px 0;
     color: $ut-charcoal;
     .accordion-caret {
-      width: 0;
-      height: 0;
-      margin-right: 20px;
-      margin-left: 10px;
+      position: relative;
+      // Transition the caret
+      transform: rotate(-180deg);
+      margin-bottom: -10px;
+      margin-left: 35px;
+    }
+    .accordion-caret:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top: 10px solid $ut-shade--s20;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-      border-top: 15px solid $ut-charcoal;
-      transition: transform .2s ease-in-out;
-      transform: rotate(-180deg);
-
+    }
+    
+    .accordion-caret:after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 0;
+      border-top: 5px solid #ffffff;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
     }
     &.collapsed {
       color: $ut-burntorange;
       .accordion-caret {
-        border-top: 15px solid $ut-shade--s20;
+        // Flip it upside down when collapsed
         transform: rotate(0deg);
+        margin-bottom: 5px;
+        margin-left: 15px;
       }
     }
   }
@@ -52,7 +68,7 @@
       padding: 8px 0;
       &.collapsed {
         .accordion-caret {
-          border-top: 10px solid $ut-burntorange;
+          // border-top: 10px solid $ut-burntorange;
         }
       }
     }
@@ -63,7 +79,7 @@
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
       border-top: 10px solid $ut-charcoal;
-      transition: transform .2s ease-in-out;
+      transition: transform 0.2s ease-in-out;
     }
     .accordion-body {
       padding: 10px 0 10px 27px;
