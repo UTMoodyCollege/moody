@@ -69,14 +69,14 @@
 			<div class="prev-next-links">
 				<div class="prev">
 					{% if prev_node.title %}
-						<img src="{{ base_path ~ directory}}/images/icons/news-previous.gif" role="presentation" alt="The Previous article is {{ prev_node.title }}"/>
+						<img src="{{ base_path ~ directory}}/images/icons/news-previous.svg" role="presentation" alt="The Previous article is {{ prev_node.title }}"/>
 						<a href="{{ prev_node.url }}">{{ prev_node.title }}</a>
 					{% endif %}
 				</div>
 				<div class="next">
 					{% if next_node.title %}
 						<a href="{{ next_node.url }}">{{ next_node.title }}</a>
-						<img src="{{ base_path ~ directory}}/images/icons/news-next.gif" role="presentation" alt="Next article is {{ next_node.title }}"/>
+						<img src="{{ base_path ~ directory}}/images/icons/news-next.svg" role="presentation" alt="Next article is {{ next_node.title }}"/>
 					{% endif %}
 				</div>
 			</div>
