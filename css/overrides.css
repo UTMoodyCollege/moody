@@ -4940,6 +4940,7 @@ body.node-moody_media_page .plyr__controls {
 }
 .field--type-moody-showcase .showcase-copy,
 .field--type-moody-showcase .showcase-copy p {
+  margin-bottom: 0;
   font-size: 1.25rem;
   line-height: 1.5;
 }
@@ -4947,6 +4948,7 @@ body.node-moody_media_page .plyr__controls {
   display: none;
 }
 .field--type-moody-showcase .showcase-copy p {
+  margin-bottom: 0;
   font-size: 1.25rem;
 }
 @media screen and (min-width: 900px) {
@@ -5034,6 +5036,9 @@ body.node-moody_media_page .plyr__controls {
 @media screen and (min-width: 1200px) {
   .field--type-moody-showcase.view-mode--moody_showcase_style_two .moody-showcase {
     grid-template-columns: 40% 60%;
+  }
+  .field--type-moody-showcase.view-mode--moody_showcase_style_two .moody-showcase .showcase-image {
+    padding: 5em;
   }
 }
 @media screen and (min-width: 1200px) {

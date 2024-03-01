@@ -87,11 +87,13 @@
   .showcase-copy p {
     font-size: 1.25rem;
     line-height: 1.5;
+    margin-bottom: 0;
   }
   hr {
     display: none;
   }
   .showcase-copy p {
+    margin-bottom: 0;
     font-size: rem-calc(20);
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(md) {
@@ -178,6 +180,9 @@
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(lg) {
         grid-template-columns: 40% 60%;
+        .showcase-image {
+          padding: 5em;
+        }
       }
     }
     .moody-showcase-66-33:nth-child(odd) {
@@ -196,6 +201,7 @@
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(lg) {
         grid-template-columns: 60% 40%;
+
       }
     }
     .moody-showcase-33-66:nth-child(odd) {
