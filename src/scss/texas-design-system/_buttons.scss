@@ -180,3 +180,48 @@
   @extend %homepage-button;
   letter-spacing: 0.5px;
 }
+
+.moody-btn--arrow {
+  // display: inline-block;
+  // padding: 10px 25px;
+  // color: #ffffff;
+  // font-size: 16px;
+  text-align: center;
+  // text-decoration: none;
+  // border: none;
+  // border-radius: 5px;
+  // font-weight: bold;
+  // transition: background-color 0.3s ease;
+  background-color: white;
+  color: $ut-burntorange !important;
+  border: 2px solid white;
+  padding-left: 0px;
+
+  &::after {
+    content: '→';
+    font-size: 25px;
+    margin-left: 10px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $ut-burntorange !important;
+    background-color: white;
+    border: 2px solid white;
+
+    &::after {
+      
+    }
+  }
+
+  &:active {
+  }
+
+  &:focus {
+    // outline: none;
+    // box-shadow: 0 0 0 2px rgba(247,152,36,0.5);
+  }
+}
+
+// This would be the HTML element:
+// <a href="your-link.html" class="moody-btn--arrow">CTA Text</a>

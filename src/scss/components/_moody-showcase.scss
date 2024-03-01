@@ -61,7 +61,7 @@
     grid-auto-flow: dense;
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(sm) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 2fr;
     }
     // At xl screens constrain the content to container
     // stylelint-disable-next-line at-rule-no-unknown
@@ -111,12 +111,12 @@
         max-width: 840px;
         grid-template-columns: 1fr;
         .showcase-image {
-          width: 500px;
+          width: 400px;
           margin-left: auto;
           margin-right: auto;
         }
         .showcase-video {
-          width: 500px;
+          width: 400px;
           margin-left: auto;
           margin-right: auto;
         }
@@ -153,6 +153,7 @@
       .showcase-copy p {
         font-size: 1.25rem;
         line-height: 1.5;
+        margin-bottom: 0;
       }
       hr {
         display: block;
