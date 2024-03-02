@@ -4882,6 +4882,10 @@ body.node-moody_media_page .plyr__controls {
 .field--type-moody-showcase .field__item:nth-child(even) {
   background-color: #fff;
 }
+.field--type-moody-showcase .field__item:nth-child(even) .moody-btn--arrow {
+  border: 2px solid #eaeaea;
+  background-color: #eaeaea;
+}
 @media screen and (min-width: 900px) {
   .field--type-moody-showcase .field__item:nth-child(even) .moody-showcase .showcase-image {
     grid-column: 2;

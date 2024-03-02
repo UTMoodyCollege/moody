@@ -28,6 +28,11 @@
     }
     &:nth-child(even) {
       background-color: $ut-white;
+      .moody-btn--arrow {
+
+        background-color: #eaeaea;
+        border: 2px solid #eaeaea;
+      }
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(md) {
         .moody-showcase .showcase-image {
@@ -222,3 +227,4 @@
     @extend %bootstrap-fake-margins;
   }
 }
+
