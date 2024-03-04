@@ -4964,7 +4964,7 @@ body.node-moody_media_page .plyr__controls {
   padding-right: 15px;
   padding-left: 15px;
 }
-.field--type-moody-showcase.view-mode--moody_showcase_style_three .moody-showcase .moody-btn--arrow {
+.field--type-moody-showcase.view-mode--moody_showcase_style_three .moody-showcase .field__item:nth-child(odd) .moody-btn--arrow {
   border: 2px solid #eaeaea;
   background-color: #eaeaea;
 }
