@@ -4882,10 +4882,6 @@ body.node-moody_media_page .plyr__controls {
 .field--type-moody-showcase .field__item:nth-child(even) {
   background-color: #fff;
 }
-.field--type-moody-showcase .field__item:nth-child(even) .moody-btn--arrow {
-  border: 2px solid #eaeaea;
-  background-color: #eaeaea;
-}
 @media screen and (min-width: 900px) {
   .field--type-moody-showcase .field__item:nth-child(even) .moody-showcase .showcase-image {
     grid-column: 2;
@@ -4967,6 +4963,10 @@ body.node-moody_media_page .plyr__controls {
 .field--type-moody-showcase.view-mode--moody_showcase_style_three .moody-showcase {
   padding-right: 15px;
   padding-left: 15px;
+}
+.field--type-moody-showcase.view-mode--moody_showcase_style_three .moody-showcase .moody-btn--arrow {
+  border: 2px solid #eaeaea;
+  background-color: #eaeaea;
 }
 @media screen and (min-width: 600px) {
   .field--type-moody-showcase.view-mode--moody_showcase_style_three .moody-showcase {
