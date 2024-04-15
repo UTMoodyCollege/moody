@@ -5616,8 +5616,20 @@ span.addtoany_list {
   font-size: 1.75rem;
   font-weight: 400;
 }
-.moody-flex-grid-wrapper .flip-container {
+.moody-flex-grid-wrapper .two-columns .flip-container {
   min-height: 500px;
+}
+.moody-flex-grid-wrapper .three-columns .flip-container {
+  min-height: 350px;
+}
+.moody-flex-grid-wrapper .four-columns .flip-container {
+  min-height: 250px;
+}
+.moody-flex-grid-wrapper .five-columns .flip-container {
+  min-height: 250px;
+}
+.moody-flex-grid-wrapper .six-columns .flip-container {
+  min-height: 250px;
 }
 .moody-flex-grid-wrapper .flip-container .mfg--image--promo {
   width: 100%;
@@ -5649,12 +5661,12 @@ span.addtoany_list {
   color: #fff;
 }
 .moody-flex-grid-wrapper .flip-container .mfg--text--promo {
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   padding: 1.5em 3em;
 
   -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -ms-flex-flow: column wrap;
+  -webkit-box-orient: horizontal;
+  -ms-flex-flow: row wrap;
 }
 .moody-flex-grid-wrapper .flip-container .back {
   display: -webkit-box;
@@ -5664,7 +5676,6 @@ span.addtoany_list {
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-  min-height: 227px;
   color: #fff;
   background-color: #bf5700;
 

@@ -179,9 +179,34 @@
 }
 
 .moody-flex-grid-wrapper {
+  .two-columns {
+    .flip-container {
+      min-height: 500px;
+    }
+  }
+  .three-columns {
+    .flip-container {
+      min-height: 350px;
+    }
+  }
+  .four-columns {
+    .flip-container {
+      min-height: 250px;
+    }
+  }
+  .five-columns {
+    .flip-container {
+      min-height: 250px;
+    }
+  }
+  .six-columns {
+    .flip-container {
+      min-height: 250px;
+    }
+  }
   .flip-container {
-    min-height: 500px;
-
+    // Adjust min height based on the number of columns dynamically
+    
     .front {
       @include screen-mq(sm) {
         
@@ -228,7 +253,7 @@
 
     .mfg--text--promo {
       padding: 1.5em 3em;
-      flex-flow: column wrap;
+      flex-flow: row wrap;
 
     }
 
@@ -240,7 +265,6 @@
       justify-content: center;
       align-items: center;
       flex-grow: 1;
-      min-height: 227px;
       // max-height: 227px;
 
       a {
