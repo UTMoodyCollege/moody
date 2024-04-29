@@ -262,31 +262,39 @@
       color: #fff; // White text color
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: center; // Use center to align items vertically in the middle
       align-items: center;
-      flex-grow: 1;
-      // max-height: 227px;
-
+      text-align: center; // Center align text for consistent styling
+      padding: 2em; // Reduced and uniform padding
+  
+      h3 {
+        margin: 0 0 0.5em; // Remove top margin and add a small bottom margin
+        color: white;
+        font-size: 1.5rem; // Define size to ensure consistency
+      }
+  
       a {
         color: #fff; // White text color
-
+        text-decoration: none; // Remove underline from links
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; // Take the full width to center content
+  
         &:hover {
           color: #fff; // White text color
           transform: scale(1.1);
           transition: transform 0.3s;
         }
       }
-
+  
       p {
         color: #fff; // White text color
+        margin: 0.5em 0; // Consistent margin for paragraphs
       }
-
+  
       .mfg--copy {
-        padding: 2.4em;
-      }
-
-      h3 {
-        color: white;
+        padding: 0; // Remove padding from copy
       }
     }
   }

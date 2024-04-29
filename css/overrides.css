@@ -5673,24 +5673,41 @@ span.addtoany_list {
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   justify-content: center;
   align-items: center;
+  padding: 2em;
+  text-align: center;
   color: #fff;
   background-color: #bf5700;
 
   -webkit-box-align: center;
   -webkit-box-direction: normal;
-  -webkit-box-flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-pack: center;
   -ms-flex-align: center;
   -ms-flex-direction: column;
   -ms-flex-pack: center;
-  -ms-flex-positive: 1;
+}
+.moody-flex-grid-wrapper .flip-container .back h3 {
+  margin: 0 0 0.5em;
+  color: white;
+  font-size: 1.5rem;
 }
 .moody-flex-grid-wrapper .flip-container .back a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
   color: #fff;
+
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -ms-flex-align: center;
+  -ms-flex-direction: column;
 }
 .moody-flex-grid-wrapper .flip-container .back a:hover {
   -webkit-transition: -webkit-transform 0.3s;
@@ -5702,13 +5719,11 @@ span.addtoany_list {
   color: #fff;
 }
 .moody-flex-grid-wrapper .flip-container .back p {
+  margin: 0.5em 0;
   color: #fff;
 }
 .moody-flex-grid-wrapper .flip-container .back .mfg--copy {
-  padding: 2.4em;
-}
-.moody-flex-grid-wrapper .flip-container .back h3 {
-  color: white;
+  padding: 0;
 }
 .moody-impact-facts-wrapper {
   padding: 50px 0;
