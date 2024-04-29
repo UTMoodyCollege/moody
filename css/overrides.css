@@ -6665,6 +6665,15 @@ header .block__ut-social-links--items {
 .quotation-wrapper.default .quote {
   padding-left: 20px;
 }
+.quotation-wrapper.blue .quote-wrapper {
+  background: #005f86;
+}
+.quotation-wrapper.blue .quote-wrapper:after {
+  border-top: solid 70px #005f86;
+}
+.quotation-wrapper.blue .author {
+  color: #005f86;
+}
 .moody-newsletter-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

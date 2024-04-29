@@ -110,4 +110,15 @@
       padding-left: 20px;
     }
   }
+  &.blue {
+    .quote-wrapper {
+      background: $ut-bluebonnet;
+      &:after {
+        border-top: solid 70px $ut-bluebonnet;
+      }
+    }
+    .author {
+      color: $ut-bluebonnet;
+    }
+  }
 }
