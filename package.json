@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "./node_modules/gulp/bin/gulp.js default"
+    "gulp": "./node_modules/gulp/bin/gulp.js default",
+    "watch": "./node_modules/gulp/bin/gulp.js watch"
   },
   "author": "Mike Marsello",
   "license": "ISC",

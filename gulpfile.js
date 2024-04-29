@@ -62,3 +62,9 @@ gulp.task('copy-css', function() {
 
 gulp.task("default", gulp.series("scss-lint", "sass", "css-lint", 'copy-js', 'copy-css'));
 
+// A watch task
+gulp.task("watch", function () {
+  gulp.watch("src/scss/**/*.scss", gulp.series("scss-lint", "sass"));
+  gulp.watch("src/css/**/*.css", gulp.series("css-lint"));
+});
+ 
