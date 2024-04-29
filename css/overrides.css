@@ -5714,11 +5714,10 @@ span.addtoany_list {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
   color: #fff;
 }
 .moody-flex-grid-wrapper .flip-container .back p {
+  width: 100%;
   margin: 0.5em 0;
   color: #fff;
 }

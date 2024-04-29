@@ -283,7 +283,7 @@
   
         &:hover {
           color: #fff; // White text color
-          transform: scale(1.1);
+          // transform: scale(1.1);
           transition: transform 0.3s;
         }
       }
@@ -291,6 +291,7 @@
       p {
         color: #fff; // White text color
         margin: 0.5em 0; // Consistent margin for paragraphs
+        width: 100%;
       }
   
       .mfg--copy {
