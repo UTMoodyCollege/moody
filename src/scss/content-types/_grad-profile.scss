@@ -1,0 +1,36 @@
+.node--type-moody-grad-profile {
+    .field--name-field-grad-photo  {
+        img {
+            border-radius: 100%;
+            margin-bottom: 40px;
+            max-width: 225px;
+        }
+    }
+    .field--name-field-grad-title {
+        font-weight: 600;
+    }
+    .layout__region--first {
+        // Its flex already, lets center all
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .block {
+            margin-bottom: 5px;
+        }
+    }
+    .field--name-field-class-year {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    .block-field-blocknodemoody-grad-profiletitle {
+        font-size: rem-calc(22);
+        font-weight: 600;
+        font-family: $ut-font--serif;
+        color: $ut-burntorange;
+    }
+}

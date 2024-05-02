@@ -4361,6 +4361,57 @@ body.node-moody_media_page .plyr__controls {
 .node-moody_event .event-secondary .event-detail-wrapper .field--name-field-moodyevent-tags {
   margin-bottom: 10px;
 }
+.node--type-moody-grad-profile .field--name-field-grad-photo img {
+  max-width: 225px;
+  margin-bottom: 40px;
+  border-radius: 100%;
+}
+.node--type-moody-grad-profile .field--name-field-grad-title {
+  font-weight: 600;
+}
+.node--type-moody-grad-profile .layout__region--first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -ms-flex-align: center;
+  -ms-flex-direction: column;
+  -ms-flex-pack: center;
+}
+.node--type-moody-grad-profile .layout__region--first .block {
+  margin-bottom: 5px;
+}
+.node--type-moody-grad-profile .field--name-field-class-year {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -ms-flex-align: center;
+  -ms-flex-direction: column;
+  -ms-flex-pack: center;
+}
+.node--type-moody-grad-profile .block-field-blocknodemoody-grad-profiletitle {
+  color: #bf5700;
+  font-family: "CharisSil", Georgia, serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
 .wysiwyg_inner_rail {
   width: 100%;
   padding: 0;
