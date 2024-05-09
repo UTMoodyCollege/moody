@@ -7811,6 +7811,12 @@ a.ut-link {
 footer #block-footermenu {
   margin-top: 0;
 }
+.text-ut-black {
+  color: black;
+}
+.text-ut-white {
+  color: white;
+}
 .text-ut-burntorange {
   color: #bf5700;
 }
@@ -7852,6 +7858,12 @@ footer #block-footermenu {
 }
 .text-ut-bluebonnet--s20 {
   color: #074d6a;
+}
+.bg-ut-black {
+  background-color: black;
+}
+.bg-ut-white {
+  background-color: white;
 }
 .bg-ut-burntorange {
   background-color: #bf5700;

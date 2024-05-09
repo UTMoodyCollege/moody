@@ -4,6 +4,8 @@
 // Mixin to generate text color classes
 @mixin text-colors {
   @each $name, $color in (
+    black: black,
+    white: white,
     burntorange: $ut-burntorange,
     bluebonnet: $ut-bluebonnet,
     turquoise: $ut-turquoise,
@@ -28,6 +30,8 @@
 // Mixin to generate background color classes
 @mixin bg-colors {
   @each $name, $color in (
+    black: black,
+    white: white,
     burntorange: $ut-burntorange,
     bluebonnet: $ut-bluebonnet,
     turquoise: $ut-turquoise,
