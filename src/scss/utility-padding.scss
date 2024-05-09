@@ -1,0 +1,33 @@
+// Assuming a base unit of padding. Adjust as needed.
+$base-padding-unit: 0.25rem; // This means 1 unit = 0.25rem
+
+// Mixin to generate padding utility classes
+@mixin generate-padding-utilities {
+  // Loop through 64 to generate padding classes for top, bottom, left, and right
+  @for $i from 1 through 64 {
+    $padding-value: $i * $base-padding-unit;
+
+    // Padding Top
+    .pt-#{$i} {
+      padding-top: $padding-value;
+    }
+
+    // Padding Bottom
+    .pb-#{$i} {
+      padding-bottom: $padding-value;
+    }
+
+    // Padding Left
+    .pl-#{$i} {
+      padding-left: $padding-value;
+    }
+
+    // Padding Right
+    .pr-#{$i} {
+      padding-right: $padding-value;
+    }
+  }
+}
+
+// Include the mixin to generate the classes
+@include generate-padding-utilities;
