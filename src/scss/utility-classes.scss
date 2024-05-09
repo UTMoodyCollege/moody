@@ -1,0 +1,54 @@
+// Import the variables SCSS file if it's in a separate file
+@import 'variables';
+
+// Mixin to generate text color classes
+@mixin text-colors {
+  @each $name, $color in (
+    burntorange: $ut-burntorange,
+    bluebonnet: $ut-bluebonnet,
+    turquoise: $ut-turquoise,
+    turtlepond: $ut-turtlepond,
+    cactus: $ut-cactus,
+    shade: $ut-shade,
+    tangerine: $ut-tangerine,
+    limestone: $ut-limestone,
+    sunshine: $ut-sunshine,
+    moody-peach: $moody-peach,
+    moody-gray: $moody-gray,
+    moody-blue: $moody-blue,
+    error-red: $ut-error_red,
+    bluebonnet--s20: $ut-bluebonnet--s20
+  ) {
+    .text-ut-#{$name} {
+      color: $color;
+    }
+  }
+}
+
+// Mixin to generate background color classes
+@mixin bg-colors {
+  @each $name, $color in (
+    burntorange: $ut-burntorange,
+    bluebonnet: $ut-bluebonnet,
+    turquoise: $ut-turquoise,
+    turtlepond: $ut-turtlepond,
+    cactus: $ut-cactus,
+    shade: $ut-shade,
+    tangerine: $ut-tangerine,
+    limestone: $ut-limestone,
+    sunshine: $ut-sunshine,
+    moody-peach: $moody-peach,
+    moody-gray: $moody-gray,
+    moody-blue: $moody-blue,
+    error-red: $ut-error_red,
+    bluebonnet--s20: $ut-bluebonnet--s20
+  ) {
+    .bg-ut-#{$name} {
+      background-color: $color;
+    }
+  }
+}
+
+// Usage of mixins
+@include text-colors;
+@include bg-colors;
