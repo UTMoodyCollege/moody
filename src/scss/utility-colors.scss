@@ -19,7 +19,9 @@
     moody-gray: $moody-gray,
     moody-blue: $moody-blue,
     error-red: $ut-error_red,
-    bluebonnet--s20: $ut-bluebonnet--s20
+    bluebonnet--s20: $ut-bluebonnet--s20,
+    ut-shade--t60: $ut-shade--t60,
+    ut-shade--t40: $ut-shade--t40
   ) {
     .text-ut-#{$name} {
       color: $color;
@@ -45,7 +47,9 @@
     moody-gray: $moody-gray,
     moody-blue: $moody-blue,
     error-red: $ut-error_red,
-    bluebonnet--s20: $ut-bluebonnet--s20
+    bluebonnet--s20: $ut-bluebonnet--s20,
+    ut-shade--t60: $ut-shade--t60,
+    ut-shade--t40: $ut-shade--t40
   ) {
     .bg-ut-#{$name} {
       background-color: $color;
@@ -53,6 +57,35 @@
   }
 }
 
+// Border colors
+@mixin border-colors {
+  @each $name, $color in (
+    black: black,
+    white: white,
+    burntorange: $ut-burntorange,
+    bluebonnet: $ut-bluebonnet,
+    turquoise: $ut-turquoise,
+    turtlepond: $ut-turtlepond,
+    cactus: $ut-cactus,
+    shade: $ut-shade,
+    tangerine: $ut-tangerine,
+    limestone: $ut-limestone,
+    sunshine: $ut-sunshine,
+    moody-peach: $moody-peach,
+    moody-gray: $moody-gray,
+    moody-blue: $moody-blue,
+    error-red: $ut-error_red,
+    bluebonnet--s20: $ut-bluebonnet--s20,
+    ut-shade--t60: $ut-shade--t60,
+    ut-shade--t40: $ut-shade--t40
+  ) {
+    .border-ut-#{$name} {
+      border-color: $color;
+    }
+  }
+}
+
 // Usage of mixins
 @include text-colors;
 @include bg-colors;
+@include border-colors;
