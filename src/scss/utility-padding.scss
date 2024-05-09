@@ -1,7 +1,14 @@
+// Breakpoint variables
+$breakpoints: (
+  'md': 768px,  // Adjust to match your actual breakpoints
+  'lg': 992px,
+  'xl': 1200px
+);
+
 // Base padding unit, change this as needed based on your design scale.
 $base-padding-unit: 0.25rem; // This means 1 unit = 0.25rem
 
-// Mixin to generate padding utility classes with "ut-" prefix
+// Mixin to generate padding utility classes with responsive modifiers
 @mixin generate-padding-utilities {
   // Loop through 64 to generate padding classes for all, top, bottom, left, and right
   @for $i from 1 through 64 {
@@ -30,6 +37,27 @@ $base-padding-unit: 0.25rem; // This means 1 unit = 0.25rem
     // Padding Right
     .ut-pr-#{$i} {
       padding-right: $padding-value;
+    }
+
+    // Responsive variations
+    @each $prefix, $bp in $breakpoints {
+      @media (min-width: $bp) {
+        .#{$prefix}:ut-p-#{$i} {
+          padding: $padding-value;
+        }
+        .#{$prefix}:ut-pt-#{$i} {
+          padding-top: $padding-value;
+        }
+        .#{$prefix}:ut-pb-#{$i} {
+          padding-bottom: $padding-value;
+        }
+        .#{$prefix}:ut-pl-#{$i} {
+          padding-left: $padding-value;
+        }
+        .#{$prefix}:ut-pr-#{$i} {
+          padding-right: $padding-value;
+        }
+      }
     }
   }
 }
