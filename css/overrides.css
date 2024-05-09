@@ -720,6 +720,7 @@ a[href^="mailto:"],
   letter-spacing: 0.5px;
 }
 .moody-btn--arrow {
+  padding-left: 0;
   text-align: center;
   color: #bf5700 !important;
   border: 2px solid transparent;
@@ -729,6 +730,13 @@ a[href^="mailto:"],
   margin-left: 10px;
   content: "→";
   font-size: 25px;
+}
+.moody-btn--arrow:hover {
+  padding-left: 1rem;
+  cursor: pointer;
+  color: #bf5700 !important;
+  border: 2px solid white;
+  background-color: white;
 }
 .news-view .views-field-title a,
 .news-view.latest-news-block > .views-row a .views-field-title {
