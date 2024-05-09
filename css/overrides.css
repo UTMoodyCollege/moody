@@ -505,6 +505,7 @@ a[href^="mailto:"],
 .ut-btn--charcoal,
 .cta--charcoal,
 .button,
+.moody-btn--arrow,
 .node--type-moody-faculty-bio .field--name-field-personal-link-faculty-bio a,
 .faculty-bio-view form.views-exposed-form input.form-submit {
   display: inline-block;
@@ -535,6 +536,7 @@ a[href^="mailto:"],
 .ut-btn--charcoal:link,
 .cta--charcoal:link,
 .button:link,
+.moody-btn--arrow:link,
 .node--type-moody-faculty-bio .field--name-field-personal-link-faculty-bio a:link,
 .faculty-bio-view form.views-exposed-form input.form-submit:link,
 .ut-btn:visited,
@@ -552,6 +554,7 @@ a[href^="mailto:"],
 .ut-btn--charcoal:visited,
 .cta--charcoal:visited,
 .button:visited,
+.moody-btn--arrow:visited,
 .node--type-moody-faculty-bio .field--name-field-personal-link-faculty-bio a:visited,
 .faculty-bio-view form.views-exposed-form input.form-submit:visited {
   color: #fff;
@@ -571,6 +574,7 @@ a[href^="mailto:"],
 .ut-btn--charcoal:hover,
 .cta--charcoal:hover,
 .button:hover,
+.moody-btn--arrow:hover,
 .node--type-moody-faculty-bio .field--name-field-personal-link-faculty-bio a:hover,
 .faculty-bio-view form.views-exposed-form input.form-submit:hover,
 .ut-btn:focus,
@@ -588,6 +592,7 @@ a[href^="mailto:"],
 .ut-btn--charcoal:focus,
 .cta--charcoal:focus,
 .button:focus,
+.moody-btn--arrow:focus,
 .node--type-moody-faculty-bio .field--name-field-personal-link-faculty-bio a:focus,
 .faculty-bio-view form.views-exposed-form input.form-submit:focus {
   cursor: pointer;
@@ -611,6 +616,7 @@ a[href^="mailto:"],
 .ut-btn--charcoal:active,
 .cta--charcoal:active,
 .button:active,
+.moody-btn--arrow:active,
 .node--type-moody-faculty-bio .field--name-field-personal-link-faculty-bio a:active,
 .faculty-bio-view form.views-exposed-form input.form-submit:active {
   background-color: #ae4f00;
@@ -714,22 +720,15 @@ a[href^="mailto:"],
   letter-spacing: 0.5px;
 }
 .moody-btn--arrow {
-  padding-left: 0;
   text-align: center;
   color: #bf5700 !important;
-  border: 2px solid white;
-  background-color: white;
+  border: 2px solid transparent;
+  background-color: transparent;
 }
 .moody-btn--arrow::after {
   margin-left: 10px;
   content: "→";
   font-size: 25px;
-}
-.moody-btn--arrow:hover {
-  cursor: pointer;
-  color: #bf5700 !important;
-  border: 2px solid white;
-  background-color: white;
 }
 .news-view .views-field-title a,
 .news-view.latest-news-block > .views-row a .views-field-title {

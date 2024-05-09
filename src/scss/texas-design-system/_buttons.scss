@@ -182,6 +182,7 @@
 }
 
 .moody-btn--arrow {
+  @extend %ut-button;
   // display: inline-block;
   // padding: 10px 25px;
   // color: #ffffff;
@@ -192,27 +193,25 @@
   // border-radius: 5px;
   // font-weight: bold;
   // transition: background-color 0.3s ease;
-  background-color: white;
+  background-color: transparent;
   color: $ut-burntorange !important;
-  border: 2px solid white;
-  padding-left: 0px;
-
+  border: 2px solid transparent;
   &::after {
     content: '→';
     font-size: 25px;
     margin-left: 10px;
   }
 
-  &:hover {
-    cursor: pointer;
-    color: $ut-burntorange !important;
-    background-color: white;
-    border: 2px solid white;
+  // &:hover {
+  //   cursor: pointer;
+  //   color: $ut-burntorange !important;
+  //   background-color: white;
+  //   border: 2px solid white;
 
-    &::after {
+  //   &::after {
       
-    }
-  }
+  //   }
+  // }
 
   &:active {
   }
