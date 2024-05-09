@@ -8867,3 +8867,48 @@ footer #block-footermenu {
 .ut-pr-64 {
   padding-right: 16rem;
 }
+.ut-font-weight-light {
+  font-weight: 300;
+}
+.ut-font-weight-normal {
+  font-weight: 400;
+}
+.ut-font-weight-medium {
+  font-weight: 500;
+}
+.ut-font-weight-semibold {
+  font-weight: 600;
+}
+.ut-font-weight-bold {
+  font-weight: 700;
+}
+.ut-font-weight-black {
+  font-weight: 900;
+}
+.ut-text-xs {
+  font-size: 0.75rem;
+}
+.ut-text-sm {
+  font-size: 0.875rem;
+}
+.ut-text-base {
+  font-size: 1rem;
+}
+.ut-text-lg {
+  font-size: 1.125rem;
+}
+.ut-text-xl {
+  font-size: 1.25rem;
+}
+.ut-text-2xl {
+  font-size: 1.5rem;
+}
+.ut-text-3xl {
+  font-size: 1.875rem;
+}
+.ut-text-4xl {
+  font-size: 2.25rem;
+}
+.ut-text-5xl {
+  font-size: 3rem;
+}
