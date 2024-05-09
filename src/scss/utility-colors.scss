@@ -21,7 +21,8 @@
     error-red: $ut-error_red,
     bluebonnet--s20: $ut-bluebonnet--s20,
     ut-shade--t60: $ut-shade--t60,
-    ut-shade--t40: $ut-shade--t40
+    ut-shade--t40: $ut-shade--t40,
+    charcoal: $ut-charcoal
   ) {
     .text-ut-#{$name} {
       color: $color;
@@ -49,7 +50,8 @@
     error-red: $ut-error_red,
     bluebonnet--s20: $ut-bluebonnet--s20,
     ut-shade--t60: $ut-shade--t60,
-    ut-shade--t40: $ut-shade--t40
+    ut-shade--t40: $ut-shade--t40,
+    charcoal: $ut-charcoal
   ) {
     .bg-ut-#{$name} {
       background-color: $color;
@@ -77,7 +79,8 @@
     error-red: $ut-error_red,
     bluebonnet--s20: $ut-bluebonnet--s20,
     ut-shade--t60: $ut-shade--t60,
-    ut-shade--t40: $ut-shade--t40
+    ut-shade--t40: $ut-shade--t40,
+    charcoal: $ut-charcoal
   ) {
     .border-ut-#{$name} {
       border-color: $color;

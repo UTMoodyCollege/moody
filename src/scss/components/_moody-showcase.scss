@@ -112,7 +112,7 @@
       // Only even items have a background color
       .field__item:nth-child(odd) {
         .moody-btn--arrow {
-          background-color: #eaeaea;
+          background-color: transparent;
           border: 2px solid #eaeaea;
         }
       }
