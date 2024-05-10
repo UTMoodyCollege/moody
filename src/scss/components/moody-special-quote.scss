@@ -65,12 +65,15 @@
 
   .image-overlay {
     position: absolute;
-    bottom: -125px; // Adjust distance from bottom as needed.
+    bottom: -65px; // Adjust distance from bottom as needed.
+    // on md and up lets do -150
+
     right: 10px; // Adjust distance from right as needed.
     max-width: 100px; // Adjust width as needed.
     max-height: 100px; // Adjust height as needed.
     z-index: 10; // Ensure the image is above other elements.
   }
+
 }
 
 @media (min-width: 768px) {
@@ -82,4 +85,9 @@
     max-width: 150px; // Larger image for larger screens.
     max-height: 150px;
   }
+  .image-overlay {
+
+    bottom: -125px; // Adjust distance from bottom as needed.
+  }
+
 }

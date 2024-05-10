@@ -16823,7 +16823,7 @@ footer #block-footermenu {
   position: absolute;
   z-index: 10;
   right: 10px;
-  bottom: -125px;
+  bottom: -65px;
   max-width: 100px;
   max-height: 100px;
 }
@@ -16831,5 +16831,8 @@ footer #block-footermenu {
   .moody-special-quote-container .image-overlay {
     max-width: 150px;
     max-height: 150px;
+  }
+  .image-overlay {
+    bottom: -125px;
   }
 }
