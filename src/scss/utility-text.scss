@@ -1,6 +1,11 @@
+// Breakpoint variables
+$breakpoints: (
+  'md': 768px,  // Adjust to match your actual breakpoints
+  'lg': 992px,
+  'xl': 1200px
+);
 
-
-// Mixin to generate text weight classes
+// Mixin to generate text weight classes with responsive modifiers
 @mixin generate-text-weights {
   $weights: (
     'light': 300,
@@ -15,10 +20,19 @@
     .ut-font-weight-#{$name} {
       font-weight: $weight;
     }
+
+    // Responsive variations
+    @each $prefix, $bp in $breakpoints {
+      @media (min-width: $bp) {
+        .#{$prefix}\:ut-font-weight-#{$name} {
+          font-weight: $weight;
+        }
+      }
+    }
   }
 }
 
-// Mixin to generate text size classes
+// Mixin to generate text size classes with responsive modifiers
 @mixin generate-text-sizes {
   $sizes: (
     'xs': 0.75rem,    // 12px
@@ -36,9 +50,18 @@
     .ut-text-#{$name} {
       font-size: $size;
     }
+
+    // Responsive variations
+    @each $prefix, $bp in $breakpoints {
+      @media (min-width: $bp) {
+        .#{$prefix}\:ut-text-#{$name} {
+          font-size: $size;
+        }
+      }
+    }
   }
 }
 
-// Include mixins to generate the classes
+// Include the mixins to generate the classes
 @include generate-text-weights;
 @include generate-text-sizes;
