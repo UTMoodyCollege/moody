@@ -1,7 +1,6 @@
 // Import the variables SCSS file if it's in a separate file
 @import 'variables';
-
-// Mixin to generate text color classes
+// Mixin to generate text color classes with hover support
 @mixin text-colors {
   @each $name, $color in (
     black: black,
@@ -27,10 +26,15 @@
     .text-ut-#{$name} {
       color: $color;
     }
+    .hover\:text-ut-#{$name} {
+      &:hover {
+        color: $color;
+      }
+    }
   }
 }
 
-// Mixin to generate background color classes
+// Mixin to generate background color classes with hover support
 @mixin bg-colors {
   @each $name, $color in (
     black: black,
@@ -56,8 +60,14 @@
     .bg-ut-#{$name} {
       background-color: $color;
     }
+    .hover\:bg-ut-#{$name} {
+      &:hover {
+        background-color: $color;
+      }
+    }
   }
 }
+
 
 // Border colors
 @mixin border-colors {
@@ -84,6 +94,11 @@
   ) {
     .border-ut-#{$name} {
       border-color: $color;
+    }
+    .hover\:border-ut-#{$name} {
+      &:hover {
+        border-color: $color;
+      }
     }
   }
 }

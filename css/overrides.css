@@ -7821,172 +7821,343 @@ footer #block-footermenu {
 .text-ut-black {
   color: black;
 }
+.hover\:text-ut-black:hover {
+  color: black;
+}
 .text-ut-white {
+  color: white;
+}
+.hover\:text-ut-white:hover {
   color: white;
 }
 .text-ut-burntorange {
   color: #bf5700;
 }
+.hover\:text-ut-burntorange:hover {
+  color: #bf5700;
+}
 .text-ut-bluebonnet {
+  color: #005f86;
+}
+.hover\:text-ut-bluebonnet:hover {
   color: #005f86;
 }
 .text-ut-turquoise {
   color: #00a9b7;
 }
+.hover\:text-ut-turquoise:hover {
+  color: #00a9b7;
+}
 .text-ut-turtlepond {
+  color: #579d42;
+}
+.hover\:text-ut-turtlepond:hover {
   color: #579d42;
 }
 .text-ut-cactus {
   color: #a6cd57;
 }
+.hover\:text-ut-cactus:hover {
+  color: #a6cd57;
+}
 .text-ut-shade {
+  color: #9cadb7;
+}
+.hover\:text-ut-shade:hover {
   color: #9cadb7;
 }
 .text-ut-tangerine {
   color: #f8971f;
 }
+.hover\:text-ut-tangerine:hover {
+  color: #f8971f;
+}
 .text-ut-limestone {
+  color: #d6d2c4;
+}
+.hover\:text-ut-limestone:hover {
   color: #d6d2c4;
 }
 .text-ut-sunshine {
   color: #ffd600;
 }
+.hover\:text-ut-sunshine:hover {
+  color: #ffd600;
+}
 .text-ut-moody-peach {
+  color: #f89722;
+}
+.hover\:text-ut-moody-peach:hover {
   color: #f89722;
 }
 .text-ut-moody-gray {
   color: #9daeb7;
 }
+.hover\:text-ut-moody-gray:hover {
+  color: #9daeb7;
+}
 .text-ut-moody-blue {
+  color: #00a9b7;
+}
+.hover\:text-ut-moody-blue:hover {
   color: #00a9b7;
 }
 .text-ut-error-red {
   color: #cd2026;
 }
+.hover\:text-ut-error-red:hover {
+  color: #cd2026;
+}
 .text-ut-bluebonnet--s20 {
+  color: #074d6a;
+}
+.hover\:text-ut-bluebonnet--s20:hover {
   color: #074d6a;
 }
 .text-ut-ut-shade--t60 {
   color: #c4cdd4;
 }
+.hover\:text-ut-ut-shade--t60:hover {
+  color: #c4cdd4;
+}
 .text-ut-ut-shade--t40 {
+  color: #e6ebed;
+}
+.hover\:text-ut-ut-shade--t40:hover {
   color: #e6ebed;
 }
 .text-ut-charcoal {
   color: #333f48;
 }
+.hover\:text-ut-charcoal:hover {
+  color: #333f48;
+}
 .bg-ut-black {
+  background-color: black;
+}
+.hover\:bg-ut-black:hover {
   background-color: black;
 }
 .bg-ut-white {
   background-color: white;
 }
+.hover\:bg-ut-white:hover {
+  background-color: white;
+}
 .bg-ut-burntorange {
+  background-color: #bf5700;
+}
+.hover\:bg-ut-burntorange:hover {
   background-color: #bf5700;
 }
 .bg-ut-bluebonnet {
   background-color: #005f86;
 }
+.hover\:bg-ut-bluebonnet:hover {
+  background-color: #005f86;
+}
 .bg-ut-turquoise {
+  background-color: #00a9b7;
+}
+.hover\:bg-ut-turquoise:hover {
   background-color: #00a9b7;
 }
 .bg-ut-turtlepond {
   background-color: #579d42;
 }
+.hover\:bg-ut-turtlepond:hover {
+  background-color: #579d42;
+}
 .bg-ut-cactus {
+  background-color: #a6cd57;
+}
+.hover\:bg-ut-cactus:hover {
   background-color: #a6cd57;
 }
 .bg-ut-shade {
   background-color: #9cadb7;
 }
+.hover\:bg-ut-shade:hover {
+  background-color: #9cadb7;
+}
 .bg-ut-tangerine {
+  background-color: #f8971f;
+}
+.hover\:bg-ut-tangerine:hover {
   background-color: #f8971f;
 }
 .bg-ut-limestone {
   background-color: #d6d2c4;
 }
+.hover\:bg-ut-limestone:hover {
+  background-color: #d6d2c4;
+}
 .bg-ut-sunshine {
+  background-color: #ffd600;
+}
+.hover\:bg-ut-sunshine:hover {
   background-color: #ffd600;
 }
 .bg-ut-moody-peach {
   background-color: #f89722;
 }
+.hover\:bg-ut-moody-peach:hover {
+  background-color: #f89722;
+}
 .bg-ut-moody-gray {
+  background-color: #9daeb7;
+}
+.hover\:bg-ut-moody-gray:hover {
   background-color: #9daeb7;
 }
 .bg-ut-moody-blue {
   background-color: #00a9b7;
 }
+.hover\:bg-ut-moody-blue:hover {
+  background-color: #00a9b7;
+}
 .bg-ut-error-red {
+  background-color: #cd2026;
+}
+.hover\:bg-ut-error-red:hover {
   background-color: #cd2026;
 }
 .bg-ut-bluebonnet--s20 {
   background-color: #074d6a;
 }
+.hover\:bg-ut-bluebonnet--s20:hover {
+  background-color: #074d6a;
+}
 .bg-ut-ut-shade--t60 {
+  background-color: #c4cdd4;
+}
+.hover\:bg-ut-ut-shade--t60:hover {
   background-color: #c4cdd4;
 }
 .bg-ut-ut-shade--t40 {
   background-color: #e6ebed;
 }
+.hover\:bg-ut-ut-shade--t40:hover {
+  background-color: #e6ebed;
+}
 .bg-ut-charcoal {
+  background-color: #333f48;
+}
+.hover\:bg-ut-charcoal:hover {
   background-color: #333f48;
 }
 .border-ut-black {
   border-color: black;
 }
+.hover\:border-ut-black:hover {
+  border-color: black;
+}
 .border-ut-white {
+  border-color: white;
+}
+.hover\:border-ut-white:hover {
   border-color: white;
 }
 .border-ut-burntorange {
   border-color: #bf5700;
 }
+.hover\:border-ut-burntorange:hover {
+  border-color: #bf5700;
+}
 .border-ut-bluebonnet {
+  border-color: #005f86;
+}
+.hover\:border-ut-bluebonnet:hover {
   border-color: #005f86;
 }
 .border-ut-turquoise {
   border-color: #00a9b7;
 }
+.hover\:border-ut-turquoise:hover {
+  border-color: #00a9b7;
+}
 .border-ut-turtlepond {
+  border-color: #579d42;
+}
+.hover\:border-ut-turtlepond:hover {
   border-color: #579d42;
 }
 .border-ut-cactus {
   border-color: #a6cd57;
 }
+.hover\:border-ut-cactus:hover {
+  border-color: #a6cd57;
+}
 .border-ut-shade {
+  border-color: #9cadb7;
+}
+.hover\:border-ut-shade:hover {
   border-color: #9cadb7;
 }
 .border-ut-tangerine {
   border-color: #f8971f;
 }
+.hover\:border-ut-tangerine:hover {
+  border-color: #f8971f;
+}
 .border-ut-limestone {
+  border-color: #d6d2c4;
+}
+.hover\:border-ut-limestone:hover {
   border-color: #d6d2c4;
 }
 .border-ut-sunshine {
   border-color: #ffd600;
 }
+.hover\:border-ut-sunshine:hover {
+  border-color: #ffd600;
+}
 .border-ut-moody-peach {
+  border-color: #f89722;
+}
+.hover\:border-ut-moody-peach:hover {
   border-color: #f89722;
 }
 .border-ut-moody-gray {
   border-color: #9daeb7;
 }
+.hover\:border-ut-moody-gray:hover {
+  border-color: #9daeb7;
+}
 .border-ut-moody-blue {
+  border-color: #00a9b7;
+}
+.hover\:border-ut-moody-blue:hover {
   border-color: #00a9b7;
 }
 .border-ut-error-red {
   border-color: #cd2026;
 }
+.hover\:border-ut-error-red:hover {
+  border-color: #cd2026;
+}
 .border-ut-bluebonnet--s20 {
+  border-color: #074d6a;
+}
+.hover\:border-ut-bluebonnet--s20:hover {
   border-color: #074d6a;
 }
 .border-ut-ut-shade--t60 {
   border-color: #c4cdd4;
 }
+.hover\:border-ut-ut-shade--t60:hover {
+  border-color: #c4cdd4;
+}
 .border-ut-ut-shade--t40 {
   border-color: #e6ebed;
 }
+.hover\:border-ut-ut-shade--t40:hover {
+  border-color: #e6ebed;
+}
 .border-ut-charcoal {
+  border-color: #333f48;
+}
+.hover\:border-ut-charcoal:hover {
   border-color: #333f48;
 }
 .utexas-bg-074d6a {
