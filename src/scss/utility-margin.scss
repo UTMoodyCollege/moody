@@ -19,14 +19,33 @@ $base-margin-unit: 0.25rem; // This means 1 unit = 0.25rem
       margin: $margin-value;
     }
 
+    .hover\:ut-m-#{$i} {
+      &:hover {
+          margin: $margin-value;
+      }
+    }
+
     // Margin Top
     .ut-mt-#{$i} {
       margin-top: $margin-value;
     }
 
+    .hover\:ut-mt-#{$i} {
+      &:hover {
+          margin-top: $margin-value;
+      }
+    }
+
+
     // Margin Bottom
     .ut-mb-#{$i} {
       margin-bottom: $margin-value;
+    }
+
+    .hover\:ut-mb-#{$i} {
+      &:hover {
+          margin-bottom: $margin-value;
+      }
     }
 
     // Margin Left
@@ -34,9 +53,21 @@ $base-margin-unit: 0.25rem; // This means 1 unit = 0.25rem
       margin-left: $margin-value;
     }
 
+    .hover\:ut-ml-#{$i} {
+      &:hover {
+          margin-left: $margin-value;
+      }
+    }
+
     // Margin Right
     .ut-mr-#{$i} {
       margin-right: $margin-value;
+    }
+
+    .hover\:ut-mr-#{$i} {
+      &:hover {
+          margin-right: $margin-value;
+      }
     }
 
     // Responsive variations
@@ -45,17 +76,46 @@ $base-margin-unit: 0.25rem; // This means 1 unit = 0.25rem
         .#{$prefix}:ut-m-#{$i} {
           margin: $margin-value;
         }
+        .hover\:.#{$prefix}:ut-m-#{$i} {
+          &:hover {
+              margin: $margin-value;
+          }
+        }
+        
         .#{$prefix}:ut-mt-#{$i} {
           margin-top: $margin-value;
         }
+        .hover\:.#{$prefix}:ut-mt-#{$i} {
+          &:hover {
+              margin-top: $margin-value;
+          }
+        }
+
         .#{$prefix}:ut-mb-#{$i} {
           margin-bottom: $margin-value;
         }
+        .hover\:.#{$prefix}:ut-mb-#{$i} {
+          &:hover {
+              margin-bottom: $margin-value;
+          }
+        }
+
         .#{$prefix}:ut-ml-#{$i} {
           margin-left: $margin-value;
         }
+        .hover\:.#{$prefix}:ut-ml-#{$i} {
+          &:hover {
+              margin-left: $margin-value;
+          }
+        }
+
         .#{$prefix}:ut-mr-#{$i} {
           margin-right: $margin-value;
+        }
+        .hover\:.#{$prefix}:ut-mr-#{$i} {
+          &:hover {
+              margin-right: $margin-value;
+          }
         }
       }
     }
