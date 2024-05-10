@@ -11,7 +11,7 @@ $base-margin-unit: 0.25rem; // This means 1 unit = 0.25rem
 // Mixin to generate margin utility classes with responsive modifiers
 @mixin generate-margin-utilities {
   // Loop through 64 to generate margin classes for all, top, bottom, left, and right
-  @for $i from 1 through 64 {
+  @for $i from 1 through 32 {
     $margin-value: $i * $base-margin-unit;
 
     // All-around Margin

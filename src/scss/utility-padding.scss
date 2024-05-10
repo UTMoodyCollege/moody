@@ -11,7 +11,7 @@ $base-padding-unit: 0.25rem; // This means 1 unit = 0.25rem
 // Mixin to generate padding utility classes with responsive modifiers
 @mixin generate-padding-utilities {
   // Loop through 64 to generate padding classes for all, top, bottom, left, and right
-  @for $i from 1 through 64 {
+  @for $i from 1 through 32 {
     $padding-value: $i * $base-padding-unit;
 
     // All-around Padding
@@ -19,9 +19,21 @@ $base-padding-unit: 0.25rem; // This means 1 unit = 0.25rem
       padding: $padding-value;
     }
 
+    .hover\:ut-p-#{$i} {
+      &:hover {
+          padding: $padding-value;
+      }
+    }
+
     // Padding Top
     .ut-pt-#{$i} {
       padding-top: $padding-value;
+    }
+
+    .hover\:ut-pt-#{$i} {
+      &:hover {
+          padding-top: $padding-value;
+      }
     }
 
     // Padding Bottom
@@ -29,14 +41,32 @@ $base-padding-unit: 0.25rem; // This means 1 unit = 0.25rem
       padding-bottom: $padding-value;
     }
 
+    .hover\:ut-pb-#{$i} {
+      &:hover {
+          padding-bottom: $padding-value;
+      }
+    }
+
     // Padding Left
     .ut-pl-#{$i} {
-      padding-left: $padding-value;
+      padding-left: $padding_value;
+    }
+
+    .hover\:ut-pl-#{$i} {
+      &:hover {
+          padding-left: $padding-value;
+      }
     }
 
     // Padding Right
     .ut-pr-#{$i} {
       padding-right: $padding-value;
+    }
+
+    .hover\:ut-pr-#{$i} {
+      &:hover {
+          padding-right: $padding-value;
+      }
     }
 
     // Responsive variations
@@ -45,17 +75,42 @@ $base-padding-unit: 0.25rem; // This means 1 unit = 0.25rem
         .#{$prefix}:ut-p-#{$i} {
           padding: $padding-value;
         }
+        .hover\:.#{$prefix}:ut-p-#{$i} {
+          &:hover {
+              padding: $padding-value;
+          }
+        }
         .#{$prefix}:ut-pt-#{$i} {
           padding-top: $padding-value;
+        }
+        .hover\:.#{$prefix}:ut-pt-#{$i} {
+          &:hover {
+              padding-top: $padding-value;
+          }
         }
         .#{$prefix}:ut-pb-#{$i} {
           padding-bottom: $padding-value;
         }
+        .hover\:.#{$prefix}:ut-pb-#{$i} {
+          &:hover {
+              padding-bottom: $padding-value;
+          }
+        }
         .#{$prefix}:ut-pl-#{$i} {
-          padding-left: $padding-value;
+          padding-left: $padding_value;
+        }
+        .hover\:.#{$prefix}:ut-pl-#{$i} {
+          &:hover {
+              padding-left: $padding-value;
+          }
         }
         .#{$prefix}:ut-pr-#{$i} {
-          padding-right: $padding-value;
+          padding-right: $padding_value;
+        }
+        .hover\:.#{$prefix}:ut-pr-#{$i} {
+          &:hover {
+              padding-right: $padding-value;
+          }
         }
       }
     }
