@@ -16767,3 +16767,69 @@ footer #block-footermenu {
     margin-right: 16rem;
   }
 }
+.moody-special-quote-container .headline-container {
+  position: relative;
+  display: inline-block;
+  min-width: 60%;
+  padding: 1.75rem 2rem;
+  background-color: #f8971f;
+}
+.moody-special-quote-container .headline-container:after {
+  position: absolute;
+  z-index: 999;
+  right: 0;
+  bottom: -20px;
+  content: "";
+  border-top: 20px solid #f8971f;
+  border-right: 0 solid transparent;
+  border-left: 20px solid transparent;
+}
+.moody-special-quote-container .headline {
+  color: #333f48;
+  font-family: "LibreFrankBlack";
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+}
+.moody-special-quote-container .quote-container {
+  position: relative;
+  margin-left: 30px;
+  padding: 1.25rem;
+  background-color: #f7f6f3;
+  font-size: 1.25rem;
+}
+.moody-special-quote-container .quote-container:before {
+  position: absolute;
+  z-index: inherit;
+  top: -20px;
+  left: 0;
+  content: "";
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #f7f6f3;
+  border-left: 0 solid transparent;
+}
+.moody-special-quote-container .quote {
+  color: #bf5700;
+  font-size: 1em;
+  font-weight: 600;
+}
+.moody-special-quote-container .quote2 {
+  max-width: 80%;
+  color: #bf5700;
+  font-size: 1em;
+  font-weight: 600;
+}
+.moody-special-quote-container .image-overlay {
+  position: absolute;
+  z-index: 10;
+  right: 10px;
+  bottom: -125px;
+  max-width: 100px;
+  max-height: 100px;
+}
+@media (min-width: 768px) {
+  .moody-special-quote-container .image-overlay {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}

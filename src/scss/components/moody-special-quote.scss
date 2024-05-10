@@ -1,0 +1,85 @@
+.moody-special-quote-container {
+
+  .headline-container {
+    position: relative;
+    background-color: #f8971f; // Yellow background color.
+    padding: 1.75rem 2rem; // Decent padding around the content.
+    display: inline-block; // Makes the container only as wide as its content plus padding.
+    min-width: 60%;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -20px; // Size of the triangle, should match border-top.
+      border-left: 20px solid transparent; // Adjust for triangle size.
+      border-right: 0px solid transparent; // Adjust for triangle size.
+      border-top: 20px solid #f8971f; // The color of the headline container.
+      z-index: 999;
+
+    }
+  }
+
+  .headline {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #333f48;
+    font-family: 'LibreFrankBlack';
+    
+  }
+
+  .quote-container {
+    position: relative;
+    background-color: #F7F6F3; // Gray background color.
+    padding: 1.25rem;
+    margin-left: 30px; // Offset the quote container to the right.
+    font-size: 1.25rem; 
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: -20px; // Size of the triangle, should match border-bottom.
+      left: 0; // Position at the left edge.
+      border-left: 0px solid transparent; // Adjust for triangle size.
+      border-right: 20px solid transparent; // Adjust for triangle size.
+      border-bottom: 20px solid #F7F6F3; // The color of the quote container.
+      z-index: inherit;
+    }
+  }
+
+  .quote {
+    font-size: 1em;
+    // margin-right: 120px; // Make room for the image to float right.
+    color: #bf5700;
+    font-weight: 600;
+  }
+
+  .quote2 {
+    font-size: 1em;
+    // margin-right: 120px; // Make room for the image to float right.
+    color: #bf5700;
+    font-weight: 600;
+    max-width: 80%;
+  }
+
+  .image-overlay {
+    position: absolute;
+    bottom: -125px; // Adjust distance from bottom as needed.
+    right: 10px; // Adjust distance from right as needed.
+    max-width: 100px; // Adjust width as needed.
+    max-height: 100px; // Adjust height as needed.
+    z-index: 10; // Ensure the image is above other elements.
+  }
+}
+
+@media (min-width: 768px) {
+  .moody-special-quote-container .quote {
+    // margin-right: 150px; // Increased space for larger screens.
+  }
+
+  .moody-special-quote-container .image-overlay {
+    max-width: 150px; // Larger image for larger screens.
+    max-height: 150px;
+  }
+}
