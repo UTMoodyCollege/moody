@@ -16616,10 +16616,8 @@ footer #block-footermenu {
 }
 @media (min-width: 768px) {
   .moody-special-quote-container .image-overlay {
+    bottom: -125px;
     max-width: 150px;
     max-height: 150px;
-  }
-  .image-overlay {
-    bottom: -125px;
   }
 }
