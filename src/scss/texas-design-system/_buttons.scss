@@ -208,8 +208,8 @@
   &:hover {
     cursor: pointer;
     color: $ut-burntorange !important;
-    background-color: white;
-    border: 2px solid white;
+    background-color: transparent;
+    border: 2px transparent solid;
     // Use padding left from base extension.
     text-decoration: underline !important;
     &::after {

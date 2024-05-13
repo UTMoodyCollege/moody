@@ -736,8 +736,8 @@ a[href^="mailto:"],
   cursor: pointer;
   text-decoration: underline !important;
   color: #bf5700 !important;
-  border: 2px solid white;
-  background-color: white;
+  border: 2px transparent solid;
+  background-color: transparent;
 }
 .moody-btn--arrow:active {
   text-decoration: underline;
