@@ -729,14 +729,19 @@ a[href^="mailto:"],
 .moody-btn--arrow::after {
   margin-left: 10px;
   content: "→";
+  pointer-events: none;
   font-size: 25px;
 }
 .moody-btn--arrow:hover {
-  padding-left: 1rem;
   cursor: pointer;
+  text-decoration: underline !important;
   color: #bf5700 !important;
   border: 2px solid white;
   background-color: white;
+}
+.moody-btn--arrow:active {
+  text-decoration: underline;
+  background: transparent;
 }
 .news-view .views-field-title a,
 .news-view.latest-news-block > .views-row a .views-field-title {
@@ -12521,6 +12526,13 @@ footer #block-footermenu {
   .xl\:ut-text-5xl {
     font-size: 3rem;
   }
+}
+.basic-underline-link-styling-only {
+  text-decoration: underline;
+  color: inherit;
+}
+.basic-underline-link-styling-only:hover {
+  text-decoration: none;
 }
 .ut-m-1 {
   margin: 0.25rem;

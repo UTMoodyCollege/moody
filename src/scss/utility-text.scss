@@ -65,3 +65,11 @@ $breakpoints: (
 // Include the mixins to generate the classes
 @include generate-text-weights;
 @include generate-text-sizes;
+
+.basic-underline-link-styling-only {
+    text-decoration: underline;
+    color: inherit;
+    &:hover {
+        text-decoration: none;
+    }
+}

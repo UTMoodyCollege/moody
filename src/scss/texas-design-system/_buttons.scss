@@ -201,6 +201,8 @@
     content: '→';
     font-size: 25px;
     margin-left: 10px;
+    // No text-deco on hover imporantt
+    pointer-events:none;
   }
 
   &:hover {
@@ -209,14 +211,15 @@
     background-color: white;
     border: 2px solid white;
     // Use padding left from base extension.
-    padding-left: 1rem;
-
+    text-decoration: underline !important;
     &::after {
       
     }
   }
 
   &:active {
+    text-decoration: underline;
+    background: transparent
   }
 
   &:focus {
