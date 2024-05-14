@@ -721,7 +721,6 @@ a[href^="mailto:"],
 }
 .moody-btn--arrow {
   padding-left: 0;
-  text-align: center;
   color: #bf5700 !important;
   border: 2px solid transparent;
   background-color: transparent;
