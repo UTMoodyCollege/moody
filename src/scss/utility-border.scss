@@ -1,0 +1,63 @@
+// Breakpoint variables
+$breakpoints: (
+  'md': 768px,  // Adjust to match your actual breakpoints
+  'lg': 992px,
+  'xl': 1200px
+);
+
+// Mixin to generate border width classes with responsive modifiers
+@mixin generate-border-widths {
+  $widths: (
+    'none': 0,
+    'thin': 1px,
+    'medium': 2px,
+    'thick': 4px
+  );
+  
+  @each $name, $width in $widths {
+    .ut-border-width-#{$name} {
+      border-width: $width;
+    }
+
+    // Responsive variations
+    @each $prefix, $bp in $breakpoints {
+      @media (min-width: $bp) {
+        .#{$prefix}\:ut-border-width-#{$name} {
+          border-width: $width;
+        }
+      }
+    }
+  }
+}
+
+// Mixin to generate border radius classes with responsive modifiers
+@mixin generate-border-radii {
+  $radii: (
+    'none': 0,
+    'sm': 0.125rem,   // 2px
+    'md': 0.25rem,    // 4px
+    'lg': 0.5rem,     // 8px
+    'xl': 1rem,       // 16px
+    '2xl': 2rem,      // 32px
+    'full': 9999px    // Fully rounded
+  );
+
+  @each $name, $radius in $radii {
+    .ut-border-radius-#{$name} {
+      border-radius: $radius;
+    }
+
+    // Responsive variations
+    @each $prefix, $bp in $breakpoints {
+      @media (min-width: $bp) {
+        .#{$prefix}\:ut-border-radius-#{$name} {
+          border-radius: $radius;
+        }
+      }
+    }
+  }
+}
+
+// Include the mixins to generate the classes
+@include generate-border-widths;
+@include generate-border-radii;
