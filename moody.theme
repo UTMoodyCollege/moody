@@ -54,6 +54,9 @@ function moody_preprocess_page(&$variables) {
   $brandbar_logo = theme_get_setting('brandbar_logo') ?: 'moody';
   // Add the brandbar_logo to the page template.
   $variables['brandbar_logo'] = $brandbar_logo;
+  // WE want to check brandbar_color setting to add that var, default to bg-ut-burntorange
+  $brandbar_color = theme_get_setting('brandbar_color') ?: 'bg-ut-burntorange';
+  $variables['brandbar_color'] = $brandbar_color;
 }
 
 /**

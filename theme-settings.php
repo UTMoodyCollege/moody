@@ -84,6 +84,18 @@ function moody_form_system_theme_settings_alter(&$form, FormStateInterface $form
     '#default_value' => theme_get_setting('brandbar_logo'),
   ];
 
+  // Option to select the "Brandbar Color" - This can be "Burnt Orange" or "bg-ut-bluebonnet--s20" for the bluebonnet color.
+  $form['header_theme_settings']['brandbar_color'] = [
+    '#type' => 'radios',
+    '#title' => t('Brandbar Color'),
+    '#description' => t('Select the color for the orange University Brand Bar.'),
+    '#options' => [
+      'bg-ut-burntorange' => t('Burnt Orange'),
+      'bg-ut-bluebonnet--s20' => t('Bluebonnet'),
+    ],
+    '#default_value' => theme_get_setting('brandbar_color'),
+  ];
+
   $form['#submit'][] = 'moody_form_system_theme_settings_submit';
 }
 
