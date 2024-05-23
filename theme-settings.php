@@ -72,6 +72,18 @@ function moody_form_system_theme_settings_alter(&$form, FormStateInterface $form
     '#element_validate' => ['_moody_parent_link_validate'],
   ];
 
+  // Option to select the setting for "Brandbar Logo" - This can be set to either "Moody Texas" or "Texas" for the classic UT Logo.
+  $form['header_theme_settings']['brandbar_logo'] = [
+    '#type' => 'radios',
+    '#title' => t('Brandbar Logo'),
+    '#description' => t('Select the logo to display in the orange University Brand Bar.'),
+    '#options' => [
+      'moody' => t('Moody Texas'),
+      'utexas' => t('Texas'),
+    ],
+    '#default_value' => theme_get_setting('brandbar_logo'),
+  ];
+
   $form['#submit'][] = 'moody_form_system_theme_settings_submit';
 }
 

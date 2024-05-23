@@ -50,6 +50,10 @@ function moody_preprocess_page(&$variables) {
   if ($node_type && $node_type == 'moody_media_page') {
     $variables['#attached']['library'][] = 'moody/media-pages';
   }
+  // Lets get the theme setting for 'brandbar_logo', with a default if empty to 'moody'.
+  $brandbar_logo = theme_get_setting('brandbar_logo') ?: 'moody';
+  // Add the brandbar_logo to the page template.
+  $variables['brandbar_logo'] = $brandbar_logo;
 }
 
 /**
