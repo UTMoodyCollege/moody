@@ -260,9 +260,7 @@
     .back {
       background-color: #bf5700; // Burnt orange background color
       color: #fff; // White text color
-      display: flex;
-      flex-direction: column;
-      justify-content: center; // Use center to align items vertically in the middle
+      
       align-items: center;
       text-align: left; // Left align text for consistent styling
       padding: 2em; // Reduced and uniform padding
@@ -276,10 +274,13 @@
       }
   
       a {
+        overflow-y: scroll;
         color: #fff; // White text color
         text-decoration: none; // Remove underline from links
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center; // Use center to align items vertically in the middle
         align-items: center;
         width: 100%; // Take the full width to center content
   

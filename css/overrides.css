@@ -5730,11 +5730,6 @@ span.addtoany_list {
   -ms-flex-flow: row wrap;
 }
 .moody-flex-grid-wrapper .flip-container .back {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 2em;
   text-align: left;
@@ -5742,12 +5737,7 @@ span.addtoany_list {
   background-color: #bf5700;
 
   -webkit-box-align: center;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-box-pack: center;
   -ms-flex-align: center;
-  -ms-flex-direction: column;
-  -ms-flex-pack: center;
 }
 .moody-flex-grid-wrapper .flip-container .back h3 {
   margin: 0 0 0.5em;
@@ -5760,7 +5750,10 @@ span.addtoany_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  overflow-y: scroll;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   width: 100%;
   text-decoration: none;
@@ -5768,9 +5761,12 @@ span.addtoany_list {
 
   -webkit-box-align: center;
   -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
   -ms-flex-align: center;
-  -ms-flex-direction: column;
+  -ms-flex-direction: row;
+  -ms-flex-pack: center;
+  -ms-flex-wrap: wrap;
 }
 .moody-flex-grid-wrapper .flip-container .back a:hover {
   -webkit-transition: -webkit-transform 0.3s;
