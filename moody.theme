@@ -217,3 +217,22 @@ function moody_preprocess_input__search(&$variables)
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_addtoany_standard().
+ */
+function moody_preprocess_addtoany_standard(&$variables) {
+  // we want to take a look at variables['link_title'], which we check if we __toString() it, do we have something that starts with "Edit layout for" - if so, lets change it to "Edit layout" and strip evetyting else
+  if (isset($variables['link_title'])) {
+    // If the $link_title is of type TranslatableMarkup...
+    if (is_object($variables['link_title'])) {
+      // Convert the TranslatableMarkup object to a string.
+      $link_title = $variables['link_title']->__toString();
+      // Check if the string starts with "Edit layout for".
+      if (strpos($link_title, 'Edit layout for') === 0) {
+        // If it does, change it to "Edit layout".
+        $variables['link_title'] = 'Edit layout';
+      }
+    }
+  }
+}
