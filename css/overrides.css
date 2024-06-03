@@ -4371,6 +4371,9 @@ body.node-moody_media_page .plyr__controls {
 .node-moody_event .event-secondary .event-detail-wrapper .field--name-field-moodyevent-tags {
   margin-bottom: 10px;
 }
+.block-moody-events-moody-events-slider-filterable {
+  padding-bottom: 1em;
+}
 .node--type-moody-grad-profile .field--name-field-grad-photo img {
   max-width: 225px;
   margin-bottom: 40px;
