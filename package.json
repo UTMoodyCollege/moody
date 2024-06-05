@@ -10,12 +10,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "./node_modules/gulp/bin/gulp.js default",
-    "watch": "./node_modules/gulp/bin/gulp.js watch"
+    "watch": "./node_modules/gulp/bin/gulp.js watch",
+    "postinstall": "cp -r node_modules/alpinejs/dist/cdn.min.js js/alpine.js"
   },
   "author": "Mike Marsello",
   "license": "ISC",
   "dependencies": {
     "@accessible360/accessible-slick": "^1.0.1",
+    "alpinejs": "^3.14.0",
     "bootstrap": "^4.6.2",
     "jquery": "^1.9.1",
     "natives": "^1.1.6",
