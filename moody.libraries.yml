@@ -12,6 +12,8 @@ global:
     js/svgxuse.js: {}
     js/slick.min.js: {}
     js/amm_overridden.js: {}
+    js/alpine.js: {}
+
   dependencies:
     - core/jquery
     - core/drupal
