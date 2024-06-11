@@ -1,39 +1,61 @@
 .node--type-moody-grad-profile {
-    .field--name-field-grad-photo  {
-        img {
-            border-radius: 100%;
-            margin-bottom: 40px;
-            max-width: 225px;
-        }
+  .field--name-field-grad-photo {
+    img {
+      border-radius: 100%;
+      margin-bottom: 40px;
+      max-width: 225px;
     }
-    .field--name-field-grad-title {
-        font-weight: 600;
+  }
+  .field--name-field-grad-title {
+    font-weight: 600;
+  }
+  .layout__region--first {
+    // Its flex already, lets center all
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .block {
+      margin-bottom: 5px;
     }
-    .layout__region--first {
-        // Its flex already, lets center all
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .block {
-            margin-bottom: 5px;
-        }
+  }
+  .field--name-field-class-year {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .block-field-blocknodemoody-grad-profiletitle {
+    font-size: rem-calc(22);
+    font-weight: 600;
+    font-family: $ut-font--serif;
+    color: $ut-burntorange;
+  }
+  div.layout.layout--twocol-section.layout--twocol-section--25-75.container
+    > div.layout__region.layout__region--first {
+    justify-content: flex-start;
+  }
+}
+
+.grad-profile-row {
+
+  .views-field-field-grad-title {
+    
+    .grad-profile-view-item {
+      text-align: center;
+      max-width: 225px;
+      img {
+        padding-bottom: 2em;
+        border-radius: 50%;
+        max-width: 225px;
+      }
+      a,
+      a:link,
+      a:visited {
+        color: $ut-bluebonnet;
+      }
     }
-    .field--name-field-class-year {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 10px;
-        font-weight: 600;
-    }
-    .block-field-blocknodemoody-grad-profiletitle {
-        font-size: rem-calc(22);
-        font-weight: 600;
-        font-family: $ut-font--serif;
-        color: $ut-burntorange;
-    }
-    div.layout.layout--twocol-section.layout--twocol-section--25-75.container > div.layout__region.layout__region--first {
-        justify-content: flex-start;
-    }
+  }
 }

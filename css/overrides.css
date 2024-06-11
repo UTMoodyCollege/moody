@@ -4431,6 +4431,20 @@ body.node-moody_media_page .plyr__controls {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
 }
+.grad-profile-row .views-field-field-grad-title .grad-profile-view-item {
+  max-width: 225px;
+  text-align: center;
+}
+.grad-profile-row .views-field-field-grad-title .grad-profile-view-item img {
+  max-width: 225px;
+  padding-bottom: 2em;
+  border-radius: 50%;
+}
+.grad-profile-row .views-field-field-grad-title .grad-profile-view-item a,
+.grad-profile-row .views-field-field-grad-title .grad-profile-view-item a:link,
+.grad-profile-row .views-field-field-grad-title .grad-profile-view-item a:visited {
+  color: #005f86;
+}
 .wysiwyg_inner_rail {
   width: 100%;
   padding: 0;
