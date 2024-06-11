@@ -4425,6 +4425,12 @@ body.node-moody_media_page .plyr__controls {
   font-size: 1.375rem;
   font-weight: 600;
 }
+.node--type-moody-grad-profile div.layout.layout--twocol-section.layout--twocol-section--25-75.container > div.layout__region.layout__region--first {
+  justify-content: flex-start;
+
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+}
 .wysiwyg_inner_rail {
   width: 100%;
   padding: 0;

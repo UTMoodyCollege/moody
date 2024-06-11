@@ -33,4 +33,7 @@
         font-family: $ut-font--serif;
         color: $ut-burntorange;
     }
+    div.layout.layout--twocol-section.layout--twocol-section--25-75.container > div.layout__region.layout__region--first {
+        justify-content: flex-start;
+    }
 }
