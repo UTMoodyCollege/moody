@@ -219,7 +219,10 @@
     }
   }
   .main-menu__link {
-    color: $ut-charcoal;
+    color: black;
+    @include screen-mq(lg) {
+      color: $ut-charcoal;
+    }
     font-weight: 600;
     font-size: rem-calc(18);
     text-transform: capitalize;
@@ -288,7 +291,10 @@
   }
   .main-menu__link--subnav {
     display: block;
-    color: $ut-shade--s40;
+    color: black;
+    @include screen-mq(lg) {
+      color: $ut-shade--s40;
+    }
     font-weight: 600;
     font-size: rem-calc(18);
     line-height: rem-calc(24);

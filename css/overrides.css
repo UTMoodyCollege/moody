@@ -3374,10 +3374,15 @@ ul.no-bullet {
   display: inline-block;
   padding: 12px;
   text-transform: capitalize;
-  color: #333f48;
+  color: black;
   border: none;
   font-size: 1.125rem;
   font-weight: 600;
+}
+@media screen and (min-width: 1200px) {
+  #moody-header .main-menu__link {
+    color: #333f48;
+  }
 }
 #moody-header .main-menu__link.nolink:hover {
   text-decoration: none;
@@ -3438,10 +3443,15 @@ ul.no-bullet {
 #moody-header .main-menu__link--subnav {
   display: block;
   padding: 0;
-  color: #5e686e;
+  color: black;
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.5rem;
+}
+@media screen and (min-width: 1200px) {
+  #moody-header .main-menu__link--subnav {
+    color: #5e686e;
+  }
 }
 #moody-header .main-menu__link--subnav:hover {
   text-decoration: underline;
