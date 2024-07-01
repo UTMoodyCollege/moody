@@ -17,6 +17,7 @@ global:
   dependencies:
     - core/jquery
     - core/drupal
+    - responsive_tables_filter/tablesaw-filter
 
 media-pages:
   css:
