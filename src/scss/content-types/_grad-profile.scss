@@ -46,10 +46,14 @@
     .grad-profile-view-item {
       text-align: center;
       max-width: 225px;
+      .photo {
+        padding-bottom: 1.25em;
+      }    
       img {
-        padding-bottom: 2em;
         border-radius: 50%;
-        max-width: 225px;
+        width: 225px; // Adjust size as needed
+        height: 225px; // Ensure the height matches the width to keep it circular
+        object-fit: cover; // This ensures the image is centered and covers the whole area  
       }
       a,
       a:link,

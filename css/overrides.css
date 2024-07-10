@@ -4445,10 +4445,16 @@ body.node-moody_media_page .plyr__controls {
   max-width: 225px;
   text-align: center;
 }
+.grad-profile-row .views-field-field-grad-title .grad-profile-view-item .photo {
+  padding-bottom: 1.25em;
+}
 .grad-profile-row .views-field-field-grad-title .grad-profile-view-item img {
-  max-width: 225px;
-  padding-bottom: 2em;
+  width: 225px;
+  height: 225px;
   border-radius: 50%;
+
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 .grad-profile-row .views-field-field-grad-title .grad-profile-view-item a,
 .grad-profile-row .views-field-field-grad-title .grad-profile-view-item a:link,
