@@ -4461,10 +4461,12 @@ body.node-moody_media_page .plyr__controls {
 .grad-profile-row .views-field-field-grad-title .grad-profile-view-item a:visited {
   color: #005f86;
 }
-#views-exposed-form-grad-profiles-page-1 .form-item-combine {
+#views-exposed-form-grad-profiles-page-1 .form-item-combine,
+#views-exposed-form-grad-profiles-page-2 .form-item-combine {
   padding-right: 0.5em;
 }
-#views-exposed-form-grad-profiles-page-1 .form-item-field-class-year-value {
+#views-exposed-form-grad-profiles-page-1 .form-item-field-class-year-value,
+#views-exposed-form-grad-profiles-page-2 .form-item-field-class-year-value {
   margin-right: 0.5em;
 }
 .wysiwyg_inner_rail {
