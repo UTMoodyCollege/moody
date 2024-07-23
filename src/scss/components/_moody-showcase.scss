@@ -62,7 +62,7 @@
     grid-auto-flow: dense;
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(sm) {
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 1fr;
     }
     // At xl screens constrain the content to container
     // stylelint-disable-next-line at-rule-no-unknown
