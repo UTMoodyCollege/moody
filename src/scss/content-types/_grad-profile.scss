@@ -40,6 +40,12 @@
 }
 
 .grad-profile-row {
+  // For all but the last item in each row we want to add padding-right: 1.5em
+  padding-right: 1.5em;
+  &:nth-child(3n) {
+    padding-right: 0;
+  }
+
 
   .views-field-field-grad-title {
     
