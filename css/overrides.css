@@ -16817,9 +16817,9 @@ footer #block-footermenu {
   }
 }
 .ut-fit-table {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
 }
 .moody-special-quote-container .headline-container {
   position: relative;
