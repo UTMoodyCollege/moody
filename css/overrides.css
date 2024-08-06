@@ -16816,6 +16816,11 @@ footer #block-footermenu {
     border-radius: 9999px;
   }
 }
+.ut-fit-table {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .moody-special-quote-container .headline-container {
   position: relative;
   display: inline-block;
