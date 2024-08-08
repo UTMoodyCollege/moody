@@ -2,3 +2,12 @@
 .ut-fit-table {
   width: fit-content !important;
 }
+
+.ut-50-50-table {
+  th {
+    @include screen-mq(md) {
+      width: 50%;
+    }
+
+  }
+}

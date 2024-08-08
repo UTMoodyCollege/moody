@@ -16821,6 +16821,11 @@ footer #block-footermenu {
   width: -moz-fit-content !important;
   width: fit-content !important;
 }
+@media screen and (min-width: 900px) {
+  .ut-50-50-table th {
+    width: 50%;
+  }
+}
 .moody-special-quote-container .headline-container {
   position: relative;
   display: inline-block;
