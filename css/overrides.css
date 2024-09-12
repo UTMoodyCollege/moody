@@ -4449,6 +4449,8 @@ body.node-moody_media_page .plyr__controls {
 }
 .grad-profile-row .views-field-field-grad-title .grad-profile-view-item {
   max-width: 225px;
+  margin-right: 1em;
+  margin-left: 1em;
   text-align: center;
 }
 .grad-profile-row .views-field-field-grad-title .grad-profile-view-item .photo {
