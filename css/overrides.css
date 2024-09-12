@@ -4447,6 +4447,15 @@ body.node-moody_media_page .plyr__controls {
 .grad-profile-row:nth-child(3n) {
   padding-right: 0;
 }
+.grad-profile-row .field-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+}
 .grad-profile-row .views-field-field-grad-title .grad-profile-view-item {
   max-width: 225px;
   margin-right: 1em;
