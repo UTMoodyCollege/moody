@@ -6504,6 +6504,16 @@ p.overview-statement {
 
   fill: #fff;
 }
+.block__ut-social-links--items .block__ut-social-links--link:focus {
+  outline: 2px solid #005f86;
+  /* Add visible yellow focus outline */
+  outline-offset: 3px;
+  /* Ensure focus outline is visually distinct */
+}
+.block__ut-social-links--items .block__ut-social-links--link:focus svg {
+  fill: #005f86;
+  /* Highlight the SVG icon when the link is focused */
+}
 .block__ut-social-links--items .invert .block__ut-social-link:hover svg,
 .block__ut-social-links--items .invert .block__ut-social-link:focus svg {
   background: #fff;
