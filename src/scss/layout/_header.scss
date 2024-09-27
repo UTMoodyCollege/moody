@@ -174,7 +174,7 @@
   }
   .main-menu__list-item {
     + .main-menu__list-item {
-      border-top: 1px solid  $moody-gray;
+      border-top: 1px solid $moody-gray;
     }
     &.open {
       .main-menu__list--subnav {
@@ -428,5 +428,17 @@
         top: inherit;
       }
     }
+  }
+}
+
+#moody-header {
+  .main-menu__list-item.menu-item-has-children > .main-menu__link.hover:before,
+  .main-menu__list-item.menu-item-has-children > .main-menu__link.open:before {
+    // hide it
+    display: none;
+  }
+
+  .main-menu__list-item.menu-item-has-children > .main-menu__link:before {
+    display: none;
   }
 }

@@ -3603,6 +3603,13 @@ ul.no-bullet {
     top: inherit;
   }
 }
+#moody-header .main-menu__list-item.menu-item-has-children > .main-menu__link.hover:before,
+#moody-header .main-menu__list-item.menu-item-has-children > .main-menu__link.open:before {
+  display: none;
+}
+#moody-header .main-menu__list-item.menu-item-has-children > .main-menu__link:before {
+  display: none;
+}
 .moody-subsite-page #moody-header .mobile_wordmark.subsite-wordmark {
   position: relative;
 }
@@ -6505,13 +6512,13 @@ p.overview-statement {
   fill: #fff;
 }
 .block__ut-social-links--items .block__ut-social-links--link:focus {
-  outline: 2px solid #005f86;
+  outline: 2px solid #00a9b7;
   /* Add visible yellow focus outline */
   outline-offset: 3px;
   /* Ensure focus outline is visually distinct */
 }
 .block__ut-social-links--items .block__ut-social-links--link:focus svg {
-  fill: #005f86;
+  fill: #00a9b7;
   /* Highlight the SVG icon when the link is focused */
 }
 .block__ut-social-links--items .invert .block__ut-social-link:hover svg,

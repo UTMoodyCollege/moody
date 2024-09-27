@@ -36,7 +36,7 @@
     }
   }
   .block__ut-social-links--link:focus {
-    outline: 2px solid $ut-turquoise /* Add visible yellow focus outline */
+    outline: 2px solid $ut-turquoise; /* Add visible yellow focus outline */
     outline-offset: 3px; /* Ensure focus outline is visually distinct */
   }
 
