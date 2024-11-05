@@ -4,20 +4,18 @@
 			<div class="row">
 				<div
 					class="col-12">
-
 					{# If the brandbar_logo is "moody", we show this: #}
 					{% if brandbar_logo == 'moody' %}
-						<a href="https://www.moody.utexas.edu">
-							<img class="brandbar-logo" src="{{ base_path }}{{ active_theme_path() }}/images/logos/utexas_moody_white.png" alt=""/>
+						<a href="https://www.moody.utexas.edu" aria-label="Moody College of Communication, University of Texas">
+							<img class="brandbar-logo" src="{{ base_path }}{{ active_theme_path() }}/images/logos/utexas_moody_white.png" alt="Moody College of Communication logo"/>
 						{% endif %}
 						{# If the brandbar_logo is "utexas", we show this: #}
 						{% if brandbar_logo == 'utexas' %}
-							{# We can use the variables ['brandbar_shield'] which is a path to an svg, we can render that out into a div #}
 							<div class="row">
 								<div class="ut-logo--wrapper col order-md-2">
-									<a href="https://www.utexas.edu" class="ut-logo--shieldtexas">
-										<span class="img-fluid logo--formal align-right" style="height: 80%;" >
-											<img class="h-50 pr-4" src="/themes/custom/forty_acres/images/utexas-brandbar-shield.svg" alt="University of Texas at Austin - home">
+									<a href="https://www.utexas.edu" class="ut-logo--shieldtexas" aria-label="University of Texas at Austin - home">
+										<span class="img-fluid logo--formal align-right" style="height: 80%;">
+											<img class="h-50 pr-4" src="/themes/custom/forty_acres/images/utexas-brandbar-shield.svg" alt="University of Texas shield logo"/>
 										</span>
 									</a>
 								</div>
