@@ -23,7 +23,7 @@
     width: 35px !important;
     height: 35px !important;
     border-radius: 4px;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
   .invert,
   .block__ut-social-link:hover,
@@ -36,13 +36,14 @@
     }
   }
   .block__ut-social-links--link:focus {
-    outline: 2px solid $ut-turquoise; /* Add visible yellow focus outline */
-    outline-offset: 3px; /* Ensure focus outline is visually distinct */
+    outline: 2px solid black; /* Black focus outline */
+    outline-offset: 3px; /* Ensures focus outline is visually distinct */
   }
 
   .block__ut-social-links--link:focus svg {
-    fill: $ut-turquoise; /* Highlight the SVG icon when the link is focused */
+    fill: black; /* Changes the SVG icon color to black when the link is focused */
   }
+
   .invert {
     .block__ut-social-link:hover,
     .block__ut-social-link:focus {
