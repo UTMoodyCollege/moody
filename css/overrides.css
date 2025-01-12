@@ -6386,6 +6386,20 @@ p.overview-statement {
 #prospective-style-basic-block .prospective-style-basic-block-textual-content h3 {
   text-align: center;
 }
+.field.field--name-field-media-oembed-video {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.field.field--name-field-media-oembed-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 .localist-widget #lw {
   font-family: inherit;
 }
