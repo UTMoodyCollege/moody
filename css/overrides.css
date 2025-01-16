@@ -17,8 +17,8 @@
 }
 *:focus,
 .ut-focus {
-  outline: 2px dotted #aeb0b5;
-  outline-offset: 3px;
+  outline: 4px solid black;
+  outline-offset: 4px;
 }
 body {
   font-family: "LibreFrank", Arial, Helvetica, sans-serif;
