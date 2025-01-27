@@ -24,11 +24,11 @@
     charcoal: $ut-charcoal
   ) {
     .text-ut-#{$name} {
-      color: $color;
+      color: $color !important;
     }
     .hover\:text-ut-#{$name} {
       &:hover {
-        color: $color;
+        color: $color !important;
       }
     }
   }

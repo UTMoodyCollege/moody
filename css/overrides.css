@@ -7913,118 +7913,118 @@ footer #block-footermenu {
   margin-top: 0;
 }
 .text-ut-black {
-  color: black;
+  color: black !important;
 }
 .hover\:text-ut-black:hover {
-  color: black;
+  color: black !important;
 }
 .text-ut-white {
-  color: white;
+  color: white !important;
 }
 .hover\:text-ut-white:hover {
-  color: white;
+  color: white !important;
 }
 .text-ut-burntorange {
-  color: #bf5700;
+  color: #bf5700 !important;
 }
 .hover\:text-ut-burntorange:hover {
-  color: #bf5700;
+  color: #bf5700 !important;
 }
 .text-ut-bluebonnet {
-  color: #005f86;
+  color: #005f86 !important;
 }
 .hover\:text-ut-bluebonnet:hover {
-  color: #005f86;
+  color: #005f86 !important;
 }
 .text-ut-turquoise {
-  color: #00a9b7;
+  color: #00a9b7 !important;
 }
 .hover\:text-ut-turquoise:hover {
-  color: #00a9b7;
+  color: #00a9b7 !important;
 }
 .text-ut-turtlepond {
-  color: #579d42;
+  color: #579d42 !important;
 }
 .hover\:text-ut-turtlepond:hover {
-  color: #579d42;
+  color: #579d42 !important;
 }
 .text-ut-cactus {
-  color: #a6cd57;
+  color: #a6cd57 !important;
 }
 .hover\:text-ut-cactus:hover {
-  color: #a6cd57;
+  color: #a6cd57 !important;
 }
 .text-ut-shade {
-  color: #9cadb7;
+  color: #9cadb7 !important;
 }
 .hover\:text-ut-shade:hover {
-  color: #9cadb7;
+  color: #9cadb7 !important;
 }
 .text-ut-tangerine {
-  color: #f8971f;
+  color: #f8971f !important;
 }
 .hover\:text-ut-tangerine:hover {
-  color: #f8971f;
+  color: #f8971f !important;
 }
 .text-ut-limestone {
-  color: #d6d2c4;
+  color: #d6d2c4 !important;
 }
 .hover\:text-ut-limestone:hover {
-  color: #d6d2c4;
+  color: #d6d2c4 !important;
 }
 .text-ut-sunshine {
-  color: #ffd600;
+  color: #ffd600 !important;
 }
 .hover\:text-ut-sunshine:hover {
-  color: #ffd600;
+  color: #ffd600 !important;
 }
 .text-ut-moody-peach {
-  color: #f89722;
+  color: #f89722 !important;
 }
 .hover\:text-ut-moody-peach:hover {
-  color: #f89722;
+  color: #f89722 !important;
 }
 .text-ut-moody-gray {
-  color: #9daeb7;
+  color: #9daeb7 !important;
 }
 .hover\:text-ut-moody-gray:hover {
-  color: #9daeb7;
+  color: #9daeb7 !important;
 }
 .text-ut-moody-blue {
-  color: #00a9b7;
+  color: #00a9b7 !important;
 }
 .hover\:text-ut-moody-blue:hover {
-  color: #00a9b7;
+  color: #00a9b7 !important;
 }
 .text-ut-error-red {
-  color: #cd2026;
+  color: #cd2026 !important;
 }
 .hover\:text-ut-error-red:hover {
-  color: #cd2026;
+  color: #cd2026 !important;
 }
 .text-ut-bluebonnet--s20 {
-  color: #074d6a;
+  color: #074d6a !important;
 }
 .hover\:text-ut-bluebonnet--s20:hover {
-  color: #074d6a;
+  color: #074d6a !important;
 }
 .text-ut-ut-shade--t60 {
-  color: #c4cdd4;
+  color: #c4cdd4 !important;
 }
 .hover\:text-ut-ut-shade--t60:hover {
-  color: #c4cdd4;
+  color: #c4cdd4 !important;
 }
 .text-ut-ut-shade--t40 {
-  color: #e6ebed;
+  color: #e6ebed !important;
 }
 .hover\:text-ut-ut-shade--t40:hover {
-  color: #e6ebed;
+  color: #e6ebed !important;
 }
 .text-ut-charcoal {
-  color: #333f48;
+  color: #333f48 !important;
 }
 .hover\:text-ut-charcoal:hover {
-  color: #333f48;
+  color: #333f48 !important;
 }
 .bg-ut-black {
   background-color: black;
