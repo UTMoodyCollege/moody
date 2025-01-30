@@ -6699,12 +6699,21 @@ header .block__ut-social-links--items {
   text-decoration: underline;
   color: #fff;
 }
-.layout.layout--utexas-onecol.container-fluid.utexas-layout-no-padding .moody-contact-info-wrapper .contact-text a:hover,
-.layout.layout--utexas-onecol.utexas-layout-no-padding.container-sm .moody-contact-info-wrapper .contact-text a:hover,
-.layout.layout--utexas-onecol.utexas-layout-no-padding.container-md .moody-contact-info-wrapper .contact-text a:hover,
-.layout.layout--utexas-onecol.utexas-layout-no-padding.container-lg .moody-contact-info-wrapper .contact-text a:hover,
-.layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-contact-info-wrapper .contact-text a:hover {
-  color: #ccc;
+.layout.layout--utexas-onecol.container-fluid.utexas-layout-no-padding .moody-contact-info-wrapper .contact-text a:focus,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-sm .moody-contact-info-wrapper .contact-text a:focus,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-md .moody-contact-info-wrapper .contact-text a:focus,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-lg .moody-contact-info-wrapper .contact-text a:focus,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-contact-info-wrapper .contact-text a:focus {
+  color: black;
+  background-color: white;
+}
+.layout.layout--utexas-onecol.container-fluid.utexas-layout-no-padding .moody-contact-info-wrapper .contact-text a:hover:focus,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-sm .moody-contact-info-wrapper .contact-text a:hover:focus,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-md .moody-contact-info-wrapper .contact-text a:hover:focus,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-lg .moody-contact-info-wrapper .contact-text a:hover:focus,
+.layout.layout--utexas-onecol.utexas-layout-no-padding.container-xl .moody-contact-info-wrapper .contact-text a:hover:focus {
+  color: black;
+  background-color: white;
 }
 .layout.layout--utexas-onecol.container-fluid.utexas-layout-no-padding .moody-contact-info-wrapper .contact-link,
 .layout.layout--utexas-onecol.utexas-layout-no-padding.container-sm .moody-contact-info-wrapper .contact-link,

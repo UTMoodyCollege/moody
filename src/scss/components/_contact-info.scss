@@ -77,8 +77,17 @@
       color: $ut-white;
       text-decoration: underline;
       transition: color .2s ease-in-out;
+      &:focus {
+        background-color: white;
+        color: black;
+
+      }
       &:hover {
-        color: #ccc;
+        // When focused, we want to make sure we do text white, burnt orange background color
+        &:focus {
+          background-color: white;
+          color: black;
+        }
       }
     }
     .contact-link {
