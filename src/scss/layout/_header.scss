@@ -442,3 +442,18 @@
     display: none;
   }
 }
+
+.search-block-form {
+  input {
+    &:focus {
+      outline: none; // Removes the default outline
+      background-color: $ut-burntorange !important;
+      color: white;
+
+      &::placeholder {
+        color: white;
+        opacity: 1; // Ensures placeholder is fully visible
+      }
+    }
+  }
+}

@@ -3610,6 +3610,27 @@ ul.no-bullet {
 #moody-header .main-menu__list-item.menu-item-has-children > .main-menu__link:before {
   display: none;
 }
+.search-block-form input:focus {
+  color: white;
+  outline: none;
+  background-color: #bf5700 !important;
+}
+.search-block-form input:focus::-webkit-input-placeholder {
+  opacity: 1;
+  color: white;
+}
+.search-block-form input:focus::-moz-placeholder {
+  opacity: 1;
+  color: white;
+}
+.search-block-form input:focus::-ms-input-placeholder {
+  opacity: 1;
+  color: white;
+}
+.search-block-form input:focus::placeholder {
+  opacity: 1;
+  color: white;
+}
 .moody-subsite-page #moody-header .mobile_wordmark.subsite-wordmark {
   position: relative;
 }
