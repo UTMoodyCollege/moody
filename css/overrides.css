@@ -4514,6 +4514,42 @@ body.node-moody_media_page .plyr__controls {
 #views-exposed-form-grad-profiles-page-2 .form-item-field-class-year-value {
   margin-right: 0.5em;
 }
+header .custom-term-links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-bottom: 1em;
+
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  -ms-flex-wrap: wrap;
+  gap: 0.5em;
+}
+header .custom-term-links-container.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+header .custom-term-links-container a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  padding: 0.5em 1em;
+  text-align: center;
+  white-space: nowrap;
+
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+}
 .wysiwyg_inner_rail {
   width: 100%;
   padding: 0;
