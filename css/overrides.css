@@ -4550,6 +4550,54 @@ header .custom-term-links-container a {
   -ms-flex-align: center;
   -ms-flex-pack: center;
 }
+[data-drupal-selector^="views-exposed-form-grad-profiles-page-"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  max-width: 100%;
+
+  -webkit-box-align: end;
+  -webkit-box-pack: start;
+  -ms-flex-align: end;
+  -ms-flex-pack: start;
+  -ms-flex-wrap: nowrap;
+  gap: 1em;
+}
+[data-drupal-selector^="views-exposed-form-grad-profiles-page-"] .form-item {
+  flex: 1 1;
+  min-width: 200px;
+
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+}
+[data-drupal-selector^="views-exposed-form-grad-profiles-page-"] .form-text,
+[data-drupal-selector^="views-exposed-form-grad-profiles-page-"] .form-select {
+  width: 100%;
+  padding: 0.5em;
+}
+[data-drupal-selector^="views-exposed-form-grad-profiles-page-"] .form-actions {
+  flex: 1 1;
+
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+}
+[data-drupal-selector^="views-exposed-form-grad-profiles-page-"] .form-submit {
+  padding: 0.5em 1.2em;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  [data-drupal-selector^="views-exposed-form-grad-profiles-page-"] {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -ms-flex-wrap: wrap;
+  }
+}
 .wysiwyg_inner_rail {
   width: 100%;
   padding: 0;

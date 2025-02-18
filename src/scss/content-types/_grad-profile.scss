@@ -110,3 +110,38 @@ header {
     }
   }
 }
+
+[data-drupal-selector^="views-exposed-form-grad-profiles-page-"] {
+  display: flex;
+  flex-wrap: nowrap; // Ensures all items stay in one row (change to `wrap` for small screens)
+  justify-content: flex-start; // Aligns fields neatly from the left
+  align-items: flex-end; // Aligns labels and inputs to bottom
+  gap: 1em; // Ensures proper spacing between items
+  max-width: 100%; // Prevents unnecessary stretching
+
+  .form-item {
+    flex: 1 1; // Ensures fields take up available space evenly
+    min-width: 200px; // Prevents items from shrinking too much
+  }
+
+  .form-text,
+  .form-select {
+    width: 100%; // Ensures inputs and selects stretch appropriately
+    padding: 0.5em;
+  }
+
+  .form-actions {
+    flex: 1 1; // Keeps button sizing minimal
+  }
+
+  .form-submit {
+    padding: 0.5em 1.2em;
+    white-space: nowrap; // Prevents button text from breaking
+  }
+
+  // Make sure on smaller screens, it wraps instead of breaking layout
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center; // Centers filters when they wrap
+  }
+}
