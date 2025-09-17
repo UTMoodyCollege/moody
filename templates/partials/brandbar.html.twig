@@ -11,13 +11,16 @@
 						{% endif %}
 						{# If the brandbar_logo is "utexas", we show this: #}
 						{% if brandbar_logo == 'utexas' %}
-							<div class="row">
-								<div class="ut-logo--wrapper col order-md-2">
+							<div class="d-flex flex-nowrap justify-content-between align-items-center">
+								<div class="ut-logo--wrapper">
 									<a href="https://www.utexas.edu" class="ut-logo--shieldtexas" aria-label="University of Texas at Austin - home">
-										<span class="img-fluid logo--formal align-right" style="height: 80%;">
+										<span class="img-fluid logo--formal" style="height: 80%;">
 											<img class="h-50 pr-4" src="/themes/custom/forty_acres/images/utexas-brandbar-shield.svg" alt="University of Texas shield logo"/>
 										</span>
 									</a>
+								</div>
+								<div>
+									<a class="text-ut-white ut-font-weight-bold" href="https://give.utexas.edu/campaigns/59328/donations/new?designation_id=OGPCOUTNY">Give</a>
 								</div>
 							</div>
 						{% endif %}
