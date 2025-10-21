@@ -18,6 +18,12 @@
       margin-left: 10px;
     }
   }
+
+  .block__ut-social-links--link {
+      background-color: $ut-burntorange;
+      width: 35px;
+      height: 35px;
+  }
   svg {
     fill: $ut-burntorange;
     width: 35px !important;

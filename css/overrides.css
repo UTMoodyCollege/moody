@@ -6612,6 +6612,11 @@ p.overview-statement {
 .block__ut-social-links--items > div + div {
   margin-left: 10px;
 }
+.block__ut-social-links--items .block__ut-social-links--link {
+  width: 35px;
+  height: 35px;
+  background-color: #bf5700;
+}
 .block__ut-social-links--items svg {
   width: 35px !important;
   height: 35px !important;
