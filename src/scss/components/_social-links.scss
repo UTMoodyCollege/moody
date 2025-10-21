@@ -7,7 +7,11 @@
   gap: 0;
   grid-gap: 0;
   .block__ut-social-links--item {
+    width: 35px;
+    height: 35px;
     margin: 0;
+    border: none;
+    padding: 0;
     + .block__ut-social-links--item {
       margin-left: 10px;
     }
