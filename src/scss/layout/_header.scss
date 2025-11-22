@@ -164,22 +164,29 @@
         .sub-nav-wrapper {
           display: none;
         }
-        // Show nested sub-nav-wrapper on hover/focus of parent item
+        // Show nested sub-nav-wrapper on hover/focus of parent item or when hovering the wrapper itself
         &:hover > .sub-nav-wrapper,
-        &:focus-within > .sub-nav-wrapper {
+        &:focus-within > .sub-nav-wrapper,
+        .sub-nav-wrapper:hover {
           display: block;
         }
         // Also show the submenu list inside the nested wrapper
         &:hover > .sub-nav-wrapper > .main-menu__list--subnav,
-        &:focus-within > .sub-nav-wrapper > .main-menu__list--subnav {
+        &:focus-within > .sub-nav-wrapper > .main-menu__list--subnav,
+        .sub-nav-wrapper:hover > .main-menu__list--subnav {
           display: block;
         }
         // Style nested submenus (L3+) differently - no white background
         .sub-nav-wrapper .main-menu__list--subnav {
           position: relative;
           background-color: transparent;
-          padding: 10px 0 0 20px;
+          padding: 15px 0 10px 25px;
           width: auto;
+          margin-left: -5px;
+        }
+        // Add spacing between nested menu items
+        .sub-nav-wrapper .main-menu__list-item--subnav {
+          margin-bottom: 10px;
         }
         .main-menu__link--subnav {
           color: $ut-white;
