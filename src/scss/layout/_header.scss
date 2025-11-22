@@ -156,6 +156,15 @@
         }
       }
       .main-menu__list-item--subnav {
+        // Hide nested sub-nav-wrappers by default
+        .sub-nav-wrapper {
+          display: none;
+        }
+        // Show nested sub-nav-wrapper on hover/focus of parent item
+        &:hover > .sub-nav-wrapper,
+        &:focus-within > .sub-nav-wrapper {
+          display: block;
+        }
         .main-menu__link--subnav {
           color: $ut-white;
           font-weight: 500;
@@ -263,7 +272,8 @@
         padding-bottom: 0;
         border-bottom: 2px solid $ut-burntorange;
         ~ .sub-nav-wrapper {
-          .main-menu__list--subnav {
+          // Only show the direct child submenu, not nested ones
+          > .main-menu__list--subnav {
             background-color: $ut-burntorange;
             opacity: 1;
             display: block;

@@ -3313,6 +3313,13 @@ ul.no-bullet {
     margin-top: -2px;
     content: "—";
   }
+  #moody-header .sub-nav-wrapper .main-menu__list-item--subnav .sub-nav-wrapper {
+    display: none;
+  }
+  #moody-header .sub-nav-wrapper .main-menu__list-item--subnav:hover > .sub-nav-wrapper,
+  #moody-header .sub-nav-wrapper .main-menu__list-item--subnav:focus-within > .sub-nav-wrapper {
+    display: block;
+  }
 }
 #moody-header .main-menu__list-item + .main-menu__list-item {
   border-top: 1px solid #9daeb7;
@@ -3415,14 +3422,14 @@ ul.no-bullet {
     text-decoration: none;
     border-bottom: 2px solid #bf5700;
   }
-  #moody-header .main-menu__link.focus ~ .sub-nav-wrapper .main-menu__list--subnav,
-  #moody-header .main-menu__link.open ~ .sub-nav-wrapper .main-menu__list--subnav {
+  #moody-header .main-menu__link.focus ~ .sub-nav-wrapper > .main-menu__list--subnav,
+  #moody-header .main-menu__link.open ~ .sub-nav-wrapper > .main-menu__list--subnav {
     display: block;
     opacity: 1;
     background-color: #bf5700;
   }
-  #moody-header .main-menu__link.focus ~ .sub-nav-wrapper .main-menu__list--subnav .main-menu__link--subnav,
-  #moody-header .main-menu__link.open ~ .sub-nav-wrapper .main-menu__list--subnav .main-menu__link--subnav {
+  #moody-header .main-menu__link.focus ~ .sub-nav-wrapper > .main-menu__list--subnav .main-menu__link--subnav,
+  #moody-header .main-menu__link.open ~ .sub-nav-wrapper > .main-menu__list--subnav .main-menu__link--subnav {
     background-color: #bf5700;
   }
   #moody-header .main-menu__link:after {
@@ -3729,6 +3736,13 @@ ul.no-bullet {
     margin-top: -2px;
     content: "—";
   }
+  .moody-subsite-page #moody-header .sub-nav-wrapper .main-menu__list-item--subnav .sub-nav-wrapper {
+    display: none;
+  }
+  .moody-subsite-page #moody-header .sub-nav-wrapper .main-menu__list-item--subnav:hover > .sub-nav-wrapper,
+  .moody-subsite-page #moody-header .sub-nav-wrapper .main-menu__list-item--subnav:focus-within > .sub-nav-wrapper {
+    display: block;
+  }
   .moody-subsite-page #moody-header .main-menu__list {
     flex-direction: column;
     justify-content: flex-start;
@@ -3777,14 +3791,14 @@ ul.no-bullet {
     color: #bf5700;
     border-bottom: none;
   }
-  .moody-subsite-page #moody-header .main-menu__link.focus ~ .sub-nav-wrapper .main-menu__list--subnav,
-  .moody-subsite-page #moody-header .main-menu__link.open ~ .sub-nav-wrapper .main-menu__list--subnav {
+  .moody-subsite-page #moody-header .main-menu__link.focus ~ .sub-nav-wrapper > .main-menu__list--subnav,
+  .moody-subsite-page #moody-header .main-menu__link.open ~ .sub-nav-wrapper > .main-menu__list--subnav {
     display: block;
     opacity: 1;
     background-color: #fff;
   }
-  .moody-subsite-page #moody-header .main-menu__link.focus ~ .sub-nav-wrapper .main-menu__list--subnav .main-menu__link--subnav,
-  .moody-subsite-page #moody-header .main-menu__link.open ~ .sub-nav-wrapper .main-menu__list--subnav .main-menu__link--subnav {
+  .moody-subsite-page #moody-header .main-menu__link.focus ~ .sub-nav-wrapper > .main-menu__list--subnav .main-menu__link--subnav,
+  .moody-subsite-page #moody-header .main-menu__link.open ~ .sub-nav-wrapper > .main-menu__list--subnav .main-menu__link--subnav {
     background-color: #fff;
   }
   .moody-subsite-page #moody-header .main-menu__link:after {
