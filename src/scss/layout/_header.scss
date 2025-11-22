@@ -135,6 +135,10 @@
         color: $ut-shade--s40;
       }
     }
+    // Hide nested sub-nav-wrappers on mobile by default
+    .main-menu__list-item--subnav .sub-nav-wrapper {
+      display: none;
+    }
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {
       position: absolute;
@@ -163,6 +167,11 @@
         // Show nested sub-nav-wrapper on hover/focus of parent item
         &:hover > .sub-nav-wrapper,
         &:focus-within > .sub-nav-wrapper {
+          display: block;
+        }
+        // Also show the submenu list inside the nested wrapper
+        &:hover > .sub-nav-wrapper > .main-menu__list--subnav,
+        &:focus-within > .sub-nav-wrapper > .main-menu__list--subnav {
           display: block;
         }
         .main-menu__link--subnav {
