@@ -59,9 +59,9 @@
             <svg class="svg angle-down"><use xlink:href="#ut-angle-down"></use></svg>
           </div>
         {% endif %}
-        {# In primary menu region, only display up to L2 items #}
-        {% if item.below and menu_level == 0 %}
-          {# Execute the menu_links macro with item.below (i.e., the next level in #}
+        {# Render sub-items at any nesting level for unlimited expansion #}
+        {% if item.below %}
+          {# Execute the menu_links macro with item.below (i.e., the next level) #}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
       </li>
