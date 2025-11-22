@@ -3327,6 +3327,12 @@ ul.no-bullet {
   #moody-header .sub-nav-wrapper .main-menu__list-item--subnav:focus-within > .sub-nav-wrapper > .main-menu__list--subnav {
     display: block;
   }
+  #moody-header .sub-nav-wrapper .main-menu__list-item--subnav .sub-nav-wrapper .main-menu__list--subnav {
+    position: relative;
+    background-color: transparent;
+    padding: 10px 0 0 20px;
+    width: auto;
+  }
 }
 #moody-header .main-menu__list-item + .main-menu__list-item {
   border-top: 1px solid #9daeb7;
@@ -3753,6 +3759,12 @@ ul.no-bullet {
   .moody-subsite-page #moody-header .sub-nav-wrapper .main-menu__list-item--subnav:hover > .sub-nav-wrapper > .main-menu__list--subnav,
   .moody-subsite-page #moody-header .sub-nav-wrapper .main-menu__list-item--subnav:focus-within > .sub-nav-wrapper > .main-menu__list--subnav {
     display: block;
+  }
+  .moody-subsite-page #moody-header .sub-nav-wrapper .main-menu__list-item--subnav .sub-nav-wrapper .main-menu__list--subnav {
+    position: relative;
+    background-color: transparent;
+    padding: 10px 0 0 20px;
+    width: auto;
   }
   .moody-subsite-page #moody-header .main-menu__list {
     flex-direction: column;
