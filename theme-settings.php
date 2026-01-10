@@ -114,5 +114,6 @@ function _moody_parent_link_validate($element, FormStateInterface &$form_state) 
  * Theme Settings Submit Callback.
  */
 function moody_form_system_theme_settings_submit($form, FormStateInterface &$form_state) {
-  drupal_flush_all_caches();
+  \Drupal::service('cache.render')->invalidateAll();
+  \Drupal::service('cache_tags.invalidator')->invalidateTags(['rendered']);
 }

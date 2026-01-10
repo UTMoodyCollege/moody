@@ -21,7 +21,7 @@ gulp.task("sass", function () {
   return gulp.src("src/scss/build/**/*.scss")
     .pipe(sass({outputStyle: "expanded"}).on("error", sass.logError))
     .pipe(autoprefixer({
-      browsers: ["last 2 versions"],
+      overrideBrowserslist: ["last 2 versions"],
       cascade: false
     }))
     .pipe(csscombx())
