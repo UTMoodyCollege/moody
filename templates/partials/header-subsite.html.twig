@@ -25,10 +25,12 @@
 					<div class="search-social-give d-none d-lg-block">
 						{{ page.header_secondary }}
 						<!-- Place sitewide social icons in header_tertiary -->
-						{% if subsite_social %}
-							{{ subsite_social }}
-						{% else %}
-							{{ page.header_tertiary }}
+						{% if not hide_all_social_accounts %}
+							{% if subsite_social %}
+								{{ subsite_social }}
+							{% else %}
+								{{ page.header_tertiary }}
+							{% endif %}
 						{% endif %}
 						{% if give_link and subsite_give_link %}
 							<a href="{{ subsite_give_link }}" class="give-button ut-btn">Give</a>
