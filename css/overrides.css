@@ -3439,16 +3439,6 @@ footer.ut-footer .block__ut-social-links--items .invert .block__ut-social-link:f
 .moody-feature-page .feature-page-content.green .field--name-field-moody-subtitle {
   color: #579d42;
 }
-.moody-feature-page .feature-page-content .field--name-body p:first-child::first-letter {
-  float: left;
-  margin-top: 5px;
-  padding-right: 10px;
-  color: #8baec3;
-  font-size: 250%;
-  font-weight: 600;
-  font-style: normal !important;
-  line-height: 1;
-}
 .moody-feature-page .field--type-moody-feature-credit {
   text-align: center;
 }

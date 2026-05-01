@@ -35,18 +35,19 @@
         color: $ut-turtlepond;
       }
     }
-    .field--name-body p:first-child {
-      &::first-letter {
-        font-size: 250%;
-        line-height: 1;
-        font-weight: 600;
-        font-style: normal !important;
-        color: #8BAEC3;
-        float: left;
-        padding-right: 10px;
-        margin-top: 5px;
-      }
-    }
+    // Style the first letter of the first paragraph in the body field as a drop cap
+    // .field--name-body p:first-child {
+    //   &::first-letter {
+    //     font-size: 250%;
+    //     line-height: 1;
+    //     font-weight: 600;
+    //     font-style: normal !important;
+    //     color: #8BAEC3;
+    //     float: left;
+    //     padding-right: 10px;
+    //     margin-top: 5px;
+    //   }
+    // }
   }
   .field--type-moody-feature-credit {
     text-align: center;
