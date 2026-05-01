@@ -5112,40 +5112,59 @@ span.addtoany_list {
   }
 }
 .focus-areas-wrapper .focus-areas-items {
+  --focus-areas-gap: 50px;
+  --focus-areas-track-width: 100px;
   display: grid;
   margin-top: 50px;
-  -webkit-column-gap: 20px;
-  -moz-column-gap: 20px;
-  column-gap: 20px;
+  -webkit-column-gap: var(--focus-areas-gap, 20px);
+  -moz-column-gap: var(--focus-areas-gap, 20px);
+  column-gap: var(--focus-areas-gap, 20px);
+  row-gap: var(--focus-areas-gap, 20px);
+  width: 100%;
+  max-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
 
   grid-template-columns: 1fr;
-  justify-items: center;
+  justify-items: stretch;
+}
+.focus-areas-wrapper .focus-areas-items.gap-touching {
+  --focus-areas-gap: 0px;
+}
+.focus-areas-wrapper .focus-areas-items.gap-small {
+  --focus-areas-gap: 50px;
+}
+.focus-areas-wrapper .focus-areas-items.gap-medium {
+  --focus-areas-gap: 200px;
+}
+.focus-areas-wrapper .focus-areas-items.gap-max {
+  --focus-areas-gap: 400px;
 }
 @media screen and (min-width: 600px) {
   .focus-areas-wrapper .focus-areas-items {
-    grid-template-columns: 1fr 1fr;
+    max-width: calc((var(--focus-areas-track-width, 100px) * 2) + var(--focus-areas-gap, 20px));
+    grid-template-columns: repeat(2, var(--focus-areas-track-width, 100px));
   }
 }
 @media screen and (min-width: 900px) {
   .focus-areas-wrapper .focus-areas-items {
-    grid-template-columns: 1fr 1fr 1fr;
+    max-width: calc((var(--focus-areas-track-width, 100px) * 3) + (var(--focus-areas-gap, 20px) * 2));
+    grid-template-columns: repeat(3, var(--focus-areas-track-width, 100px));
   }
 }
 @media screen and (min-width: 1600px) {
   .focus-areas-wrapper .focus-areas-items {
-    padding-right: calc((100% - 1140px) / 2);
-    padding-left: calc((100% - 1140px) / 2);
+    max-width: calc((var(--focus-areas-track-width, 100px) * 3) + (var(--focus-areas-gap, 20px) * 2));
   }
 }
 .focus-areas-wrapper .focus-areas-items .focus-areas-item {
   width: 100%;
-  max-width: 300px;
-  margin-bottom: 35px;
 }
-@media screen and (min-width: 600px) {
-  .focus-areas-wrapper .focus-areas-items .focus-areas-item {
-    padding: 0 30px;
-  }
+.focus-areas-wrapper .focus-areas-items .focus-areas-item .content,
+.focus-areas-wrapper .focus-areas-items .focus-areas-item .ut-headline {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 .focus-areas-wrapper .focus-areas-items .focus-areas-item .ut-headline {
   display: inline-block;
@@ -5185,17 +5204,41 @@ span.addtoany_list {
 }
 @media screen and (min-width: 600px) {
   .focus-areas-wrapper .focus-areas-items.two-per-row {
-    grid-template-columns: 1fr 1fr;
+    max-width: calc((var(--focus-areas-track-width, 100px) * 2) + var(--focus-areas-gap, 20px));
+    grid-template-columns: repeat(2, var(--focus-areas-track-width, 100px));
+  }
+}
+@media screen and (min-width: 1600px) {
+  .focus-areas-wrapper .focus-areas-items.two-per-row {
+    max-width: calc((var(--focus-areas-track-width, 100px) * 2) + var(--focus-areas-gap, 20px));
+  }
+}
+@media screen and (min-width: 900px) {
+  .focus-areas-wrapper .focus-areas-items.three-per-row {
+    max-width: calc((var(--focus-areas-track-width, 100px) * 3) + (var(--focus-areas-gap, 20px) * 2));
+    grid-template-columns: repeat(3, var(--focus-areas-track-width, 100px));
+  }
+}
+@media screen and (min-width: 1600px) {
+  .focus-areas-wrapper .focus-areas-items.three-per-row {
+    max-width: calc((var(--focus-areas-track-width, 100px) * 3) + (var(--focus-areas-gap, 20px) * 2));
   }
 }
 @media screen and (min-width: 900px) {
   .focus-areas-wrapper .focus-areas-items.four-per-row {
-    grid-template-columns: 1fr 1fr;
+    max-width: calc((var(--focus-areas-track-width, 100px) * 2) + var(--focus-areas-gap, 20px));
+    grid-template-columns: repeat(2, var(--focus-areas-track-width, 100px));
   }
 }
 @media screen and (min-width: 1200px) {
   .focus-areas-wrapper .focus-areas-items.four-per-row {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: calc((var(--focus-areas-track-width, 100px) * 4) + (var(--focus-areas-gap, 20px) * 3));
+    grid-template-columns: repeat(4, var(--focus-areas-track-width, 100px));
+  }
+}
+@media screen and (min-width: 1600px) {
+  .focus-areas-wrapper .focus-areas-items.four-per-row {
+    max-width: calc((var(--focus-areas-track-width, 100px) * 4) + (var(--focus-areas-gap, 20px) * 3));
   }
 }
 .focus-areas-wrapper .ut-btn--homepage {

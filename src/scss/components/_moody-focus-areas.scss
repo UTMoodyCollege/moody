@@ -14,31 +14,51 @@
     }
   }
   .focus-areas-items {
+    --focus-areas-gap: 50px;
+    --focus-areas-track-width: 100px;
     margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr;
-    column-gap: 20px;
-    justify-items: center;
+    column-gap: var(--focus-areas-gap, 20px);
+    row-gap: var(--focus-areas-gap, 20px);
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: stretch;
+    &.gap-touching {
+      --focus-areas-gap: 0px;
+    }
+    &.gap-small {
+      --focus-areas-gap: 50px;
+    }
+    &.gap-medium {
+      --focus-areas-gap: 200px;
+    }
+    &.gap-max {
+      --focus-areas-gap: 400px;
+    }
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(sm) {
-      grid-template-columns: 1fr 1fr;
+      max-width: calc((var(--focus-areas-track-width, 100px) * 2) + var(--focus-areas-gap, 20px));
+      grid-template-columns: repeat(2, var(--focus-areas-track-width, 100px));
     }
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(md) {
-      grid-template-columns: 1fr 1fr 1fr;
+      max-width: calc((var(--focus-areas-track-width, 100px) * 3) + (var(--focus-areas-gap, 20px) * 2));
+      grid-template-columns: repeat(3, var(--focus-areas-track-width, 100px));
     }
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(xl) {
-      padding-left: calc((100% - 1140px) / 2);
-      padding-right: calc((100% - 1140px) / 2);
+      max-width: calc((var(--focus-areas-track-width, 100px) * 3) + (var(--focus-areas-gap, 20px) * 2));
     }
     .focus-areas-item {
-      max-width: 300px;
       width: 100%;
-      margin-bottom: 35px;
-      // stylelint-disable-next-line at-rule-no-unknown
-      @include screen-mq(sm) {
-        padding: 0 30px;
+      .content,
+      .ut-headline {
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: none;
       }
       .ut-headline {
         display: inline-block;
@@ -84,17 +104,39 @@
     &.two-per-row {
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(sm) {
-        grid-template-columns: 1fr 1fr;
+        max-width: calc((var(--focus-areas-track-width, 100px) * 2) + var(--focus-areas-gap, 20px));
+        grid-template-columns: repeat(2, var(--focus-areas-track-width, 100px));
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(xl) {
+        max-width: calc((var(--focus-areas-track-width, 100px) * 2) + var(--focus-areas-gap, 20px));
+      }
+    }
+    &.three-per-row {
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(md) {
+        max-width: calc((var(--focus-areas-track-width, 100px) * 3) + (var(--focus-areas-gap, 20px) * 2));
+        grid-template-columns: repeat(3, var(--focus-areas-track-width, 100px));
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(xl) {
+        max-width: calc((var(--focus-areas-track-width, 100px) * 3) + (var(--focus-areas-gap, 20px) * 2));
       }
     }
     &.four-per-row {
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(md) {
-        grid-template-columns: 1fr 1fr;
+        max-width: calc((var(--focus-areas-track-width, 100px) * 2) + var(--focus-areas-gap, 20px));
+        grid-template-columns: repeat(2, var(--focus-areas-track-width, 100px));
       }
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(lg) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: calc((var(--focus-areas-track-width, 100px) * 4) + (var(--focus-areas-gap, 20px) * 3));
+        grid-template-columns: repeat(4, var(--focus-areas-track-width, 100px));
+      }
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(xl) {
+        max-width: calc((var(--focus-areas-track-width, 100px) * 4) + (var(--focus-areas-gap, 20px) * 3));
       }
     }
   }
