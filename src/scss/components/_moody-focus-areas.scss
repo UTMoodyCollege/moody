@@ -15,16 +15,19 @@
   }
   .focus-areas-items {
     --focus-areas-gap: 50px;
+    --focus-areas-row-gap: 400px;
     --focus-areas-track-width: 100px;
+    --focus-areas-content-width: 220px;
     margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr;
     column-gap: var(--focus-areas-gap, 20px);
-    row-gap: var(--focus-areas-gap, 20px);
+    row-gap: var(--focus-areas-row-gap, 20px);
     width: 100%;
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
     justify-items: stretch;
     &.gap-touching {
       --focus-areas-gap: 0px;
@@ -37,6 +40,18 @@
     }
     &.gap-max {
       --focus-areas-gap: 400px;
+    }
+    &.gap-row-touching {
+      --focus-areas-row-gap: 0px;
+    }
+    &.gap-row-small {
+      --focus-areas-row-gap: 50px;
+    }
+    &.gap-row-medium {
+      --focus-areas-row-gap: 200px;
+    }
+    &.gap-row-max {
+      --focus-areas-row-gap: 400px;
     }
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(sm) {
@@ -53,7 +68,21 @@
       max-width: calc((var(--focus-areas-track-width, 100px) * 3) + (var(--focus-areas-gap, 20px) * 2));
     }
     .focus-areas-item {
-      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: max-content;
+      min-width: var(--focus-areas-track-width, 100px);
+      max-width: var(--focus-areas-content-width, 220px);
+      justify-self: center;
+      text-align: center;
+      .content {
+        width: 100%;
+        max-width: var(--focus-areas-content-width, 220px);
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
       .content,
       .ut-headline {
         overflow-wrap: normal;
@@ -61,7 +90,11 @@
         hyphens: none;
       }
       .ut-headline {
-        display: inline-block;
+        display: block;
+        width: auto;
+        max-width: var(--focus-areas-content-width, 220px);
+        margin-left: auto;
+        margin-right: auto;
         font-size: rem-calc(32);
         line-height: 1.2;
         font-family: $ut-font--serif;
@@ -70,12 +103,16 @@
         font-weight: 500;
       }
       .ut-copy {
+        width: auto;
         font-size: rem-calc(24);
         color: $ut-charcoal;
         font-family: $ut-font--serif;
         margin-bottom: 0;
       }
       .image-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
         .image-overflow {
           overflow: hidden;
           max-width: 100%;
@@ -107,6 +144,14 @@
         max-width: calc((var(--focus-areas-track-width, 100px) * 2) + var(--focus-areas-gap, 20px));
         grid-template-columns: repeat(2, var(--focus-areas-track-width, 100px));
       }
+      .focus-areas-item:last-child:nth-child(odd) {
+        // Center a lone item in the final row when the item count is odd.
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: max-content;
+        min-width: var(--focus-areas-track-width, 100px);
+        max-width: var(--focus-areas-content-width, 220px);
+      }
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(xl) {
         max-width: calc((var(--focus-areas-track-width, 100px) * 2) + var(--focus-areas-gap, 20px));
@@ -126,17 +171,17 @@
     &.four-per-row {
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(md) {
-        max-width: calc((var(--focus-areas-track-width, 100px) * 2) + var(--focus-areas-gap, 20px));
-        grid-template-columns: repeat(2, var(--focus-areas-track-width, 100px));
+        max-width: fit-content;
+        grid-template-columns: repeat(2, minmax(var(--focus-areas-track-width, 100px), max-content));
       }
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(lg) {
-        max-width: calc((var(--focus-areas-track-width, 100px) * 4) + (var(--focus-areas-gap, 20px) * 3));
-        grid-template-columns: repeat(4, var(--focus-areas-track-width, 100px));
+        max-width: fit-content;
+        grid-template-columns: repeat(4, minmax(var(--focus-areas-track-width, 100px), max-content));
       }
       // stylelint-disable-next-line at-rule-no-unknown
       @include screen-mq(xl) {
-        max-width: calc((var(--focus-areas-track-width, 100px) * 4) + (var(--focus-areas-gap, 20px) * 3));
+        max-width: fit-content;
       }
     }
   }
