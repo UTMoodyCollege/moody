@@ -1,8 +1,8 @@
 core_version_requirement: ^8 || ^9 || ^10 || ^11
 type: theme
-base theme: forty_acres
+base theme: speedway
 name: Moody Theme
-description: Custom subtheme of Forty Acres theme.
+description: Custom subtheme of Speedway theme.
 screenshot: images/screenshot.png
 
 regions:

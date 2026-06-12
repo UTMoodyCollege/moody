@@ -1,7 +1,7 @@
 {
   "name": "moody",
   "version": "1.0.0",
-  "description": "Bootstrap based Drupal Forty Acres subtheme",
+  "description": "Bootstrap based Drupal Speedway subtheme",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",

@@ -44,9 +44,9 @@
  */
 #}
 
-{% include '@forty_acres/includes/brandbar.html.twig' %}
+{% include '@speedway/includes/brandbar.html.twig' %}
 
-{% include '@forty_acres/includes/header.html.twig' %}
+{% include '@speedway/includes/header.html.twig' %}
 
 {{ page.breadcrumb }}
 
@@ -74,5 +74,5 @@
 		</aside>
 	{% endif %}
 </main>
-{% include '@forty_acres/includes/footer.html.twig' %}</div>{# /.layout-container #}
+{% include '@speedway/includes/footer.html.twig' %}</div>{# /.layout-container #}
 

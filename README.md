@@ -1,7 +1,7 @@
-# Forty Acres Subtheme Developer Documentation
+# Speedway Subtheme Developer Documentation
 
-### Creating a Forty Acres Subtheme
-Copy the STARTERKIT directory and put it at the same level as the forty_acres theme (/web/themes).  Rename the subtheme name in place of the name STARTERKIT, and replace the word STARTERKIT in your subtheme in the following places within your subtheme:
+### Creating a Speedway Subtheme
+Copy the STARTERKIT directory and put it at the same level as the speedway theme (/web/themes).  Rename the subtheme name in place of the name STARTERKIT, and replace the word STARTERKIT in your subtheme in the following places within your subtheme:
 /config/install/STARTERKIT.settings.yml
 package.json
 STARTERKIT.info.yml (the name and 2 instances inside this file)
@@ -11,9 +11,9 @@ STARTERKIT.libraries.yml
 ### Customizing your subtheme
 
 #### Customizing templates
-If you want to override a Forty Acres theme template just copy it into the templates directory in your new subtheme. Namespacing in those templates may need to be updated with the namespace of your new subtheme. For example, if you copy a header.html.twig file into your new subtheme, you would need to copy the page.html.twig file and reference the include file with the new theme namespace.
+If you want to override a Speedway theme template just copy it into the templates directory in your new subtheme. Namespacing in those templates may need to be updated with the namespace of your new subtheme. For example, if you copy a header.html.twig file into your new subtheme, you would need to copy the page.html.twig file and reference the include file with the new theme namespace.
 In other words, in page.html.twig, you would change:
-{% include '@forty_acres/includes/header.html.twig' %} to {% include '@your_subtheme/includes/header.html.twig' %}
+{% include '@speedway/includes/header.html.twig' %} to {% include '@your_subtheme/includes/header.html.twig' %}
 
 #### Customizing JS
 There is an example.custom.js file in the /js directory. It is referenced in the libraries.yml file. To use it, rename it by removing the "example" part of the file names and uncomment the "js" and the line beneath it in the libraries file.
@@ -81,7 +81,7 @@ You should now have Node, NPM and Gulp installed globally. You can verify the lo
     which gulp
 
 #### Running a gulp build
-Now that you have Node, NPM and Gulp installed globally you can run the gulp configuration in Forty Acres. Forty Acres contains a package.json which defines a number of node packages and gulpfile.js which contains the Gulp configuration for tasks such as compiling SCSS and uglifying JS.
+Now that you have Node, NPM and Gulp installed globally you can run the gulp configuration in Speedway. Speedway contains a package.json which defines a number of node packages and gulpfile.js which contains the Gulp configuration for tasks such as compiling SCSS and uglifying JS.
 
 Run the following commands from your theme root to install the local packages and then to trigger a new build.
 

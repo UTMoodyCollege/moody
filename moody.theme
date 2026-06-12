@@ -2,7 +2,7 @@
 
 /**
  * @file
- * The primary PHP file for a Forty Acres subtheme.
+ * The primary PHP file for a Speedway subtheme.
  */
 
 use Drupal\node\NodeInterface;

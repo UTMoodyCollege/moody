@@ -12,10 +12,10 @@ use Drupal\Core\Form\FormStateInterface;
  */
 function moody_form_system_theme_settings_alter(&$form, FormStateInterface $form_state, $form_id = NULL) {
 
-  // Forty Acres custom settings.
+  // Speedway custom settings.
   $form['utexas_custom_section'] = [
     '#type' => 'markup',
-    '#markup' => '<h2><small>Forty Acres Custom Settings</small></h2>',
+    '#markup' => '<h2><small>Speedway Custom Settings</small></h2>',
   ];
   $form['ut_vertical_tabs'] = [
     '#type' => 'vertical_tabs',
