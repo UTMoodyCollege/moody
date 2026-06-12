@@ -13,7 +13,7 @@ STARTERKIT.libraries.yml
 #### Customizing templates
 If you want to override a Speedway theme template just copy it into the templates directory in your new subtheme. Namespacing in those templates may need to be updated with the namespace of your new subtheme. For example, if you copy a header.html.twig file into your new subtheme, you would need to copy the page.html.twig file and reference the include file with the new theme namespace.
 In other words, in page.html.twig, you would change:
-{% include '@speedway/includes/header.html.twig' %} to {% include '@your_subtheme/includes/header.html.twig' %}
+{% include '@moody/partials/header.html.twig' %} to {% include '@your_subtheme/partials/header.html.twig' %}
 
 #### Customizing JS
 There is an example.custom.js file in the /js directory. It is referenced in the libraries.yml file. To use it, rename it by removing the "example" part of the file names and uncomment the "js" and the line beneath it in the libraries file.
