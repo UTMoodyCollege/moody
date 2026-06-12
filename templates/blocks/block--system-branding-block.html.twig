@@ -14,10 +14,11 @@
  */
 #}
 {% block content %}
-  {% if site_logo %}
+  {% set logo_src = site_logo ?: base_path ~ active_theme_path() ~ '/images/logos/SVG/moody.svg' %}
+  {% if logo_src %}
     <span class="site-title sr-only">{{ site.title }}</span>
     <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-      <img class="img-fluid ut-logo--main" src="{{ site_logo }}" alt="" role="presentation" aria-hidden="true"/>
+      <img class="img-fluid ut-logo--main" src="{{ logo_src }}" alt="Moody College of Communication"/>
     </a>
   {% endif %}
   {% if site_name %}

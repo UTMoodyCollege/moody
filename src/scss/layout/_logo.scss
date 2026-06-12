@@ -9,6 +9,9 @@
     }
   }
   .ut-logo--main {
+    display: block;
+    width: auto;
+    max-width: none;
     object-fit: contain;
     object-position: center;
     // stylelint-disable-next-line at-rule-no-unknown
@@ -42,6 +45,10 @@
     }
   }
 
+  &.short-logo {
+    @extend .short_logo;
+  }
+
   &.medium_logo {
     height: 70px;
     // stylelint-disable-next-line at-rule-no-unknown
@@ -68,6 +75,10 @@
     }
   }
 
+  &.medium-logo {
+    @extend .medium_logo;
+  }
+
   &.tall_logo {
     height: 80px;
     // stylelint-disable-next-line at-rule-no-unknown
@@ -89,5 +100,9 @@
         height: 100px;
       }
     }
+  }
+
+  &.tall-logo {
+    @extend .tall_logo;
   }
 }

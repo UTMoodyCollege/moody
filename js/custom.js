@@ -82,29 +82,47 @@
 
       //////////////////////////////////////////////////////
       // Click event on L2 links on mobile menu trigger.
+      var setSubnavState = function ($trigger, isOpening) {
+        var $item = $trigger.parent('.main-menu__list-item');
+        var $link = $trigger.siblings('.main-menu__link');
+        var $subNavWrapper = $trigger.siblings('.sub-nav-wrapper');
+        var $subNav = $subNavWrapper.find('.main-menu__list--subnav');
+
+        $item.siblings().find('.moody-subnav-trigger').removeClass('icon--open');
+        $item.siblings().find('.main-menu__link').removeClass('add-border open').attr('aria-expanded', 'false');
+        $item.siblings().find('.sub-nav-wrapper').removeClass('open hover focus').attr('aria-expanded', 'false').attr('aria-hidden', 'true');
+        $item.siblings().find('.main-menu__list--subnav').removeClass('open');
+
+        $trigger.toggleClass('icon--open', isOpening);
+        $link.toggleClass('add-border open', isOpening).attr('aria-expanded', isOpening ? 'true' : 'false');
+        $subNavWrapper.toggleClass('open', isOpening).attr('aria-hidden', isOpening ? 'false' : 'true').attr('aria-expanded', isOpening ? 'true' : 'false');
+        $subNav.toggleClass('open', isOpening);
+      }
+
+      var toggleSubnav = function ($trigger) {
+        var isOpening = !$trigger.hasClass('icon--open');
+        setSubnavState($trigger, isOpening);
+        window.setTimeout(function () {
+          setSubnavState($trigger, isOpening);
+        }, 0);
+        window.setTimeout(function () {
+          setSubnavState($trigger, isOpening);
+        }, 300);
+      }
+
       var iconClick = function () {
-        $('.moody-subnav-trigger').on('touchstart mousedown keydown', function (e) {
-          if (e.type == 'mousedown' || e.type == 'touchstart' || e.keyCode == 13) {
+        $('.moody-subnav-trigger, .main-menu__list-item.menu-item-has-children > .main-menu__link')
+          .off('touchstart.moodySubnav mousedown.moodySubnav keydown.moodySubnav')
+          .on('touchstart.moodySubnav mousedown.moodySubnav keydown.moodySubnav', function (e) {
+          if (e.type == 'mousedown' || e.type == 'touchstart' || e.keyCode == 13 || e.keyCode == 32) {
+            var $trigger = $(this).hasClass('moody-subnav-trigger') ? $(this) : $(this).siblings('.moody-subnav-trigger');
+            if (!$trigger.length) {
+              return;
+            }
             // Keep mousedown event from grabbing focus.
             e.preventDefault();
             e.stopPropagation();
-            $(this).toggleClass('icon--open');
-            // Add border on sibling link when active.
-            $(this).siblings('.main-menu__link').toggleClass('add-border');
-            // Add 'open' class to subnav associated with icon.
-            $(this).siblings('.sub-nav-wrapper').find('.main-menu__list--subnav').toggleClass('open');
-            // Remove 'open' class from all other subnavs.
-            $(this).parent('.main-menu__list-item').siblings().find('.main-menu__list--subnav').removeClass('open');
-            // Remove 'icon--open' class from all other icons.
-            $(this).parent('.main-menu__list-item').siblings().find('.moody-subnav-trigger').removeClass('icon--open');
-            // Toggle aria attributes.
-            $(this).siblings('.main-menu__link').attr('aria-expanded', function (index, attr) { return (attr == 'true') ? 'false' : 'true'; });
-            $(this).siblings('.sub-nav-wrapper').attr('aria-hidden', function (index, attr) { return (attr == 'true') ? 'false' : 'true'; });
-            $(this).siblings('.sub-nav-wrapper').attr('aria-expanded', function (index, attr) { return (attr == 'true') ? 'false' : 'true'; });
-            // Reset aria attributes and styles of the clicked item's siblings.
-            $(this).parent('.main-menu__list-item').siblings().find('.main-menu__link').removeClass('add-border');
-            $(this).parent('.main-menu__list-item').siblings().find('.sub-nav-wrapper').attr('aria-expanded', 'false').attr('aria-hidden', 'true');
-            $(this).parent('.main-menu__list-item').siblings().find('.main-menu__link').attr('aria-expanded', 'false');
+            toggleSubnav($trigger);
           }
         });
       }
