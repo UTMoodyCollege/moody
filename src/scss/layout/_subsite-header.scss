@@ -4,6 +4,17 @@
     .mobile_wordmark.subsite-wordmark {
       position: relative;
     }
+    #menu-icon {
+      &[aria-expanded="true"] {
+        position: fixed;
+        top: 50px;
+        right: 18px;
+        z-index: 1112;
+        margin-right: 0;
+        padding: 8px;
+        background-color: #efefef;
+      }
+    }
   }
 }
 // stylelint-disable-next-line at-rule-no-unknown
