@@ -2525,8 +2525,16 @@ ul.no-bullet {
   }
 }
 #moody-header .header-wrapper #block-moody-site-branding-header {
-  flex: 0 0 auto;
+  flex: 1 1 auto;
+  min-width: 0;
   margin-bottom: 0;
+  margin-right: 0.625rem;
+}
+@media screen and (min-width: 1200px) {
+  #moody-header .header-wrapper #block-moody-site-branding-header {
+    flex: 0 0 auto;
+    margin-right: 0;
+  }
 }
 #moody-header .p2-logo {
   display: block;
@@ -2973,6 +2981,8 @@ ul.no-bullet {
 }
 .search-block-form input:focus {
   color: white;
+  -webkit-text-fill-color: white;
+  caret-color: white;
   outline: none;
   background-color: #bf5700 !important;
 }
@@ -2991,6 +3001,11 @@ ul.no-bullet {
 .search-block-form input:focus::placeholder {
   opacity: 1;
   color: white;
+}
+#moody-header .search-block-form input.form-search:focus {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+  caret-color: white !important;
 }
 .moody-subsite-page #moody-header .mobile_wordmark.subsite-wordmark {
   position: relative;
@@ -3231,7 +3246,7 @@ ul.no-bullet {
 #moody-header .ut-logo--main {
   display: block;
   width: auto;
-  max-width: none;
+  max-width: 100%;
   -o-object-fit: contain;
   object-fit: contain;
   -o-object-position: center;
@@ -3239,6 +3254,7 @@ ul.no-bullet {
 }
 @media screen and (min-width: 1200px) {
   #moody-header .ut-logo--main {
+    max-width: none;
     -o-object-position: top;
     object-position: top;
   }

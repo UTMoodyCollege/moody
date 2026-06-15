@@ -64,6 +64,30 @@
       });
 
       //////////////////////////////////////////////////////
+      // Keep header search text legible against the focused orange field.
+      var setSearchTextContrast = function (input, isFocused) {
+        if (isFocused) {
+          input.style.setProperty('color', '#fff', 'important');
+          input.style.setProperty('-webkit-text-fill-color', '#fff');
+          input.style.setProperty('caret-color', '#fff');
+        }
+        else {
+          input.style.removeProperty('color');
+          input.style.removeProperty('-webkit-text-fill-color');
+          input.style.removeProperty('caret-color');
+        }
+      };
+
+      $('#moody-header .search-block-form input.form-search')
+        .off('focus.moodySearchContrast input.moodySearchContrast blur.moodySearchContrast')
+        .on('focus.moodySearchContrast input.moodySearchContrast', function () {
+          setSearchTextContrast(this, true);
+        })
+        .on('blur.moodySearchContrast', function () {
+          setSearchTextContrast(this, false);
+        });
+
+      //////////////////////////////////////////////////////
       // Turn off hover events on main nav on subsite pages.
       $('.moody-subsite-page .main-menu__list').off('mouseover touchstart');
       $('.moody-subsite-page .moody-subnav-trigger').on('click', function() {

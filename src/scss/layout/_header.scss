@@ -25,8 +25,15 @@
       z-index: 1;
     }
     #block-moody-site-branding-header {
-      flex: 0 0 auto;
+      flex: 1 1 auto;
       margin-bottom: 0;
+      min-width: 0;
+      margin-right: rem-calc(10);
+      // stylelint-disable-next-line at-rule-no-unknown
+      @include screen-mq(lg) {
+        flex: 0 0 auto;
+        margin-right: 0;
+      }
     }
   }
   .p2-logo {
@@ -483,10 +490,24 @@
       outline: none; // Removes the default outline
       background-color: $ut-burntorange !important;
       color: white;
+      -webkit-text-fill-color: white;
+      caret-color: white;
 
       &::placeholder {
         color: white;
         opacity: 1; // Ensures placeholder is fully visible
+      }
+    }
+  }
+}
+
+#moody-header {
+  .search-block-form {
+    input.form-search {
+      &:focus {
+        color: white !important;
+        -webkit-text-fill-color: white !important;
+        caret-color: white !important;
       }
     }
   }
