@@ -3393,7 +3393,35 @@ ul.no-bullet {
 }
 footer.ut-footer .footer-menu__list-item a,
 footer.ut-footer .required-links__list-item a {
-  color: #333f48;
+  color: #ae4f00;
+}
+footer.ut-footer .required-links__list {
+  display: grid;
+  gap: 0.625rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+footer.ut-footer .required-links__list-item {
+  margin-bottom: 0;
+  padding-bottom: 0.625rem;
+  list-style: none;
+}
+footer.ut-footer .required-links__list-item::marker {
+  content: "";
+}
+footer.ut-footer .required-links__list-item a {
+  text-decoration: none;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+footer.ut-footer .required-links__list-item a::after {
+  display: none;
+}
+footer.ut-footer .required-links__list-item a:hover,
+footer.ut-footer .required-links__list-item a:focus {
+  text-decoration: underline;
 }
 footer.ut-footer .subsite-footer-text h2 {
   font-weight: 600;

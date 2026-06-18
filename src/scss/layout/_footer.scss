@@ -2,7 +2,35 @@ footer.ut-footer {
   .footer-menu__list-item,
   .required-links__list-item {
     a {
-      color: $ut-charcoal;
+      color: $ut-burntorange--s10;
+    }
+  }
+  .required-links__list {
+    display: grid;
+    gap: rem-calc(10);
+    margin: 0;
+    margin-bottom: rem-calc(16);
+    padding-left: 0;
+    list-style: none;
+  }
+  .required-links__list-item {
+    margin-bottom: 0;
+    padding-bottom: rem-calc(10);
+    list-style: none;
+    &::marker {
+      content: "";
+    }
+    a {
+      font-size: rem-calc(14);
+      line-height: rem-calc(20);
+      text-decoration: none;
+      &::after {
+        display: none;
+      }
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
     }
   }
   .subsite-footer-text {
