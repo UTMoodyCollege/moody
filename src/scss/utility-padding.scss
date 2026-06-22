@@ -8,6 +8,50 @@ $breakpoints: (
 // Base padding unit, change this as needed based on your design scale.
 $base-padding-unit: 0.25rem; // This means 1 unit = 0.25rem
 
+// Bootstrap-compatible padding utilities.
+$moody-bootstrap-spacers: (
+  0: 0,
+  1: .25rem,
+  2: .5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem
+);
+
+@mixin moody-bootstrap-padding-utilities($infix: "") {
+  @each $size, $value in $moody-bootstrap-spacers {
+    .p#{$infix}-#{$size} {
+      padding: $value !important;
+    }
+    .pt#{$infix}-#{$size},
+    .py#{$infix}-#{$size} {
+      padding-top: $value !important;
+    }
+    .pr#{$infix}-#{$size},
+    .px#{$infix}-#{$size} {
+      padding-right: $value !important;
+    }
+    .pb#{$infix}-#{$size},
+    .py#{$infix}-#{$size} {
+      padding-bottom: $value !important;
+    }
+    .pl#{$infix}-#{$size},
+    .px#{$infix}-#{$size} {
+      padding-left: $value !important;
+    }
+  }
+}
+
+@include moody-bootstrap-padding-utilities;
+
+@each $breakpoint, $width in $grid-breakpoints {
+  @if $width != 0 {
+    @media (min-width: $width) {
+      @include moody-bootstrap-padding-utilities("-#{$breakpoint}");
+    }
+  }
+}
+
 // Mixin to generate padding utility classes with responsive modifiers
 @mixin generate-padding-utilities {
   // Loop through 64 to generate padding classes for all, top, bottom, left, and right
@@ -49,7 +93,7 @@ $base-padding-unit: 0.25rem; // This means 1 unit = 0.25rem
 
     // Padding Left
     .ut-pl-#{$i} {
-      padding-left: $padding_value;
+      padding-left: $padding-value;
     }
 
     .hover\:ut-pl-#{$i} {
@@ -97,7 +141,7 @@ $base-padding-unit: 0.25rem; // This means 1 unit = 0.25rem
           }
         }
         .#{$prefix}:ut-pl-#{$i} {
-          padding-left: $padding_value;
+          padding-left: $padding-value;
         }
         .hover\:.#{$prefix}:ut-pl-#{$i} {
           &:hover {
@@ -105,7 +149,7 @@ $base-padding-unit: 0.25rem; // This means 1 unit = 0.25rem
           }
         }
         .#{$prefix}:ut-pr-#{$i} {
-          padding-right: $padding_value;
+          padding-right: $padding-value;
         }
         .hover\:.#{$prefix}:ut-pr-#{$i} {
           &:hover {
