@@ -4749,6 +4749,12 @@ header .custom-term-links-container a {
   font-weight: 600;
   line-height: 1.2;
 }
+.field--type-moody-accordion .accordion-btn:hover,
+.field--type-moody-accordion .accordion-btn:focus-visible {
+  color: #333f48 !important;
+  border: none;
+  background: #fff;
+}
 .field--type-moody-accordion .accordion-btn .accordion-caret {
   position: relative;
   margin-bottom: -10px;

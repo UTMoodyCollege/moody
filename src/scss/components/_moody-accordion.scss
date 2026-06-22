@@ -18,6 +18,12 @@
     text-align: left;
     padding: 20px 0;
     color: $ut-charcoal !important;
+    &:hover,
+    &:focus-visible {
+      color: $ut-charcoal !important;
+      border: none;
+      background: $ut-white;
+    }
     .accordion-caret {
       position: relative;
       // Transition the caret
