@@ -108,6 +108,10 @@
 @include bg-colors;
 @include border-colors;
 
+.text-white {
+  color: white !important;
+}
+
 // Copy over from the utexas_layouts module to include everywhere
 .utexas-bg-074d6a {
   background-color: #074d6a;

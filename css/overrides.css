@@ -7494,6 +7494,10 @@ footer #block-footermenu {
 .hover\:border-ut-charcoal:hover {
   border-color: #333f48;
 }
+
+.text-white {
+  color: white !important;
+}
 .utexas-bg-074d6a {
   background-color: #074d6a;
 }
@@ -16199,6 +16203,10 @@ footer #block-footermenu {
 
 .fs-6 {
   font-size: 1rem !important;
+}
+
+.text-center {
+  text-align: center !important;
 }
 
 /* Moody Bootstrap-compatible spacing utilities. */
