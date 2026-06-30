@@ -66,6 +66,31 @@ $breakpoints: (
 @include generate-text-weights;
 @include generate-text-sizes;
 
+// Bootstrap-compatible font-size utilities.
+.fs-1 {
+  font-size: 2.5rem !important;
+}
+
+.fs-2 {
+  font-size: 2rem !important;
+}
+
+.fs-3 {
+  font-size: 1.75rem !important;
+}
+
+.fs-4 {
+  font-size: 1.5rem !important;
+}
+
+.fs-5 {
+  font-size: 1.25rem !important;
+}
+
+.fs-6 {
+  font-size: 1rem !important;
+}
+
 .basic-underline-link-styling-only {
     text-decoration: underline;
     color: inherit;
