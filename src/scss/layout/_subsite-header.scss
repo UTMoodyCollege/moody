@@ -17,6 +17,17 @@
     }
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .d-xl-none {
+    display: none !important;
+  }
+
+  .d-xl-block {
+    display: block !important;
+  }
+}
+
 // stylelint-disable-next-line at-rule-no-unknown
 @include screen-mq(lg) {
   .moody-subsite-page {

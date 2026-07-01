@@ -3020,6 +3020,14 @@ ul.no-bullet {
   background-color: #efefef;
 }
 @media screen and (min-width: 1200px) {
+  .d-xl-none {
+    display: none !important;
+  }
+  .d-xl-block {
+    display: block !important;
+  }
+}
+@media screen and (min-width: 1200px) {
   .moody-subsite-page #moody-header .header-wrapper {
     position: relative;
     z-index: unset;
