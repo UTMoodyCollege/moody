@@ -205,6 +205,27 @@
 ////////////////// Style 5 ///////////////////////////
 /* Medium, floated right image (i.e., Style 5) */
 .moody-hero.hero--half-n-half {
+  padding: 2rem 15px;
+  .hero-content {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1300px;
+    background: $ut-white;
+  }
+  .hero-img {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    min-height: 260px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .hero-callout {
+    padding: 1.5rem;
+  }
   // stylelint-disable-next-line no-descending-specificity
   .hero-headline {
     color: $ut-charcoal;
@@ -223,6 +244,26 @@
   }
   .ut-btn--secondary {
     align-self: start;
+  }
+  // stylelint-disable-next-line at-rule-no-unknown
+  @include screen-mq(md) {
+    padding: 3rem 15px;
+    .hero-content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
+    }
+    .hero-img {
+      grid-column: 2;
+      grid-row: 1;
+      height: 543px !important;
+      min-height: 0;
+    }
+    .hero-callout {
+      grid-column: 1;
+      grid-row: 1;
+      padding: 2rem 3rem;
+    }
   }
 }
 
