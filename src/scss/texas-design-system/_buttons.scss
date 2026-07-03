@@ -227,5 +227,16 @@
   }
 }
 
+.ut-btn.moody-btn--arrow {
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: $ut-white !important;
+  }
+}
+
 // This would be the HTML element:
 // <a href="your-link.html" class="moody-btn--arrow">CTA Text</a>

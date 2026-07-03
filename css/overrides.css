@@ -740,6 +740,9 @@ a[href^="mailto:"],
   text-decoration: underline;
   background: transparent;
 }
+.ut-btn.moody-btn--arrow, .ut-btn.moody-btn--arrow:link, .ut-btn.moody-btn--arrow:visited, .ut-btn.moody-btn--arrow:hover, .ut-btn.moody-btn--arrow:focus, .ut-btn.moody-btn--arrow:active {
+  color: #fff !important;
+}
 .news-view .views-field-title a,
 .news-view.latest-news-block > .views-row a .views-field-title {
   margin-top: 10px;
