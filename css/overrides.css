@@ -4015,6 +4015,10 @@ header .custom-term-links-container a {
   line-height: 1.375rem;
 }
 /* General defaults for Hero elements */
+.hero-headline {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
 .moody-hero .ut-btn--hero {
   display: inline-block;
   padding: 0.5rem 1rem;

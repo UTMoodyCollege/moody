@@ -3,6 +3,11 @@
 //
 
 /* General defaults for Hero elements */
+.hero-headline {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
 .moody-hero .ut-btn--hero {
   background: transparent;
   border: 2px solid $ut-white;
