@@ -218,9 +218,10 @@
       }
       // search bar
       .ut-search-form {
-        border: 2px solid $ut-burntorange;
-        border-radius: 5px;
-        height: 35px;
+        height: 44px;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
       }
       // Hamburger.
       #menu-icon {

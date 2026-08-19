@@ -339,25 +339,145 @@
 
   // search bar
   .ut-search-form {
-    height: 50px;
     display: flex;
     align-items: center;
-    padding: 5px;
+    height: 44px;
+    padding: 0;
+
     form {
+      position: relative;
       width: 100%;
+      height: 44px;
     }
-    input {
-      padding-right: 25px;
+
+    .form-item-keys {
+      height: 44px;
+      margin: 0;
     }
+
+    input.form-search {
+      box-sizing: border-box;
+      width: 100%;
+      height: 44px;
+      min-height: 44px;
+      margin: 0;
+      padding: 8px 48px 8px 16px;
+      color: $ut-charcoal !important;
+      -webkit-text-fill-color: $ut-charcoal;
+      caret-color: $ut-charcoal;
+      background-color: $ut-white !important;
+      border: 1px solid $ut-burntorange;
+      border-radius: 22px;
+      outline: 2px solid transparent;
+      outline-offset: 1px;
+
+      &::placeholder {
+        color: $ut-limestone--s60;
+        opacity: 1;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: $ut-limestone--t20 !important;
+          border-color: $ut-burntorange-dark;
+        }
+      }
+
+      &:focus,
+      &:focus-visible {
+        color: $ut-charcoal !important;
+        -webkit-text-fill-color: $ut-charcoal !important;
+        caret-color: $ut-charcoal !important;
+        background-color: $ut-white !important;
+        border-color: $ut-burntorange-dark;
+        outline: 2px solid $ut-burntorange-dark;
+        outline-offset: 1px;
+      }
+
+      &:active {
+        background-color: $ut-limestone--t20 !important;
+        border-color: $ut-burntorange-dark;
+      }
+
+      &[aria-invalid="true"] {
+        border-color: $ut-error_red;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+        background-color: $ut-limestone--t40 !important;
+      }
+    }
+
+    .form-actions {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: auto;
+      left: auto;
+      width: 44px;
+      height: 44px;
+      margin: 0;
+
+      &::after {
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        width: 44px;
+        height: 44px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30px 30px;
+        pointer-events: none;
+      }
+    }
+
+    input.form-submit {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: auto;
+      left: auto;
+      box-sizing: border-box;
+      width: 44px;
+      height: 44px;
+      min-height: 44px;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      border: 0;
+      border-radius: 50%;
+      outline: 2px solid transparent;
+      outline-offset: -5px;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: $ut-limestone--t40;
+        }
+      }
+
+      &:focus,
+      &:focus-visible {
+        background-color: $ut-limestone--t20;
+        outline: 2px solid $ut-charcoal;
+        outline-offset: -5px;
+      }
+
+      &:active {
+        background-color: $ut-limestone--s20;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.55;
+      }
+    }
+
     // stylelint-disable-next-line at-rule-no-unknown
     @include screen-mq(lg) {
-      border: 2px solid $ut-burntorange;
-      border-radius: 5px;
-      height: 35px;
       margin-right: 15px;
-      input[type="search"] {
-        width: 100%;
-      }
     }
   }
   .give-button {
@@ -481,34 +601,5 @@
 
   .main-menu__list-item.menu-item-has-children > .main-menu__link:before {
     display: none;
-  }
-}
-
-.search-block-form {
-  input {
-    &:focus {
-      outline: none; // Removes the default outline
-      background-color: $ut-burntorange !important;
-      color: white;
-      -webkit-text-fill-color: white;
-      caret-color: white;
-
-      &::placeholder {
-        color: white;
-        opacity: 1; // Ensures placeholder is fully visible
-      }
-    }
-  }
-}
-
-#moody-header {
-  .search-block-form {
-    input.form-search {
-      &:focus {
-        color: white !important;
-        -webkit-text-fill-color: white !important;
-        caret-color: white !important;
-      }
-    }
   }
 }
