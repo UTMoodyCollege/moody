@@ -19,8 +19,8 @@
     attach: function (context, settings) {
 
       //////////////////////////////////////////////////////
-      // Initialize megamenu library on main menu.
-      $('nav#block-moody-accessible-main-menu').accessibleMegaMenu({
+      // Initialize megamenu library on main and desktop subsite menus.
+      $('nav#block-moody-accessible-main-menu, nav.site-navigation-subsite').accessibleMegaMenu({
           uuidPrefix: "accessible-megamenu",
           menuClass: "nav-menu",
           topNavItemClass: "main-menu__list-item",
@@ -64,8 +64,8 @@
       });
 
       //////////////////////////////////////////////////////
-      // Turn off hover events on main nav on subsite pages.
-      $('.moody-subsite-page .main-menu__list').off('mouseover touchstart');
+      // Keep drawer menus click-driven on subsite pages.
+      $('.moody-subsite-page .nav-wrapper .main-menu__list').off('mouseover touchstart');
       $('.moody-subsite-page .moody-subnav-trigger').on('click', function() {
         // $(this).toggleClass('icon--open');
       });
@@ -110,8 +110,11 @@
         }, 300);
       }
 
-      var iconClick = function () {
-        $('.moody-subnav-trigger, .main-menu__list-item.menu-item-has-children > .main-menu__link')
+      var iconClick = function ($scope) {
+        var $links = $scope
+          ? $scope.find('.moody-subnav-trigger, .main-menu__list-item.menu-item-has-children > .main-menu__link')
+          : $('.moody-subnav-trigger, .main-menu__list-item.menu-item-has-children > .main-menu__link');
+        $links
           .off('touchstart.moodySubnav mousedown.moodySubnav keydown.moodySubnav')
           .on('touchstart.moodySubnav mousedown.moodySubnav keydown.moodySubnav', function (e) {
           if (e.type == 'mousedown' || e.type == 'touchstart' || e.keyCode == 13 || e.keyCode == 32) {
@@ -136,12 +139,15 @@
         menuToggler.attr('aria-expanded', 'false');
         togglerTarget.removeClass('active');
         resetDefaults();
-        // Attach click event to chevron on subsite desktop.
-        if ($('body').hasClass('moody-subsite-page') || (window.innerWidth < 1200)) {
-            // Add click handler to mobile nav chevron.
-            iconClick();
-            // Remove mouseover and touchstart event from main menu.
-            $('.main-menu__list').off('mouseover touchstart');
+        if (window.innerWidth < 1200) {
+          // Add click handler to mobile nav chevron.
+          iconClick();
+          // Remove mouseover and touchstart event from main menu.
+          $('.main-menu__list').off('mouseover touchstart');
+        }
+        else if ($('body').hasClass('moody-subsite-page')) {
+          iconClick($('.nav-wrapper'));
+          $('.nav-wrapper .main-menu__list').off('mouseover touchstart');
         }
       }, 100);
       $(window).on('load', resizeEvent);
@@ -149,13 +155,13 @@
         var newWidth = window.innerWidth;
         if (newWidth !== currentWidth) {
           currentWidth = newWidth;
-          resizeEvent;
+          resizeEvent();
         }
       });
 
       //////////////////////////////////////////////////////
       // Adding column and overflowing classes to the navigation dynamically.
-      $('nav#block-moody-accessible-main-menu .sub-nav').each(function(i, el){
+      $('nav#block-moody-accessible-main-menu .sub-nav, nav.site-navigation-subsite .sub-nav').each(function(i, el){
         var $el = $(el),
           navWidth = $el.parent().parent().width(),
           navOffsetLeft = $el.parent().parent().offset().left,

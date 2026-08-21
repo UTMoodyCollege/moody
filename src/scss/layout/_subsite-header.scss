@@ -91,7 +91,7 @@
           }
         }
       }
-      .sub-nav-wrapper {
+      .nav-wrapper .sub-nav-wrapper {
         position: relative;
         width: 100%;
         left: 0;
@@ -121,13 +121,13 @@
           }
         }
       }
-      .main-menu__list {
+      .nav-wrapper .main-menu__list {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         border: 1px solid $ut-charcoal;
       }
-      .main-menu__list-item {
+      .nav-wrapper .main-menu__list-item {
         position: relative;
         display: flex;
         width: 100%;
@@ -143,7 +143,7 @@
           padding-right: 0;
         }
       }
-      .main-menu__link {
+      .nav-wrapper .main-menu__link {
         padding: 0;
         border-bottom: none;
         display: inline-block;
@@ -192,28 +192,6 @@
       .site-navigation-main {
         .main-menu__list-item {
           padding-right: 0;
-        }
-      }
-      .subsite-nav.main-menu__list {
-        flex-direction: row;
-        justify-content: flex-end;
-        border: none;
-        .main-menu__list-item {
-          position: relative;
-          display: block;
-          width: auto;
-          + .main-menu__list-item {
-            margin-left: 10px;
-            border-top: none;
-          }
-        }
-        .main-menu__link {
-          width: inherit;
-          &.is-active {
-            color: $ut-burntorange;
-            padding-bottom: 0;
-            border-bottom: 2px solid $ut-burntorange;
-          }
         }
       }
       // search bar
