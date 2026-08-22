@@ -2754,6 +2754,7 @@ ul.no-bullet {
 #moody-header .main-menu__link {
   display: flex;
   align-items: center;
+  cursor: pointer;
   width: 100%;
   min-height: 76px;
   padding: 12px 70px 12px 12px;
