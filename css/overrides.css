@@ -3008,6 +3008,7 @@ ul.no-bullet {
   width: 50px;
   max-width: 50px;
   margin-right: 10px;
+  margin-bottom: 0;
   padding-right: 0;
   color: #333f48;
   border: none;
