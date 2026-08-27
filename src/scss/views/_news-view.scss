@@ -60,7 +60,6 @@
       img {
         display: block;
         width: 100%;
-        min-height: 233px;
       }
       &:hover {
         color: $ut-charcoal;
@@ -134,7 +133,7 @@
       position: relative;
       width: 100%;
       overflow: hidden;
-      aspect-ratio: 363 / 190;
+      aspect-ratio: 16 / 9;
 
       &::before {
         position: absolute;

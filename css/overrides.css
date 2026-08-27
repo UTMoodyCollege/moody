@@ -6626,7 +6626,6 @@ header .block__ut-social-links--items {
 }
 .news-view.latest-news-block > .views-row a img {
   width: 100%;
-  min-height: 233px;
 }
 .news-view.latest-news-block > .views-row a:hover {
   color: #333f48;
@@ -6693,7 +6692,7 @@ header .block__ut-social-links--items {
   position: relative;
   width: 100%;
   overflow: hidden;
-  aspect-ratio: 363 / 190;
+  aspect-ratio: 16 / 9;
 }
 .news-view.latest-news-block .latest-news-block-image-field::before {
   position: absolute;
