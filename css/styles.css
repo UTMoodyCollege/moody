@@ -1,0 +1,147 @@
+/* Hallmark · component: mobile navigation · theme: existing Moody brand.
+ * Compact spacing, square controls, visible focus; no added animation.
+ */
+@media (max-width: 1199.98px) {
+  body { --moody-menu-offset: var(--drupal-displace-offset-top, 0px); }
+  body.toolbar-fixed { --moody-menu-offset: var(--drupal-displace-offset-top, 39px); }
+  body.toolbar-fixed.toolbar-tray-open.toolbar-horizontal {
+    --moody-menu-offset: var(--drupal-displace-offset-top, 79px);
+  }
+
+  #moody-header,
+  body.moody-subsite-page #moody-header {
+    --menu-paper: #f2f1ed;
+    --menu-ink: #333f48;
+    --menu-accent: #a04400;
+    --menu-rule: #aba89e;
+    margin-bottom: 1.5rem;
+  }
+
+  #moody-header .nav-wrapper.active {
+    top: var(--moody-menu-offset) !important;
+    bottom: 0;
+    width: min(100%, 28rem);
+    height: calc(100dvh - var(--moody-menu-offset));
+    min-height: 0;
+    padding: 0 1rem max(1rem, env(safe-area-inset-bottom));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border-top: 4px solid var(--menu-accent);
+    background: var(--menu-paper);
+    color: var(--menu-ink);
+  }
+  #moody-header .nav-wrapper .nav-wrapper-inner {
+    padding: 0;
+    margin: 0;
+  }
+  #moody-header .p2-logo {
+    margin: 0 0 .75rem;
+    background: var(--menu-paper);
+  }
+  #moody-header .p2-logo .main-logo { display: block; }
+  #moody-header .mobile_wordmark {
+    min-height: 76px;
+    max-width: none;
+    padding: 1rem 4rem 1rem 0;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+    background: var(--menu-paper);
+    color: var(--menu-accent);
+  }
+  #moody-header #menu-icon[aria-expanded="true"],
+  body.moody-subsite-page #moody-header #menu-icon[aria-expanded="true"] {
+    top: calc(var(--moody-menu-offset) + 16px);
+    right: 16px;
+    width: 48px;
+    min-height: 48px;
+    margin: 0;
+    padding: 4px;
+    background: var(--menu-paper);
+    color: var(--menu-ink);
+    border-radius: 0;
+  }
+  #moody-header #menu-icon svg { height: 30px; fill: var(--menu-accent); }
+  #moody-header .nav-wrapper .search-social-give {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    margin: 0 0 1rem;
+    padding: 0;
+  }
+  #moody-header .search-social-give > *,
+  #moody-header .search-social-give .block {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #moody-header .search-social-give .give-button {
+    width: 100%;
+    min-height: 44px;
+    margin: 0;
+    padding: .625rem 1rem;
+    border-radius: 0;
+  }
+  #moody-header .ut-search-form input.form-search { border-radius: 0; }
+  #moody-header .block__ut-social-links--items {
+    padding: 0;
+    margin: 0;
+    gap: .25rem;
+  }
+  #moody-header .block__ut-social-links--items > *,
+  #moody-header .block__ut-social-links--item {
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+  #moody-header .block__ut-social-links--items a,
+  #moody-header .search-social-give .block__ut-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  #moody-header .main-menu__list { margin: 0; }
+  #moody-header .main-menu__list-item,
+  #moody-header .main-menu__link { min-height: 52px; }
+  #moody-header .main-menu__link {
+    padding: .75rem 3.5rem .75rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+  #moody-header .main-menu__list-item .moody-subnav-trigger {
+    right: 4px;
+    width: 44px;
+    height: 52px;
+  }
+  #moody-header .main-menu__list-item .moody-subnav-trigger::after {
+    width: 12px;
+    height: 12px;
+    border-width: 3px;
+  }
+  #moody-header .sub-nav-wrapper .main-menu__list--subnav { padding: 0 .75rem .5rem; }
+  #moody-header .main-menu__list-item--subnav { margin-bottom: 0; }
+  #moody-header .main-menu__link--subnav {
+    padding: .625rem 0;
+    min-height: 44px;
+    font-size: 1rem;
+  }
+  #moody-header .mobile-subsite-navigation { margin-top: 1rem; }
+  #moody-header .mobile_wordmark.subsite-wordmark {
+    min-height: 0;
+    padding: 0 0 .75rem;
+    font-size: 1.125rem;
+  }
+  #moody-header a:focus-visible,
+  #moody-header button:focus-visible {
+    outline: 2px solid var(--menu-ink);
+    outline-offset: 2px;
+  }
+}
+@media (min-width: 1200px) {
+  #moody-header [data-menu-utilities-home] {
+    flex: 1 0 auto;
+    margin-left: auto;
+  }
+}

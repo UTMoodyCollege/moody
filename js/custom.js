@@ -41,16 +41,26 @@
       var toggleIcon = $('#menu-icon > svg');
       var hamburgerIcon = '<title>Open Menu</title><path d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z"></path>';
       var closeIcon = '<title>Close Menu</title><path d="M20.281 20.656c0 0.391-0.156 0.781-0.438 1.062l-2.125 2.125c-0.281 0.281-0.672 0.438-1.062 0.438s-0.781-0.156-1.062-0.438l-4.594-4.594-4.594 4.594c-0.281 0.281-0.672 0.438-1.062 0.438s-0.781-0.156-1.062-0.438l-2.125-2.125c-0.281-0.281-0.438-0.672-0.438-1.062s0.156-0.781 0.438-1.062l4.594-4.594-4.594-4.594c-0.281-0.281-0.438-0.672-0.438-1.062s0.156-0.781 0.438-1.062l2.125-2.125c0.281-0.281 0.672-0.438 1.062-0.438s0.781 0.156 1.062 0.438l4.594 4.594 4.594-4.594c0.281-0.281 0.672-0.438 1.062-0.438s0.781 0.156 1.062 0.438l2.125 2.125c0.281 0.281 0.438 0.672 0.438 1.062s-0.156 0.781-0.438 1.062l-4.594 4.594 4.594 4.594c0.281 0.281 0.438 0.672 0.438 1.062z" ></path>';
-      menuToggler.on('click', function () {
-        if (menuToggler.text() == 'CLOSE') {
+      var setMenuOpen = function (open) {
+        if (!open) {
           resetDefaults();
         }
-        togglerTarget.toggleClass('active');
-        togglerTarget.hasClass('active') ? menuToggler.find('span').html('CLOSE') : menuToggler.find('span').html('MENU');
-        togglerTarget.hasClass('active') ? toggleIcon.html(closeIcon) : toggleIcon.html(hamburgerIcon);
-        togglerTarget.hasClass('active') ? toggleIcon.attr('viewBox', '0 5 23 23') : toggleIcon.attr('viewBox', '-1 3 27 25');
-        menuToggler.attr('aria-expanded', function (index, attr) { return (attr == 'false') ? 'true' : 'false'; });
-        $('body').toggleClass('overflow-hidden');
+        togglerTarget.toggleClass('active', open);
+        menuToggler.find('span').text(open ? Drupal.t('CLOSE') : Drupal.t('MENU'));
+        toggleIcon.html(open ? closeIcon : hamburgerIcon);
+        toggleIcon.attr('viewBox', open ? '0 5 23 23' : '-1 3 27 25');
+        menuToggler.attr('aria-expanded', open ? 'true' : 'false');
+        menuToggler.attr('aria-label', open ? Drupal.t('Close menu') : Drupal.t('Open menu'));
+        $('body').toggleClass('overflow-hidden', open);
+      };
+      menuToggler.off('click.moodyMenu').on('click.moodyMenu', function () {
+        setMenuOpen(!togglerTarget.hasClass('active'));
+      });
+      $(document).off('keydown.moodyMenu').on('keydown.moodyMenu', function (event) {
+        if (event.key === 'Escape' && togglerTarget.hasClass('active')) {
+          setMenuOpen(false);
+          menuToggler.trigger('focus');
+        }
       });
 
       //////////////////////////////////////////////////////
@@ -136,9 +146,13 @@
       // Function to add click handler on load and resize
       var resizeEvent = debounce(function () {
         // Close mobile nav if screen resized.
-        menuToggler.attr('aria-expanded', 'false');
-        togglerTarget.removeClass('active');
-        resetDefaults();
+        setMenuOpen(false);
+        // Move, rather than clone, so search IDs and configured links stay unique.
+        var utilities = $('[data-menu-utilities]');
+        var utilityHome = $(window.innerWidth < 1200 ? '[data-menu-utilities-mobile]' : '[data-menu-utilities-home]');
+        if (utilities.length && utilityHome.length) {
+          utilityHome.append(utilities);
+        }
         if (window.innerWidth < 1200) {
           // Add click handler to mobile nav chevron.
           iconClick();
@@ -150,8 +164,9 @@
           $('.nav-wrapper .main-menu__list').off('mouseover touchstart');
         }
       }, 100);
-      $(window).on('load', resizeEvent);
-      $(window).on('resize', function(e) {
+      resizeEvent();
+      $(window).off('load.moodyMenu resize.moodyMenu').on('load.moodyMenu', resizeEvent);
+      $(window).on('resize.moodyMenu', function(e) {
         var newWidth = window.innerWidth;
         if (newWidth !== currentWidth) {
           currentWidth = newWidth;

@@ -22,7 +22,8 @@
 							{% endif %}
 					</div>
 
-					<div class="search-social-give d-none d-xl-block">
+					<div data-menu-utilities-home class="d-none d-xl-block">
+					<div class="search-social-give" data-menu-utilities>
 						{{ page.header_secondary }}
 						<!-- Place sitewide social icons in header_tertiary -->
 						{% if not hide_all_social_accounts %}
@@ -38,9 +39,10 @@
 							<a href="{{ give_link }}" class="give-button ut-btn">Give</a>
 						{% endif %}
 					</div>
+					</div>
 
 					<!-- hamburger -->
-					<button href="#" class="UT-nav-hamburger icon-menu" id="menu-icon">
+					<button type="button" class="UT-nav-hamburger icon-menu" id="menu-icon" aria-controls="moody-menu-drawer" aria-expanded="false" aria-label="{{ 'Open menu'|t }}">
 						<svg viewbox="-1 3 27 25">
 							<title>Open Menu</title>
 							<path d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z"></path>
@@ -49,7 +51,7 @@
 					</button>
 				</div>
 				<!-- end header-wrapper -->
-				<div class="nav-wrapper">
+				<div class="nav-wrapper" id="moody-menu-drawer">
 					<div class="nav-wrapper-inner">
 						<div class="d-block p2-logo">
 							<!-- mobile wordmark -->
@@ -57,11 +59,11 @@
 								<div class="mobile_wordmark">{{ site_slogan }}</div>
 							</a>
 						</div>
-						{# </div> #}
+						<div data-menu-utilities-mobile class="d-xl-none"></div>
 						<div class="site-navigation site-navigation-main">
 							{{ page.primary_menu }}
 						</div>
-						<div class="d-xl-none mt-5">
+						<div class="d-xl-none mobile-subsite-navigation">
 							<div class="mobile_wordmark subsite-wordmark">{{ subsite_title }}</div>
 							{{ subsite_nav }}
 						</div>
