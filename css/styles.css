@@ -22,6 +22,12 @@
     justify-content: center;
   }
 
+  /* Include the eyebrow variant, which otherwise reserves an empty 10px. */
+  #moody-header,
+  #eyebrow + #moody-header {
+    top: var(--moody-menu-offset);
+  }
+
   #moody-header,
   body.moody-subsite-page #moody-header {
     --menu-paper: #f2f1ed;

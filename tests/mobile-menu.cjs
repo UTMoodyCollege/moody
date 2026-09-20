@@ -19,6 +19,14 @@ const { chromium } = require('playwright');
         if (await openToolbar.count()) await openToolbar.first().click();
         await page.waitForTimeout(200);
         const toggle = page.locator('#menu-icon');
+        await page.evaluate(() => window.scrollTo(0, 600));
+        await page.waitForTimeout(200);
+        const sticky = await page.locator('#moody-header').evaluate(el => ({
+          top: el.getBoundingClientRect().top,
+          offset: parseFloat(getComputedStyle(el).getPropertyValue('--moody-menu-offset')) || 0,
+        }));
+        assert(Math.abs(sticky.top - sticky.offset) <= 1, `Sticky header leaves a gap: ${JSON.stringify({url, width, sticky})}`);
+        await page.evaluate(() => window.scrollTo(0, 0));
         const bottomGap = await toggle.evaluate(el => el.closest('header').getBoundingClientRect().bottom - el.getBoundingClientRect().bottom);
         assert(bottomGap >= 8, `MENU needs space above the divider: ${url} at ${width}px has ${bottomGap}px`);
         if (process.env.MOODY_MENU_SCREENSHOTS) await page.screenshot({path: `${process.env.MOODY_MENU_SCREENSHOTS}/menu-${index}-${width}-closed.png`});
