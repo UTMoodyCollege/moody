@@ -8,6 +8,20 @@
     --moody-menu-offset: var(--drupal-displace-offset-top, 79px);
   }
 
+  /* Let the icon and label fit inside the header's existing 10px padding. */
+  #moody-header.short_logo,
+  #moody-header.short-logo,
+  #moody-header.medium_logo,
+  #moody-header.medium-logo,
+  #moody-header.tall_logo,
+  #moody-header.tall-logo { height: auto; }
+  #moody-header .header-wrapper { align-items: center; }
+  #moody-header #menu-icon[aria-expanded="false"] {
+    min-height: 48px;
+    padding: 0;
+    justify-content: center;
+  }
+
   #moody-header,
   body.moody-subsite-page #moody-header {
     --menu-paper: #f2f1ed;

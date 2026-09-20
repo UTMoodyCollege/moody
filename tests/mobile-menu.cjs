@@ -1,5 +1,5 @@
 // Run with Playwright available: node tests/mobile-menu.cjs <main-page-url> <subsite-page-url>
-// Optional: MOODY_MENU_LOGIN_URL, CHROME_PATH, MOODY_MENU_SCREENSHOTS (existing directory).
+// Optional: MOODY_MENU_LOGIN_URL, CHROME_PATH, MOODY_MENU_SCREENSHOTS (existing directory), MOODY_MENU_CSS (local preview).
 const assert = require('node:assert/strict');
 const { chromium } = require('playwright');
 
@@ -11,6 +11,7 @@ const { chromium } = require('playwright');
     if (process.env.MOODY_MENU_LOGIN_URL) await page.goto(process.env.MOODY_MENU_LOGIN_URL);
     for (const [index, url] of process.argv.slice(2).entries()) {
       await page.goto(url);
+      if (process.env.MOODY_MENU_CSS) await page.addStyleTag({path: process.env.MOODY_MENU_CSS});
       for (const width of [320, 375, 414, 768]) {
         await page.setViewportSize({width, height: 812});
         await page.waitForTimeout(400); // Existing resize debounce and menu transition.
@@ -18,6 +19,9 @@ const { chromium } = require('playwright');
         if (await openToolbar.count()) await openToolbar.first().click();
         await page.waitForTimeout(200);
         const toggle = page.locator('#menu-icon');
+        const bottomGap = await toggle.evaluate(el => el.closest('header').getBoundingClientRect().bottom - el.getBoundingClientRect().bottom);
+        assert(bottomGap >= 8, `MENU needs space above the divider: ${url} at ${width}px has ${bottomGap}px`);
+        if (process.env.MOODY_MENU_SCREENSHOTS) await page.screenshot({path: `${process.env.MOODY_MENU_SCREENSHOTS}/menu-${index}-${width}-closed.png`});
         await toggle.click();
         await page.waitForTimeout(200);
         assert.equal(await toggle.getAttribute('aria-expanded'), 'true');
