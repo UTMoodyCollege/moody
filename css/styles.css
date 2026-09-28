@@ -159,9 +159,73 @@
     outline-offset: 2px;
   }
 }
+/* Upstream now puts ut-search-form on the form itself, not its wrapper. */
+#moody-header form.ut-search-form { position: relative; }
+#moody-header form.ut-search-form .form-item-keys { width: 100%; }
+#moody-header form.ut-search-form .form-submit { font-size: 0; }
+#moody-header form.ut-search-form .form-actions::after {
+  content: "";
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23a04400' stroke-width='2.5'%3E%3Ccircle cx='13' cy='13' r='8'/%3E%3Cpath d='m19 19 9 9'/%3E%3C/svg%3E");
+}
 @media (min-width: 1200px) {
   #moody-header [data-menu-utilities-home] {
     flex: 1 0 auto;
     margin-left: auto;
+  }
+
+  /* Reserve real columns for branding and utilities instead of overlaying
+     an absolutely positioned logo with the full-width navigation row. */
+  body:not(.moody-subsite-page) #moody-header > .container > .row > .col-12 {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 2rem;
+    align-items: start;
+  }
+  body:not(.moody-subsite-page) #moody-header .header-wrapper {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+  }
+  body:not(.moody-subsite-page) #moody-header .nav-wrapper,
+  body:not(.moody-subsite-page) #moody-header .nav-wrapper-inner {
+    display: contents;
+  }
+  body:not(.moody-subsite-page) #moody-header .nav-wrapper-inner > * {
+    grid-column: 1 / -1;
+  }
+  body:not(.moody-subsite-page) #moody-header .nav-wrapper-inner > .search-social-give {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+  body:not(.moody-subsite-page) #moody-header .header-wrapper #block-moody-site-branding-header {
+    flex: 1 1 auto;
+  }
+  body:not(.moody-subsite-page) #moody-header .header-wrapper > .region {
+    width: 100%;
+    min-width: 0;
+  }
+  body:not(.moody-subsite-page) #moody-header .ut-logo--main {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  body:not(.moody-subsite-page) #moody-header .search-social-give > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+  body:not(.moody-subsite-page) #moody-header .ut-search-form {
+    flex: 1 1 12rem;
+    margin-right: 0;
+  }
+  body:not(.moody-subsite-page) #moody-header .region-header-secondary {
+    flex: 1 1 10rem;
+  }
+  body:not(.moody-subsite-page) #moody-header .region-header-secondary .ut-search-form {
+    width: 100%;
   }
 }
