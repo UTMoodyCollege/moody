@@ -8,16 +8,15 @@
 				<div class="header-wrapper">
 					<!-- branding block -->
 					<div id="block-moody-site-branding-header" class="block block-system block-system-branding-block">
-						<a href="{{ logo_link }}" title="{{ subsite_title }}" rel="home">
 							{% if custom_logo %}
-								<span class="site-title sr-only">"{{ subsite_title }}</span>
+								<span class="site-title sr-only">{{ subsite_title }}</span>
 								<a href="{{ logo_link }}" title="{{ subsite_title }}" rel="home">
 									{{ custom_logo }}
 								</a>
 							{% else %}
-								<span class="site-title sr-only">"{{ site_slogan }}</span>
+								<span class="site-title sr-only">{{ site_slogan }}</span>
 								<a href="{{ logo_link }}" title="Home" rel="home">
-									<img class="img-fluid ut-logo--main" src="{{ default_logo_url }}" alt="">
+									<img class="img-fluid ut-logo--main" src="{{ default_logo_url }}" alt="{{ site_slogan|default(site_name) }}">
 								</a>
 							{% endif %}
 					</div>
