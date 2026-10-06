@@ -64,6 +64,15 @@
             <p class="ut-h3">We're sorry! Access to this page has been denied.</p>
             <p class="ut-h3">Please try searching for a new page at our <a href="/">home page</a>.</p>
             <p class="ut-h3">Still can't find what you're looking for? Try <a href="/search">searching</a> for your content.</p>
+            <section class="mt-4" aria-labelledby="edit-access-heading">
+              <h2 id="edit-access-heading">{{ 'Need access to edit?'|t }}</h2>
+              <p>{{ 'Log in with your UT EID to use your existing editing access. Signing in does not automatically grant editing permissions.'|t }}</p>
+              {% if not logged_in %}
+                <a class="ut-btn" href="{{ path('samlauth.saml_controller_login') }}">{{ 'Log in with your EID'|t }}</a>
+              {% endif %}
+              <p>{{ 'Need editing access or access to another site?'|t }} <a href="https://form.asana.com/?k=qgvf7ATUPYXTUCJ_AvfugQ&amp;d=939520625567004">{{ 'Request editing access'|t }}</a>.</p>
+              <p><a href="https://webusersguide.moody.utexas.edu/">{{ 'Documentation for web users'|t }}</a></p>
+            </section>
           </div>{# /.layout-content #}
         </main>
       </div>
