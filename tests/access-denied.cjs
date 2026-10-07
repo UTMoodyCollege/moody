@@ -1,6 +1,6 @@
 // NODE_PATH=<existing Playwright modules> node tests/access-denied.cjs <403-page-url>...
 const assert = require('node:assert/strict');
-const { chromium } = require('playwright');
+const { chromium } = require('@playwright/test');
 
 (async () => {
   assert(process.argv.length > 2, 'Provide a protected page URL');

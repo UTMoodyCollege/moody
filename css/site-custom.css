@@ -1,3 +1,23 @@
 body {
   background-color: white;
 }
+
+/* Outline is a complete variant, with or without a size/base class. */
+.ut-btn--secondary:not(:hover):not(:focus):not(:active) {
+  background-color: #fff;
+  color: #bf5700;
+  border-color: #bf5700;
+}
+
+/* A section surface should not turn ordinary copy into a bordered card. */
+.background-accent .block-inline-blockbasic,
+.background-accent .moody-basic-block {
+  background-color: transparent;
+  border: 0;
+}
+
+/* Preserve explicit utility colors; neutral is the default for Basic copy. */
+.block-inline-blockbasic h2,
+.moody-basic-block h2 {
+  color: #333f48;
+}

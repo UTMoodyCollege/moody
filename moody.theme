@@ -69,6 +69,10 @@ function moody_preprocess_page(&$variables)
 function moody_preprocess_block(&$variables)
 {
   $block_type = $variables['derivative_plugin_id'];
+  $content_block = $variables['content']['#block_content'] ?? NULL;
+  if ($block_type === 'basic' || ($content_block instanceof \Drupal\block_content\BlockContentInterface && $content_block->bundle() === 'basic')) {
+    $variables['attributes']['class'][] = 'moody-basic-block';
+  }
   // print_r($block_type);
   $blocks_with_titles = [
     'moody_hero',
